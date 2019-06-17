@@ -1,0 +1,1428 @@
+<!doctype html>
+<html ⚡>
+  <head>
+    <meta charset="utf-8">
+    <title>Sample document</title>
+    <link rel="canonical" href="./regular-html-version.html">
+    <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
+
+    <style amp-custom>
+      h1,h2,h3,h4,h5,h6,p,span{font-family:'Roboto Condensed',sans-serif;font-size:10px;font-weight:400;margin:0;padding:0}
+      html{margin:0;padding:0;outline:none;text-decoration:none;font-family:'Roboto Condensed',sans-serif;box-sizing:border-box}
+      input,section,button,select{outline:none}
+      a,button{cursor:pointer;pointer-events:all;text-decoration:none;color:#000}
+      button{border:none;border-radius:7px;background:#fff}
+      .hvr-fade{display:inline-block;vertical-align:middle;-webkit-transform:perspective(1px) translateZ(0);transform:perspective(1px) translateZ(0);box-shadow:0 0 1px rgba(0,0,0,0);overflow:hidden;-webkit-transition-duration:.3s;transition-duration:.3s;-webkit-transition-property:color,background-color;transition-property:color,background-color}
+      .hvr-fade:hover,.hvr-fade:focus,.hvr-fade:active{background-color:#80a4be;color:#fff}
+      .scrollbar{margin:7px;float:left;height:97%;width:95%;background:#fff;overflow-y:scroll;position:relative;z-index:1}
+      .force-overflow{min-height:100px;line-height:1.5;font-size:12px}
+      #style-3-scrollbar::-webkit-scrollbar-track{-webkit-box-shadow:inset 0 0 6px rgba(0,0,0,0.15);background-color:#fff}
+      #style-3-scrollbar::-webkit-scrollbar{width:6px;background-color:#fff}
+      #style-3-scrollbar::-webkit-scrollbar-thumb{background-color:silver}
+      .header{height:126px;background-color:#f2f2f2}
+      .stroke{stroke-width:.16em}
+      .StatusBarContainer{box-sizing:border-box;height:50px;box-shadow:0 0 30px 0 rgba(0,0,0,0.10);margin:30px auto;border-radius:10px;background-color:#bbc6c3;position:relative;display:flex;flex-direction:row;flex-wrap:nowrap;align-items:center;justify-content:space-between;padding:6px;width:94vw;max-width:1300px}
+      .InputMailingName{position:relative;display:flex;flex-direction:row;flex-wrap:nowrap;align-items:center}
+      #configNameBtn{background-color:transparent}
+      #mailingNameIcon{height:28px;width:28px;margin-left:5px}
+      #nomeMailingInput{border:none;width:250px;margin-left:10px;font-size:16px;font-weight:500;background-color:transparent;font-family:'Roboto Condensed',sans-serif}
+      #nomeMailingInput::placeholder{color:#fff}
+      .StatusBarWrappers{height:100%;width:100px;box-shadow:0 0 30px 0 rgba(0,0,0,0.10);background-color:#fff;border-radius:5px;display:flex;flex-direction:column;flex-wrap:nowrap;justify-content:center;align-items:center;line-height:1;font-size:12px;box-sizing:border-box}
+      #QuantVeiculos{font-size:20px;font-family:'Roboto',sans-serif}
+      .graphicWrapper{position:relative;display:flex;flex-direction:row;flex-wrap:nowrap;width:auto}
+      #graphicIcon{position:relative;margin-left:5px;height:90%}
+      .graphicTexts{display:flex;flex-direction:column;margin:5px;justify-content:center;align-items:center}
+      #graphicNumber{font-size:20px}
+      #ponteiro{position:absolute;transform-origin:center 90%;bottom:10px;width:200px}
+      .excluidosWrapper{width:76px}
+      #QuantExcluidos{font-size:20px;font-family:'Roboto',sans-serif}
+      #EnvioExpresIcon{height:25px}
+      .EnvioExpresWrapper{display:flex;flex-direction:row;flex-wrap:nowrap;width:auto;padding:5px}
+      .EnvioExpresWrapper span{margin-left:5px;font-family:'Roboto Condensed',sans-serif;text-align:left}
+      #VerTodosIcon{height:25px}
+      .VerTodosWrapper{display:flex;flex-direction:row;flex-wrap:nowrap;width:auto;padding:5px}
+      .VerTodosWrapper span{margin-left:5px;font-family:'Roboto Condensed',sans-serif;text-align:left}
+      #ExibirCanvasIcon{height:25px}
+      .ExibirCanvasWrapper{display:flex;flex-direction:row;flex-wrap:nowrap;width:auto;padding:5px}
+      .ExibirCanvasWrapper span{margin-left:5px;font-family:'Roboto Condensed',sans-serif;text-align:left}
+      .editorMailingContainer{position:relative;display:grid;grid-template-columns:243px 285px 380px;grid-template-rows:510px;grid-gap:27px;margin:0 auto;justify-content:center}
+      .WhiteOnWhite{box-shadow:0 20px 50px 10px rgba(0,0,0,0.10);border-radius:8px}
+      .ListarWrapper{position:relative}
+      amp-accordion span{font-size:14px}
+      #listaFiltros{padding:5px}
+      .hoverFiltros{cursor:grab}
+      .hoverFiltros:active{cursor:grabbing}
+      amp-accordion ul li{position:relative;list-style:none;list-style-position:outside;border:.5px solid #eee2df;padding:4px;font-size:14px;border-radius:6px;font-weight:500;font-family:'Roboto',sans-serif;margin:4px 0;color:#26547c;display:flex;flex-direction:row;flex-wrap:nowrap;align-items:center;transition:.5s all ease-out}
+      #listaFiltros li:hover{background-color:#8e9aaf;color:#eee2df}
+      .i-amphtml-accordion-header{outline:none;border:.5px solid #fff;padding:5px}
+      .HeaderLine1{font-size:18px;color:#fff}
+      #CategoriasPrincipaisHeaders{background-color:#c26158}
+      #CategoriasPrincipaisHeaders1{background-color:#e46054}
+      #CategoriasPrincipaisHeaders2{background-color:#ff675d}
+      #CategoriasPrincipaisHeaders3{background-color:#ff7775}
+      #CategoriasPrincipaisHeaders4{background-color:#ff8d90}
+      #CategoriasPrincipaisHeaders5{background-color:#ffb1b8}
+      .nested-accordion{margin-bottom:20px}
+      .AddFilterTag{position:relative;background:-webkit-linear-gradient(left,#606c88 0%,#3f4c6b 100%);background:-o-linear-gradient(left,#606c88 0%,#3f4c6b 100%);background:linear-gradient(to right,#606c88 0%,#3f4c6b 100%);border-radius:5px}
+      .AddFilter{display:flex;flex-direction:row;flex-wrap:nowrap;align-items:center}
+      .AddFilter div{font-size:16px;font-family:'Roboto',sans-serif;color:#fff;font-weight:500}
+      #AddFilterIcon{width:20px;margin-right:6px}
+      #excludeTag{background:-webkit-linear-gradient(left,#606c88 0%,#3f4c6b 100%);background:-o-linear-gradient(left,#606c88 0%,#3f4c6b 100%);background:linear-gradient(to right,#606c88 0%,#3f4c6b 100%);border-radius:5px}
+      .excludeSectionSpan{position:relative;display:flex;flex-direction:row;flex-wrap:nowrap;align-items:center;color:#fff;font-size:16px;font-family:'Roboto',sans-serif;font-weight:500}
+      #trashIcon{width:20px;margin-right:6px}
+      #excludeSection div{position:relative;display:flex}
+      .tabs{position:relative;height:490px;clear:both;margin:15px 0 0}
+      .tab{float:left}
+      .tab label{background:#eee;padding:10px 6.5px;border:1px solid #ccc;margin-left:-1px;position:relative;left:1px;border-radius:5px 5px 0 0;cursor:pointer}
+      .tab label span{font-size:18px;margin:0 10px;font-weight:500}
+      .tab [type=radio]{display:none}
+      .content{position:absolute;top:28px;left:0;background:#fff;right:0;bottom:0;padding:6px;border:1px solid #ccc;border:none;border-top:.5px solid #ccc}
+      [type=radio]:checked ~ label{background:#fff;border-bottom:1px solid #fff;z-index:2}
+      [type=radio]:checked ~ label ~ .content{z-index:1}
+      .closeTabSvgIcon{position:absolute;width:10px;z-index:4;background-color:transparent;top:-3px;right:4px}
+      #closeSvg{width:8px;height:8px;background-color:transparent}
+      .tabsPlus{position:absolute;right:0;top:-10px;width:30px;height:50px;box-sizing:border-box;border:.5px solid #ccc}
+      #TabsPlusIcon{position:relative;bottom:7px}
+      .alertDialogBox{position:absolute;z-index:101;left:50%;bottom:30px;transform:translate(-50%);display:flex;flex-direction:column;flex-wrap:nowrap;width:430px;background-color:#ff5100;padding:10px;border-radius:7px;box-shadow:0 20px 50px 10px rgba(0,0,0,0.30)}
+      .alertBarContainer{position:relative;display:grid;grid-template-columns:1fr;grid-template-rows:1fr;height:3px;margin-bottom:7px}
+      .alertProgressBar{grid-column:1 / 2;grid-row:1 / 2;position:relative;z-index:2;width:100%;height:100%;background-color:rgba(0,0,0,.2)}
+      .alertBarBG{position:relative;z-index:3;grid-column:1 / 2;grid-row:1 / 2;background-color:rgba(0,0,0,.5);width:30%}
+      .alertMsgWrapper{position:relative;display:grid;grid-template-columns:1fr 5fr 1.5fr;grid-template-rows:1fr;align-items:center}
+      .alertMsgWrapper svg{width:50px}
+      #alertMsgIcon{width:50px;height:60px}
+      .alertMsg{text-align:justify;font-size:14px;color:#fff;font-weight:300;grid-column:2 / 3;margin:0 6px}
+      .AlertBtn{background-color:#ff5100;box-shadow:0 10px 30px 10px rgba(0,0,0,0.20);padding:10px;width:80%;cursor:pointer;transition:.5s all ease-in-out;justify-self:center;font-weight:200;font-family:'Roboto',sans-serif;font-size:20px;grid-column:3 / 4;grid-row:1 / 2;color:#fff}
+      .AlertBtn:hover{background-color:#f77441;box-shadow:0 20px 50px 10px rgba(0,0,0,0.20);transition:.3s all ease-in-out;color:#000}
+      .alertDialogBoxMask{position:fixed;display:block;top:0;height:100vh;width:100vw;background-color:rgba(255,255,255,.8);z-index:100;overflow:hidden;cursor:not-allowed}
+      .DialogBox{position:absolute;z-index:100;left:50%;bottom:180px;transform:translate(-50%);display:flex;flex-direction:column;flex-wrap:nowrap;width:430px;background-color:#fff;padding:10px;border-radius:7px;box-shadow:0 20px 50px 10px rgba(0,0,0,0.30)}
+      .DialogBarContainer{position:relative;display:grid;grid-template-columns:1fr;grid-template-rows:1fr;height:3px;margin-bottom:7px}
+      .DialogProgressBar{grid-column:1 / 2;grid-row:1 / 2;position:relative;z-index:2;width:100%;height:100%;background-color:rgba(0,0,0,.3);animation:bar 10s linear}
+      @keyframes bar {
+      from{width:0}
+      to{width:100%}
+      }
+      .DialogBarBG{position:relative;z-index:3;grid-column:1 / 2;grid-row:1 / 2;background-color:rgba(0,0,0,.1);width:100%}
+      .DialogMsgWrapper{position:relative;display:grid;grid-template-columns:1fr 5fr 1.5fr;grid-template-rows:1fr;align-items:center}
+      .DialogMsgWrapper svg{width:50px}
+      #alertMsgIcon{width:50px;height:60px}
+      .DialogMsg{margin:0 8px;justify-self:end;text-align:justify;font-size:14px;color:#26547c;font-weight:400}
+      .DialogBtn{background-color:#00c496;box-shadow:0 0 30px 10px rgba(0,0,0,0.10);padding:10px;width:80%;cursor:pointer;transition:.5s all ease-in-out;justify-self:center;font-weight:200;font-family:'Roboto',sans-serif;font-size:20px;color:#fff}
+      .DialogBtn:hover{background-color:#88ead0;box-shadow:0 20px 50px 10px rgba(0,0,0,0.20);transition:.3s all ease-in-out;color:#000}
+      .tagClienteWrapper{position:fixed;z-index:50;bottom:0;display:block;right:50%;transform:translateX(50%);padding:10px 30px;background-color:#26547c;color:#fff;border-radius:7px 7px 0 0}
+      .filtrosBaseBoxWrapper{position:relative;display:flex;flex-direction:column;flex-wrap:nowrap;justify-content:stretch;box-shadow:0 0 20px 0 rgba(0,0,0,0.20);margin:10px;border-radius:5px 20px 5px 5px}
+      .baseBoxTitle{position:relative;display:flex;border-radius:5px 20px 0 0;border:2px solid #4d4d4d;border-bottom:1px solid #4d4d4d;background-color:gray;align-items:center;padding:5px}
+      .baseBoxTitle span{color:#EEE2DF;font-family:'Roboto',sans-serif;font-size:14px}
+      .baseBoxInputWrapper{position:relative;display:block;padding:15px;border-radius:0 0 5px 5px;border:2px solid #4d4d4d;border-top:1px solid #4d4d4d}
+      .baseBoxInputShadow{position:relative;display:flex;flex-direction:row;flex-wrap:nowrap;align-items:center;justify-content:space-between;box-shadow:0 0 20px 0 rgba(0,0,0,0.10);padding:6px;border-radius:4px}
+      #inputBaseBoxFiltros{position:relative;display:inline-block;outline:none;border:none;padding:4px}
+      .svgIconSearch{position:relative;display:inline-block}
+      #baseBoxSearchIcon{position:relative;top:3px;width:20px;height:20px}
+      #baseBoxAddFilterIcon{position:relative;top:-2px;width:20px;margin-right:8px}
+      .IndiceWrapper{z-index:10;position:absolute;bottom:8px;right:17px;overflow:hidden;background-color:silver;border-radius:5px}
+      .indiceLista{display:flex;flex-direction:column;flex-wrap:nowrap;justify-content:center;align-items:center;padding:0;margin:5px 0}
+      .IndiceWrapper ul li{position:relative;list-style-type:none;list-style-position:inside;line-height:.6}
+      .IndiceWrapper ul li button{background-color:transparent;color:#EEE2DF;font-size:10px;font-weight:600}
+      .FiltroTopicoWrapperStyle{position:relative;display:flex;flex-direction:column;flex-wrap:nowrap;justify-content:space-between;width:88%}
+      .NomeFiltroTopicoStyle{position:relative;display:flex;z-index:30;flex-direction:row;flex-wrap:nowrap;justify-content:space-between;align-items:center;border:.5px solid #eee2df;padding:5px;margin:5px}
+      .NomeFiltroTopicoStyle span{font-size:14px;font-weight:500;font-family:'Roboto',sans-serif;color:#26547c;margin-left:4px}
+      .TopicoIconSvgStyle{position:relative;bottom:-1px;width:17px}
+      .ListaFiltroTopicoStyle{display:flex;flex-direction:column;flex-wrap:nowrap;line-height:1.5;font-size:14px;margin-top:0;padding:0 0 0 27px}
+      .itemFiltroTopicoStyle{cursor:pointer;color:#26547c}
+      .itemFiltroTopicoStyle:hover{font-weight:600}
+      .filtrosAbasBoxWrapperEditoria{position:relative;display:flex;flex-direction:column;flex-wrap:nowrap;justify-content:stretch;box-shadow:0 0 20px 0 rgba(0,0,0,0.20);margin:10px 10px 10px 0;border-radius:5px 20px 5px 5px}
+      .baseAbasBoxTitleEditoria{position:relative;display:flex;border-radius:5px 20px 0 0;border:2px solid #c26158;border-bottom:1px solid #c26158;background-color:#c26158;align-items:center;padding:5px}
+      .baseAbasBoxTitleEditoria span{color:#EEE2DF;font-family:'Roboto',sans-serif;font-size:14px}
+      .baseAbasBoxTitleEditoria{position:relative;display:flex;border-radius:5px 20px 0 0;border:2px solid #c26158;border-bottom:1px solid #c26158;background-color:#c26158;align-items:center;padding:5px}
+      .baseAbasBoxTitleEditoria span{color:#EEE2DF;font-family:'Roboto',sans-serif;font-size:14px}
+      .baseAbasBoxItemWrapperEditoria{position:relative;display:flex;padding:0 10px 10px 0;border-radius:0 0 5px 5px;border:2px solid #c26158;border-top:1px solid #c26158;justify-content:space-around;flex-wrap:wrap}
+      .AbasBoxItemShadowEditoria{position:relative;display:flex;flex-direction:row;flex-wrap:nowrap;align-items:center;justify-content:start;padding:3px 6px;border-radius:20px;background-color:#fff;margin:5px;cursor:pointer}
+      .AbasBoxItemShadowEditoria span{font-size:14px;color:#26547c;font-family:'Roboto',sans-serif;font-weight:300}
+      .svgIconCheckEditoria{position:relative;display:inline-block;margin:0 7px 0 9px;z-index:2;width:20px;height:20px;display:flex;align-items:center;background-color:transparent;border:1px solid #26547c;border-radius:3px;background-color:transparent;transition:.2s ease-out}
+      .BGCheckboxBlocoEditoriaSec{background-color:#26547c}
+      .svgIconCheckEditoriaMouseOver{position:absolute;display:inline-block;z-index:1;margin:0 7px 0 9px;width:20px;height:20px;display:flex;align-items:center;background-color:transparent;border:1px solid #26547c;border-radius:3px;background-color:#eee2df;transition:.2s ease-out}
+      #baseBoxItemIconCheckEditoria{position:absolute;margin:0 auto;text-align:center;align-self:center;width:17px;opacity:1;left:2px;transition:.2s ease-out}
+      #editoriaTargetIcon{position:relative;bottom:2px;width:35px}
+      #editoriaTargetIconDardo50,#editoriaTargetIconDardo100{width:37px;height:37px;position:absolute;display:none;z-index:2;left:4px;bottom:4px;transition:.3s all ease-out}
+      #editoriaTargetIconDardo100{transition:.3s all ease-out}
+      #editoriaTargetIconDardo50{display:block}
+      .filtrosAbasBoxWrapperIncluir{position:relative;display:flex;flex-direction:column;flex-wrap:nowrap;justify-content:stretch;box-shadow:0 0 20px 0 rgba(0,0,0,0.20);margin:10px 10px 10px 0;border-radius:5px 20px 5px 5px}
+      .baseAbasBoxTitleIncluir{position:relative;display:flex;border-radius:5px 20px 0 0;border:2px solid #c26158;border-bottom:1px solid #c26158;background-color:#c26158;align-items:center;padding:5px}
+      .baseAbasBoxTitleIncluir span{color:#EEE2DF;font-family:'Roboto',sans-serif;font-size:14px}
+      .baseAbasBoxItemWrapperIncluir{position:relative;display:flex;padding:15px;border-radius:0 0 5px 5px;border:2px solid #c26158;border-top:1px solid #c26158;justify-content:flex-start;flex-wrap:wrap}
+      .AbasBoxItemShadowIncluir{position:relative;display:flex;flex-direction:row;flex-wrap:nowrap;align-items:center;justify-content:start;box-shadow:0 0 20px 0 rgba(0,0,0,0.20);padding:6px;border-radius:4px;background-color:#e46054;margin:5px;cursor:pointer}
+      .AbasBoxItemShadowIncluir span{font-size:14px;color:#eee2df}
+      .FilterCurtainSvgStyle{position:absolute;right:40px;width:17px;cursor:pointer}
+      #FiltercloseSvg{position:absolute;right:10px;width:14px;cursor:pointer}
+      #inputBaseBoxFiltros{position:relative;display:inline-block;outline:none;border:none;padding:4px}
+      .svgIconCheckIncluir{position:relative;display:inline-block;margin:0 0 0 9px;bottom:3px;width:20px;height:20px;display:flex;align-items:center;background-color:transparent}
+      #baseBoxItemIconCheckIncluir{position:absolute;margin:0 auto;text-align:center;align-self:center;top:5px;width:17px;opacity:1;transition:.2s ease-out}
+      #baseBoxItemIconCloseIncluir{position:absolute;margin:0 auto;text-align:center;width:0;height:0;top:6px;opacity:0;transition:.2s ease-out}
+      #baseBoxAddFilterIcon{position:relative;top:-2px;width:20px;margin-right:8px}
+      .filtrosExcluirAbasBoxWrapper{position:relative;display:flex;flex-direction:column;flex-wrap:nowrap;justify-content:stretch;box-shadow:0 0 20px 0 rgba(0,0,0,0.20);margin:10px 10px 10px 0;border-radius:5px 20px 5px 5px}
+      .baseAbasBoxTitle{position:relative;display:flex;border-radius:5px 20px 0 0;border:2px solid #4d4d4d;border-bottom:1px solid #4d4d4d;background-color:gray;align-items:center;padding:5px}
+      .baseAbasBoxTitle span{color:#EEE2DF;font-family:'Roboto',sans-serif;font-size:14px}
+      .baseAbasBoxItemWrapper{position:relative;display:flex;padding:15px;border-radius:0 0 5px 5px;border:2px solid #4d4d4d;border-top:1px solid #4d4d4d;justify-content:flex-start;flex-wrap:wrap}
+      .AbasBoxItemShadowExcluir{position:relative;display:flex;flex-direction:row;flex-wrap:nowrap;align-items:center;justify-content:start;box-shadow:0 0 20px 0 rgba(0,0,0,0.20);padding:6px;border-radius:4px;background-color:gray;margin:5px;cursor:pointer}
+      .AbasBoxItemShadowExcluir span{font-size:14px;color:#eee2df}
+      .FilterCurtainSvgStyle{position:absolute;right:40px;width:17px;cursor:pointer}
+      #FiltercloseSvg{position:absolute;right:10px;width:14px;cursor:pointer}
+      #inputBaseBoxFiltros{position:relative;display:inline-block;outline:none;border:none;padding:4px}
+      .svgIconCheck{position:relative;display:inline-block;margin:0 0 0 9px;bottom:3px;width:20px;height:20px;display:flex;align-items:center;background-color:transparent}
+      #baseBoxItemIconCheck{position:absolute;margin:0 auto;text-align:center;align-self:center;top:5px;width:17px;opacity:1;transition:.2s ease-out}
+      #baseBoxItemIconClose{position:absolute;margin:0 auto;text-align:center;width:0;height:0;top:6px;opacity:0;transition:.2s ease-out}
+      #baseBoxAddFilterIcon{position:relative;top:-2px;width:20px;margin-right:8px}
+      .tooltip100{position:relative;text-align:center;font-size:14px}
+      .tooltip100::before,.tooltip100::after{z-index:100;position:absolute;left:50%;opacity:0;visibility:hidden;transition:.1s ease-out}
+      .tooltip100::before{content:"";border-width:0 8px 10px;border-style:solid;margin-left:-8px;top:50px;border-color:transparent transparent #415b76}
+      .tooltip100::after{content:attr(data-tooltip-Editoria100);background:#415b76;border-radius:4px;color:#fff;top:59px;width:110px;padding:5px;left:-17px}
+      .tooltip100:hover::before,.tooltip100:hover::after{transition:.1s ease-out;transform:translateY(-20px);opacity:1;visibility:visible}
+      .tooltip100:active::before,.tooltip100:active::after{opacity:0;visibility:hidden}
+      .tooltip50{position:relative;text-align:center;font-size:14px}
+      .tooltip50::before,.tooltip50::after{z-index:100;position:absolute;left:50%;opacity:0;visibility:hidden;transition:.1s ease-out}
+      .tooltip50::before{content:"";border-width:0 8px 10px;border-style:solid;margin-left:-8px;top:50px;border-color:transparent transparent #415b76}
+      .tooltip50::after{content:attr(data-tooltip-Editoria50);background:#415b76;border-radius:4px;color:#fff;top:59px;width:110px;padding:5px;left:-17px}
+      .tooltip50:hover::before,.tooltip50:hover::after{transition:.1s ease-out;transform:translateY(-20px);opacity:1;visibility:visible}
+      .tooltip50:active::before,.tooltip50:active::after{opacity:0;visibility:hidden}
+      .tooltipAbasPlus{position:relative;text-align:center;font-size:14px}
+      .tooltipAbasPlus::before,.tooltipAbasPlus::after{position:absolute;left:50%;opacity:0;visibility:hidden;transition:.1s ease-out;z-index:100}
+      .tooltipAbasPlus::before{content:"";border-width:0 8px 10px;border-style:solid;margin-left:-8px;top:50px;border-color:transparent transparent #415b76}
+      .tooltipAbasPlus::after{content:attr(data-tooltip-NovaAba);background:#415b76;border-radius:4px;color:#fff;top:59px;width:80px;padding:5px;left:-30px}
+      .tooltipAbasPlus:hover::before,.tooltipAbasPlus:hover::after{transition:.1s ease-out;transform:translateY(-20px);opacity:1;visibility:visible}
+      .tooltipAbasPlus:active::before,.tooltipAbasPlus:active::after{opacity:0;visibility:hidden}
+    </style>
+
+
+    <script async custom-element="amp-carousel" src="https://cdn.ampproject.org/v0/amp-carousel-0.1.js"></script>
+    <style amp-boilerplate>body{-webkit-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-moz-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-ms-animation:-amp-start 8s steps(1,end) 0s 1 normal both;animation:-amp-start 8s steps(1,end) 0s 1 normal both}@-webkit-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-moz-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-ms-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-o-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}</style><noscript><style amp-boilerplate>body{-webkit-animation:none;-moz-animation:none;-ms-animation:none;animation:none}</style></noscript>
+    <script async src="https://cdn.ampproject.org/v0.js"></script>
+    <script async custom-element="amp-accordion" src="https://cdn.ampproject.org/v0/amp-accordion-0.1.js"></script>
+    <!-- <link rel="stylesheet" href="css/editor-mailing-style.css"> -->
+
+        <!-- google fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed:300,300i,400,400i,700,700i|Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i" rel="stylesheet">
+  </head>
+
+
+  <body>
+
+<!-- header space -->
+<div class="header"></div>
+<!-- header space -->
+
+<div class="tagClienteWrapper">
+  <div>NOME DO CLIENTE</div>
+</div>
+
+
+<!-- barra de status -->
+<div class="StatusBarContainer">
+  <div class="InputMailingName">
+    <button id="configNameBtn">
+      <svg id="mailingNameIcon" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 57.4 57.4" xml:space="preserve">
+        <path fill="none" stroke="#394553" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" d="M10.9,39.3l-4.4,6.1l5.5,5.5l6.1-4.4c1.7,1,3.5,1.8,5.4,2.3l1.3,7.4h7.8l1.3-7.4c1.9-0.5,3.7-1.3,5.4-2.3l6.1,4.4l5.5-5.5l-4.3-6.1c1-1.7,1.8-3.5,2.3-5.5l7.4-1.2v-7.8l-7.4-1.2c-0.5-1.9-1.2-3.8-2.2-5.4l4.3-6.1l-5.5-5.5l-6.1,4.3c-1.7-1-3.5-1.7-5.4-2.2l-1.2-7.4h-7.8l-1.2,7.4c-1.9,0.5-3.8,1.2-5.4,2.2l-6.1-4.3l-5.5,5.5l4.3,6.1c-1,1.7-1.7,3.5-2.2,5.4l-7.4,1.3v7.8l7.4,1.3C9.1,35.8,9.9,37.6,10.9,39.3z"/>
+        <circle fill="none" stroke="#394553" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" cx="28.7" cy="28.7" r="8"/>
+      </svg>
+    </button>
+    <input id="nomeMailingInput" type="text" placeholder="Nome do mailing">
+  </div>
+  <div class="StatusBarWrappers VeiculosWrapper">
+    <span id="QuantVeiculos">296</span>
+    <span>VEÍCULOS</span>
+  </div>
+  <div class="StatusBarWrappers graphicWrapper">
+      <svg id="graphicIcon" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 57.3 31.1" xml:space="preserve">
+        <path fill="#A2A9AD" d="M7.1,28.3C8.1,18,16.5,10,26.7,10s18.6,8,19.6,18.3h4.2C50.3,16.4,40.6,6.8,28.7,6.8C16.7,6.8,7.1,16.4,7.1,28.3L7.1,28.3z"/>
+        <path fill="#F5333F" d="M46.2,6.2L43.5,10c5.5,4.3,9,10.9,9.1,18.4h4.7C57.2,19.4,52.9,11.3,46.2,6.2z"/>
+        <path fill="#F2CD00" d="M3.3,15.4C1.2,19.3,0,23.7,0,28.4h4.7c0.1-3.8,1-7.4,2.7-10.6L3.3,15.4z"/>
+        <path fill="#00B189" d="M8.6,15.7C12.8,9.2,20.2,4.9,28.7,4.9c4.7,0,9.2,1.4,12.9,3.8l2.7-3.8c-4.5-2.9-9.8-4.6-15.6-4.6c-10.1,0-19,5.2-24.1,13.1L8.6,15.7z"/>
+        <path id="ponteiro" d="M30,27.2L28.7,0.8l-1.3,26.4c-0.5,0.4-0.9,1-0.9,1.8c0,1.2,1,2.2,2.2,2.2s2.2-1,2.2-2.2C30.9,28.2,30.5,27.6,30,27.2z"/>
+      </svg>
+    <div class="graphicTexts">
+      <span id="graphicNumber">300</span>
+      <span>CONTATOS</span>
+    </div>
+  </div>
+  <div class="StatusBarWrappers excluidosWrapper">
+    <span id="QuantExcluidos">20</span>
+    <span>BLOQUEADOS</span>
+  </div>
+  <a class="StatusBarWrappers EnvioExpresWrapper hvr-fade" href="http://local.imcgrupo.com/pages/producao/telaConfirmacao/confirmacao-step-form.html">
+    <svg id="EnvioExpresIcon" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 45.6 23.4" xml:space="preserve">
+      <path class="stroke" fill="none" stroke="#EEE2DF" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" d="M12.5,22.9h27.9c0.9,0,1.8-0.8,1.9-1.7l2.7-19c0.1-0.9-0.5-1.7-1.5-1.7H15.3l13.1,12.1L44,1.3"/>
+      <line class="stroke" fill="none" stroke="#EEE2DF" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" x1="21.2" y1="17" x2="7.5" y2="17"/>
+      <line class="stroke" fill="none" stroke="#EEE2DF" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" x1="18.2" y1="11.9" x2="0.5" y2="11.9"/>
+      <line class="stroke" fill="none" stroke="#EEE2DF" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" x1="13.8" y1="6.9" x2="5.8" y2="6.9"/>
+    </svg>
+    <span>ENVIO<BR>EXPRESS</span>
+  </a>
+  <a class="StatusBarWrappers VerTodosWrapper hvr-fade" href="http://local.imcgrupo.com/pages/producao/verTodos/verTodos.html">
+    <svg id="VerTodosIcon" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 25 25" xml:space="preserve">
+      <path class="stroke" fill="none" stroke="#EEE2DF" stroke-miterlimit="10" d="M18.1,3.5c4,4,4,10.5,0,14.6c-4,4-10.5,4-14.6,0c-4-4-4-10.5,0-14.6C7.5-0.5,14-0.5,18.1,3.5z"/>
+      <line class="stroke" fill="none" stroke="#EEE2DF" stroke-miterlimit="10" x1="10.8" y1="5.9" x2="10.8" y2="15.6"/>
+      <line class="stroke" fill="none" stroke="#EEE2DF" stroke-miterlimit="10" x1="15.6" y1="10.8" x2="5.9" y2="10.8"/>
+      <path class="stroke" fill="none" stroke="#EEE2DF" stroke-miterlimit="10" d="M19,17l5.2,5.2c0.5,0.5,0.5,1.4-0.1,1.9c-0.6,0.6-1.4,0.6-1.9,0.1l-3.7-3.7"/>
+    </svg>
+    <span>VER<BR>TODOS</span>
+  </a>
+  <button class="StatusBarWrappers ExibirCanvasWrapper hvr-fade">
+    <svg id="ExibirCanvasIcon" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 25.8 28" xml:space="preserve">
+      <path class="stroke" fill="none" stroke="#EEE2DF" stroke-linejoin="round" stroke-miterlimit="10" d="M12.8,26.9h-11c-0.7,0-1.3-0.6-1.3-1.3v-20
+      c0-0.7,0.6-1.3,1.3-1.3h1.6"/>
+      <path class="stroke" fill="none" stroke="#EEE2DF" stroke-linejoin="round" stroke-miterlimit="10" d="M16.5,4.2h1.7c0.7,0,1.3,0.6,1.3,1.3V13"/>
+      <circle class="stroke" fill="none" stroke="#EEE2DF" stroke-miterlimit="10" cx="19.2" cy="21.4" r="6.1"/>
+      <polyline class="stroke" fill="none" stroke="#EEE2DF" stroke-miterlimit="10" points="16.4,21.1 18.9,23.2 22.1,19   "/>
+      <path class="stroke" fill="none" stroke="#EEE2DF" stroke-linecap="round" stroke-miterlimit="10" d="M14.4,2.7h-2.2c0-1.2-1-2.2-2.2-2.2c-1.2,0-2.2,1-2.2,2.2H5.6v3.4h8.9V2.7z"/>
+      <rect class="stroke" x="4.5" y="10.9" fill="#394553" stroke="#EEE2DF" stroke-miterlimit="10" width="0.4" height="0.4"/>
+      <line class="stroke" fill="none" stroke="#EEE2DF" stroke-miterlimit="10" x1="7.3" y1="11.1" x2="16.3" y2="11.1"/>
+      <rect class="stroke" x="4.5" y="14.5" fill="#394553" stroke="#EEE2DF" stroke-miterlimit="10" width="0.4" height="0.4"/>
+      <line class="stroke" fill="none" stroke="#EEE2DF" stroke-miterlimit="10" x1="7.3" y1="14.7" x2="14.1" y2="14.7"/>
+      <rect class="stroke" x="4.5" y="18.1" fill="#394553" stroke="#EEE2DF" stroke-miterlimit="10" width="0.4" height="0.4"/>
+      <line class="stroke" fill="none" stroke="#EEE2DF" stroke-miterlimit="10" x1="7.3" y1="18.2" x2="11.4" y2="18.2"/>
+      <rect class="stroke" x="4.5" y="21.6" fill="#394553" stroke="#EEE2DF" stroke-miterlimit="10" width="0.4" height="0.4"/>
+      <line class="stroke" fill="none" stroke="#EEE2DF" stroke-miterlimit="10" x1="7.3" y1="21.8" x2="10.8" y2="21.8"/>
+    </svg>
+    <span>EXIBIR<BR>CANVAS</span>
+  </button>
+
+
+</div>
+<!-- barra de status -->
+
+<!-- máscara alert dialog box -->
+<div class="alertDialogBoxMask"></div>
+<!-- fim máscara alert dialog box  -->
+
+<!-- editor mailing -->
+<div class="editorMailingContainer">
+  <div class="filtrosWrapper WhiteOnWhite">
+      <div class="listaFiltrosWrapper scrollbar" id="style-3-scrollbar">
+        <div class="force-overflow">
+          <amp-accordion expand-single-section>
+            <section expanded>
+              <span id="CategoriasPrincipaisHeaders" class="HeaderLine1">Padrão</span>
+              <amp-accordion class="nested-accordion">
+
+<!-- section adicionar filtro -->
+                <section expanded>
+                  <span class="AddFilterTag">
+                    <div class="AddFilter">
+                      <svg id="AddFilterIcon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                        <path fill="#eee2df" d="M504 96h-88V8c0-4.42-3.58-8-8-8h-16c-4.42 0-8 3.58-8 8v88h-88c-4.42 0-8 3.58-8 8v16c0 4.42 3.58 8 8 8h88v88c0 4.42 3.58 8 8 8h16c4.42 0 8-3.58 8-8v-88h88c4.42 0 8-3.58 8-8v-16c0-4.42-3.58-8-8-8zm-6.77 270.71l-99.72-42.87 99.72-42.87c8.35-3.6 12.19-13.23 8.58-21.52-3.65-8.29-13.32-12.13-21.74-8.48l-225.32 96.86c-1.81.77-3.74.77-5.48 0L45.23 258.4l193.45-83.16c8.35-3.59 12.19-13.23 8.58-21.52-3.65-8.28-13.26-12.13-21.74-8.48L14.81 235.81C5.81 239.66 0 248.52 0 258.4c0 9.87 5.81 18.74 14.77 22.58l99.73 42.87-99.7 42.85C5.81 370.55 0 379.42 0 389.31c0 9.87 5.81 18.74 14.77 22.58l225.32 96.84c5.06 2.17 10.48 3.28 15.9 3.28s10.84-1.09 15.9-3.28l225.29-96.83c9-3.85 14.81-12.72 14.81-22.59.01-9.89-5.8-18.76-14.76-22.6zM258.74 478.72c-1.81.77-3.74.77-5.48 0L45.23 389.29 156 341.68l84.1 36.15c5.06 2.17 10.48 3.28 15.9 3.28s10.84-1.09 15.9-3.28l84.12-36.16 110.78 47.62-208.06 89.43z"/>
+                      </svg>
+                      <div>Adicionar Filtros</div>
+                    </div>
+                </span>
+                  <ul id="listaFiltros">
+                    <a class="hoverFiltros" href="">
+                      <li id="">
+                        <svg id="AddFilterIcon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                          <path fill="#eee2df" d="M504 96h-88V8c0-4.42-3.58-8-8-8h-16c-4.42 0-8 3.58-8 8v88h-88c-4.42 0-8 3.58-8 8v16c0 4.42 3.58 8 8 8h88v88c0 4.42 3.58 8 8 8h16c4.42 0 8-3.58 8-8v-88h88c4.42 0 8-3.58 8-8v-16c0-4.42-3.58-8-8-8zm-6.77 270.71l-99.72-42.87 99.72-42.87c8.35-3.6 12.19-13.23 8.58-21.52-3.65-8.29-13.32-12.13-21.74-8.48l-225.32 96.86c-1.81.77-3.74.77-5.48 0L45.23 258.4l193.45-83.16c8.35-3.59 12.19-13.23 8.58-21.52-3.65-8.28-13.26-12.13-21.74-8.48L14.81 235.81C5.81 239.66 0 248.52 0 258.4c0 9.87 5.81 18.74 14.77 22.58l99.73 42.87-99.7 42.85C5.81 370.55 0 379.42 0 389.31c0 9.87 5.81 18.74 14.77 22.58l225.32 96.84c5.06 2.17 10.48 3.28 15.9 3.28s10.84-1.09 15.9-3.28l225.29-96.83c9-3.85 14.81-12.72 14.81-22.59.01-9.89-5.8-18.76-14.76-22.6zM258.74 478.72c-1.81.77-3.74.77-5.48 0L45.23 389.29 156 341.68l84.1 36.15c5.06 2.17 10.48 3.28 15.9 3.28s10.84-1.09 15.9-3.28l84.12-36.16 110.78 47.62-208.06 89.43z"/>
+                        </svg>
+                        <div>Editoria</div>
+                      </li>
+                    </a>
+                    <a class="hoverFiltros" href="">
+                      <li id="">
+                        <svg id="AddFilterIcon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                          <path fill="#eee2df" d="M504 96h-88V8c0-4.42-3.58-8-8-8h-16c-4.42 0-8 3.58-8 8v88h-88c-4.42 0-8 3.58-8 8v16c0 4.42 3.58 8 8 8h88v88c0 4.42 3.58 8 8 8h16c4.42 0 8-3.58 8-8v-88h88c4.42 0 8-3.58 8-8v-16c0-4.42-3.58-8-8-8zm-6.77 270.71l-99.72-42.87 99.72-42.87c8.35-3.6 12.19-13.23 8.58-21.52-3.65-8.29-13.32-12.13-21.74-8.48l-225.32 96.86c-1.81.77-3.74.77-5.48 0L45.23 258.4l193.45-83.16c8.35-3.59 12.19-13.23 8.58-21.52-3.65-8.28-13.26-12.13-21.74-8.48L14.81 235.81C5.81 239.66 0 248.52 0 258.4c0 9.87 5.81 18.74 14.77 22.58l99.73 42.87-99.7 42.85C5.81 370.55 0 379.42 0 389.31c0 9.87 5.81 18.74 14.77 22.58l225.32 96.84c5.06 2.17 10.48 3.28 15.9 3.28s10.84-1.09 15.9-3.28l225.29-96.83c9-3.85 14.81-12.72 14.81-22.59.01-9.89-5.8-18.76-14.76-22.6zM258.74 478.72c-1.81.77-3.74.77-5.48 0L45.23 389.29 156 341.68l84.1 36.15c5.06 2.17 10.48 3.28 15.9 3.28s10.84-1.09 15.9-3.28l84.12-36.16 110.78 47.62-208.06 89.43z"/>
+                        </svg>
+                        <div>Tipo de Veículo</div>
+                      </li>
+                    </a>
+                    <a class="hoverFiltros" href="">
+                      <li id="">
+                        <svg id="AddFilterIcon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                          <path fill="#eee2df" d="M504 96h-88V8c0-4.42-3.58-8-8-8h-16c-4.42 0-8 3.58-8 8v88h-88c-4.42 0-8 3.58-8 8v16c0 4.42 3.58 8 8 8h88v88c0 4.42 3.58 8 8 8h16c4.42 0 8-3.58 8-8v-88h88c4.42 0 8-3.58 8-8v-16c0-4.42-3.58-8-8-8zm-6.77 270.71l-99.72-42.87 99.72-42.87c8.35-3.6 12.19-13.23 8.58-21.52-3.65-8.29-13.32-12.13-21.74-8.48l-225.32 96.86c-1.81.77-3.74.77-5.48 0L45.23 258.4l193.45-83.16c8.35-3.59 12.19-13.23 8.58-21.52-3.65-8.28-13.26-12.13-21.74-8.48L14.81 235.81C5.81 239.66 0 248.52 0 258.4c0 9.87 5.81 18.74 14.77 22.58l99.73 42.87-99.7 42.85C5.81 370.55 0 379.42 0 389.31c0 9.87 5.81 18.74 14.77 22.58l225.32 96.84c5.06 2.17 10.48 3.28 15.9 3.28s10.84-1.09 15.9-3.28l225.29-96.83c9-3.85 14.81-12.72 14.81-22.59.01-9.89-5.8-18.76-14.76-22.6zM258.74 478.72c-1.81.77-3.74.77-5.48 0L45.23 389.29 156 341.68l84.1 36.15c5.06 2.17 10.48 3.28 15.9 3.28s10.84-1.09 15.9-3.28l84.12-36.16 110.78 47.62-208.06 89.43z"/>
+                        </svg>
+                        <div>Cargo</div>
+                      </li>
+                    </a>
+                    <a class="hoverFiltros" href="">
+                      <li id="">
+                        <svg id="AddFilterIcon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                          <path fill="#eee2df" d="M504 96h-88V8c0-4.42-3.58-8-8-8h-16c-4.42 0-8 3.58-8 8v88h-88c-4.42 0-8 3.58-8 8v16c0 4.42 3.58 8 8 8h88v88c0 4.42 3.58 8 8 8h16c4.42 0 8-3.58 8-8v-88h88c4.42 0 8-3.58 8-8v-16c0-4.42-3.58-8-8-8zm-6.77 270.71l-99.72-42.87 99.72-42.87c8.35-3.6 12.19-13.23 8.58-21.52-3.65-8.29-13.32-12.13-21.74-8.48l-225.32 96.86c-1.81.77-3.74.77-5.48 0L45.23 258.4l193.45-83.16c8.35-3.59 12.19-13.23 8.58-21.52-3.65-8.28-13.26-12.13-21.74-8.48L14.81 235.81C5.81 239.66 0 248.52 0 258.4c0 9.87 5.81 18.74 14.77 22.58l99.73 42.87-99.7 42.85C5.81 370.55 0 379.42 0 389.31c0 9.87 5.81 18.74 14.77 22.58l225.32 96.84c5.06 2.17 10.48 3.28 15.9 3.28s10.84-1.09 15.9-3.28l225.29-96.83c9-3.85 14.81-12.72 14.81-22.59.01-9.89-5.8-18.76-14.76-22.6zM258.74 478.72c-1.81.77-3.74.77-5.48 0L45.23 389.29 156 341.68l84.1 36.15c5.06 2.17 10.48 3.28 15.9 3.28s10.84-1.09 15.9-3.28l84.12-36.16 110.78 47.62-208.06 89.43z"/>
+                        </svg>
+                        <div>Periodicidade</div>
+                      </li>
+                    </a>
+                    <a class="hoverFiltros" href="">
+                      <li id="">
+                        <svg id="AddFilterIcon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                          <path fill="#eee2df" d="M504 96h-88V8c0-4.42-3.58-8-8-8h-16c-4.42 0-8 3.58-8 8v88h-88c-4.42 0-8 3.58-8 8v16c0 4.42 3.58 8 8 8h88v88c0 4.42 3.58 8 8 8h16c4.42 0 8-3.58 8-8v-88h88c4.42 0 8-3.58 8-8v-16c0-4.42-3.58-8-8-8zm-6.77 270.71l-99.72-42.87 99.72-42.87c8.35-3.6 12.19-13.23 8.58-21.52-3.65-8.29-13.32-12.13-21.74-8.48l-225.32 96.86c-1.81.77-3.74.77-5.48 0L45.23 258.4l193.45-83.16c8.35-3.59 12.19-13.23 8.58-21.52-3.65-8.28-13.26-12.13-21.74-8.48L14.81 235.81C5.81 239.66 0 248.52 0 258.4c0 9.87 5.81 18.74 14.77 22.58l99.73 42.87-99.7 42.85C5.81 370.55 0 379.42 0 389.31c0 9.87 5.81 18.74 14.77 22.58l225.32 96.84c5.06 2.17 10.48 3.28 15.9 3.28s10.84-1.09 15.9-3.28l225.29-96.83c9-3.85 14.81-12.72 14.81-22.59.01-9.89-5.8-18.76-14.76-22.6zM258.74 478.72c-1.81.77-3.74.77-5.48 0L45.23 389.29 156 341.68l84.1 36.15c5.06 2.17 10.48 3.28 15.9 3.28s10.84-1.09 15.9-3.28l84.12-36.16 110.78 47.62-208.06 89.43z"/>
+                        </svg>
+                        <div>Atividade Econômica</div>
+                      </li>
+                    <a class="hoverFiltros" href="">
+                      <li id="">
+                        <svg id="AddFilterIcon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                          <path fill="#eee2df" d="M504 96h-88V8c0-4.42-3.58-8-8-8h-16c-4.42 0-8 3.58-8 8v88h-88c-4.42 0-8 3.58-8 8v16c0 4.42 3.58 8 8 8h88v88c0 4.42 3.58 8 8 8h16c4.42 0 8-3.58 8-8v-88h88c4.42 0 8-3.58 8-8v-16c0-4.42-3.58-8-8-8zm-6.77 270.71l-99.72-42.87 99.72-42.87c8.35-3.6 12.19-13.23 8.58-21.52-3.65-8.29-13.32-12.13-21.74-8.48l-225.32 96.86c-1.81.77-3.74.77-5.48 0L45.23 258.4l193.45-83.16c8.35-3.59 12.19-13.23 8.58-21.52-3.65-8.28-13.26-12.13-21.74-8.48L14.81 235.81C5.81 239.66 0 248.52 0 258.4c0 9.87 5.81 18.74 14.77 22.58l99.73 42.87-99.7 42.85C5.81 370.55 0 379.42 0 389.31c0 9.87 5.81 18.74 14.77 22.58l225.32 96.84c5.06 2.17 10.48 3.28 15.9 3.28s10.84-1.09 15.9-3.28l225.29-96.83c9-3.85 14.81-12.72 14.81-22.59.01-9.89-5.8-18.76-14.76-22.6zM258.74 478.72c-1.81.77-3.74.77-5.48 0L45.23 389.29 156 341.68l84.1 36.15c5.06 2.17 10.48 3.28 15.9 3.28s10.84-1.09 15.9-3.28l84.12-36.16 110.78 47.62-208.06 89.43z"/>
+                        </svg>
+                        <div>Estado</div>
+                      </li>
+                    </a>
+                    <a class="hoverFiltros" href="">
+                      <li id="">
+                        <svg id="AddFilterIcon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                          <path fill="#eee2df" d="M504 96h-88V8c0-4.42-3.58-8-8-8h-16c-4.42 0-8 3.58-8 8v88h-88c-4.42 0-8 3.58-8 8v16c0 4.42 3.58 8 8 8h88v88c0 4.42 3.58 8 8 8h16c4.42 0 8-3.58 8-8v-88h88c4.42 0 8-3.58 8-8v-16c0-4.42-3.58-8-8-8zm-6.77 270.71l-99.72-42.87 99.72-42.87c8.35-3.6 12.19-13.23 8.58-21.52-3.65-8.29-13.32-12.13-21.74-8.48l-225.32 96.86c-1.81.77-3.74.77-5.48 0L45.23 258.4l193.45-83.16c8.35-3.59 12.19-13.23 8.58-21.52-3.65-8.28-13.26-12.13-21.74-8.48L14.81 235.81C5.81 239.66 0 248.52 0 258.4c0 9.87 5.81 18.74 14.77 22.58l99.73 42.87-99.7 42.85C5.81 370.55 0 379.42 0 389.31c0 9.87 5.81 18.74 14.77 22.58l225.32 96.84c5.06 2.17 10.48 3.28 15.9 3.28s10.84-1.09 15.9-3.28l225.29-96.83c9-3.85 14.81-12.72 14.81-22.59.01-9.89-5.8-18.76-14.76-22.6zM258.74 478.72c-1.81.77-3.74.77-5.48 0L45.23 389.29 156 341.68l84.1 36.15c5.06 2.17 10.48 3.28 15.9 3.28s10.84-1.09 15.9-3.28l84.12-36.16 110.78 47.62-208.06 89.43z"/>
+                        </svg>
+                        <div>Cidade</div>
+                      </li>
+                    </a>
+                    <a class="hoverFiltros" href="">
+                      <li id="">
+                        <svg id="AddFilterIcon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                          <path fill="#eee2df" d="M504 96h-88V8c0-4.42-3.58-8-8-8h-16c-4.42 0-8 3.58-8 8v88h-88c-4.42 0-8 3.58-8 8v16c0 4.42 3.58 8 8 8h88v88c0 4.42 3.58 8 8 8h16c4.42 0 8-3.58 8-8v-88h88c4.42 0 8-3.58 8-8v-16c0-4.42-3.58-8-8-8zm-6.77 270.71l-99.72-42.87 99.72-42.87c8.35-3.6 12.19-13.23 8.58-21.52-3.65-8.29-13.32-12.13-21.74-8.48l-225.32 96.86c-1.81.77-3.74.77-5.48 0L45.23 258.4l193.45-83.16c8.35-3.59 12.19-13.23 8.58-21.52-3.65-8.28-13.26-12.13-21.74-8.48L14.81 235.81C5.81 239.66 0 248.52 0 258.4c0 9.87 5.81 18.74 14.77 22.58l99.73 42.87-99.7 42.85C5.81 370.55 0 379.42 0 389.31c0 9.87 5.81 18.74 14.77 22.58l225.32 96.84c5.06 2.17 10.48 3.28 15.9 3.28s10.84-1.09 15.9-3.28l225.29-96.83c9-3.85 14.81-12.72 14.81-22.59.01-9.89-5.8-18.76-14.76-22.6zM258.74 478.72c-1.81.77-3.74.77-5.48 0L45.23 389.29 156 341.68l84.1 36.15c5.06 2.17 10.48 3.28 15.9 3.28s10.84-1.09 15.9-3.28l84.12-36.16 110.78 47.62-208.06 89.43z"/>
+                        </svg>
+                        <div>Região Geográfica</div>
+                      </li>
+                    </a>
+                    <a class="hoverFiltros" href="">
+                      <li id="">
+                        <svg id="AddFilterIcon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                          <path fill="#eee2df" d="M504 96h-88V8c0-4.42-3.58-8-8-8h-16c-4.42 0-8 3.58-8 8v88h-88c-4.42 0-8 3.58-8 8v16c0 4.42 3.58 8 8 8h88v88c0 4.42 3.58 8 8 8h16c4.42 0 8-3.58 8-8v-88h88c4.42 0 8-3.58 8-8v-16c0-4.42-3.58-8-8-8zm-6.77 270.71l-99.72-42.87 99.72-42.87c8.35-3.6 12.19-13.23 8.58-21.52-3.65-8.29-13.32-12.13-21.74-8.48l-225.32 96.86c-1.81.77-3.74.77-5.48 0L45.23 258.4l193.45-83.16c8.35-3.59 12.19-13.23 8.58-21.52-3.65-8.28-13.26-12.13-21.74-8.48L14.81 235.81C5.81 239.66 0 248.52 0 258.4c0 9.87 5.81 18.74 14.77 22.58l99.73 42.87-99.7 42.85C5.81 370.55 0 379.42 0 389.31c0 9.87 5.81 18.74 14.77 22.58l225.32 96.84c5.06 2.17 10.48 3.28 15.9 3.28s10.84-1.09 15.9-3.28l225.29-96.83c9-3.85 14.81-12.72 14.81-22.59.01-9.89-5.8-18.76-14.76-22.6zM258.74 478.72c-1.81.77-3.74.77-5.48 0L45.23 389.29 156 341.68l84.1 36.15c5.06 2.17 10.48 3.28 15.9 3.28s10.84-1.09 15.9-3.28l84.12-36.16 110.78 47.62-208.06 89.43z"/>
+                        </svg>
+                        <div>Microrregião</div>
+                      </li>
+                    </a>
+                    <a class="hoverFiltros" href="">
+                      <li id="">
+                        <svg id="AddFilterIcon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                          <path fill="#eee2df" d="M504 96h-88V8c0-4.42-3.58-8-8-8h-16c-4.42 0-8 3.58-8 8v88h-88c-4.42 0-8 3.58-8 8v16c0 4.42 3.58 8 8 8h88v88c0 4.42 3.58 8 8 8h16c4.42 0 8-3.58 8-8v-88h88c4.42 0 8-3.58 8-8v-16c0-4.42-3.58-8-8-8zm-6.77 270.71l-99.72-42.87 99.72-42.87c8.35-3.6 12.19-13.23 8.58-21.52-3.65-8.29-13.32-12.13-21.74-8.48l-225.32 96.86c-1.81.77-3.74.77-5.48 0L45.23 258.4l193.45-83.16c8.35-3.59 12.19-13.23 8.58-21.52-3.65-8.28-13.26-12.13-21.74-8.48L14.81 235.81C5.81 239.66 0 248.52 0 258.4c0 9.87 5.81 18.74 14.77 22.58l99.73 42.87-99.7 42.85C5.81 370.55 0 379.42 0 389.31c0 9.87 5.81 18.74 14.77 22.58l225.32 96.84c5.06 2.17 10.48 3.28 15.9 3.28s10.84-1.09 15.9-3.28l225.29-96.83c9-3.85 14.81-12.72 14.81-22.59.01-9.89-5.8-18.76-14.76-22.6zM258.74 478.72c-1.81.77-3.74.77-5.48 0L45.23 389.29 156 341.68l84.1 36.15c5.06 2.17 10.48 3.28 15.9 3.28s10.84-1.09 15.9-3.28l84.12-36.16 110.78 47.62-208.06 89.43z"/>
+                        </svg>
+                        <div>Região de Influência</div>
+                      </li>
+                    </a>
+                    <a class="hoverFiltros" href="">
+                      <li id="">
+                        <svg id="AddFilterIcon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                          <path fill="#eee2df" d="M504 96h-88V8c0-4.42-3.58-8-8-8h-16c-4.42 0-8 3.58-8 8v88h-88c-4.42 0-8 3.58-8 8v16c0 4.42 3.58 8 8 8h88v88c0 4.42 3.58 8 8 8h16c4.42 0 8-3.58 8-8v-88h88c4.42 0 8-3.58 8-8v-16c0-4.42-3.58-8-8-8zm-6.77 270.71l-99.72-42.87 99.72-42.87c8.35-3.6 12.19-13.23 8.58-21.52-3.65-8.29-13.32-12.13-21.74-8.48l-225.32 96.86c-1.81.77-3.74.77-5.48 0L45.23 258.4l193.45-83.16c8.35-3.59 12.19-13.23 8.58-21.52-3.65-8.28-13.26-12.13-21.74-8.48L14.81 235.81C5.81 239.66 0 248.52 0 258.4c0 9.87 5.81 18.74 14.77 22.58l99.73 42.87-99.7 42.85C5.81 370.55 0 379.42 0 389.31c0 9.87 5.81 18.74 14.77 22.58l225.32 96.84c5.06 2.17 10.48 3.28 15.9 3.28s10.84-1.09 15.9-3.28l225.29-96.83c9-3.85 14.81-12.72 14.81-22.59.01-9.89-5.8-18.76-14.76-22.6zM258.74 478.72c-1.81.77-3.74.77-5.48 0L45.23 389.29 156 341.68l84.1 36.15c5.06 2.17 10.48 3.28 15.9 3.28s10.84-1.09 15.9-3.28l84.12-36.16 110.78 47.62-208.06 89.43z"/>
+                        </svg>
+                        <div>Tamanho da População</div>
+                      </li>
+                    </a>
+                    <a class="hoverFiltros" href="">
+                      <li id="">
+                        <svg id="AddFilterIcon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                          <path fill="#eee2df" d="M504 96h-88V8c0-4.42-3.58-8-8-8h-16c-4.42 0-8 3.58-8 8v88h-88c-4.42 0-8 3.58-8 8v16c0 4.42 3.58 8 8 8h88v88c0 4.42 3.58 8 8 8h16c4.42 0 8-3.58 8-8v-88h88c4.42 0 8-3.58 8-8v-16c0-4.42-3.58-8-8-8zm-6.77 270.71l-99.72-42.87 99.72-42.87c8.35-3.6 12.19-13.23 8.58-21.52-3.65-8.29-13.32-12.13-21.74-8.48l-225.32 96.86c-1.81.77-3.74.77-5.48 0L45.23 258.4l193.45-83.16c8.35-3.59 12.19-13.23 8.58-21.52-3.65-8.28-13.26-12.13-21.74-8.48L14.81 235.81C5.81 239.66 0 248.52 0 258.4c0 9.87 5.81 18.74 14.77 22.58l99.73 42.87-99.7 42.85C5.81 370.55 0 379.42 0 389.31c0 9.87 5.81 18.74 14.77 22.58l225.32 96.84c5.06 2.17 10.48 3.28 15.9 3.28s10.84-1.09 15.9-3.28l225.29-96.83c9-3.85 14.81-12.72 14.81-22.59.01-9.89-5.8-18.76-14.76-22.6zM258.74 478.72c-1.81.77-3.74.77-5.48 0L45.23 389.29 156 341.68l84.1 36.15c5.06 2.17 10.48 3.28 15.9 3.28s10.84-1.09 15.9-3.28l84.12-36.16 110.78 47.62-208.06 89.43z"/>
+                        </svg>
+                        <div>Brandeds</div>
+                      </li>
+                    </a>
+                    <a class="hoverFiltros" href="">
+                      <li id="">
+                        <svg id="AddFilterIcon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                          <path fill="#eee2df" d="M504 96h-88V8c0-4.42-3.58-8-8-8h-16c-4.42 0-8 3.58-8 8v88h-88c-4.42 0-8 3.58-8 8v16c0 4.42 3.58 8 8 8h88v88c0 4.42 3.58 8 8 8h16c4.42 0 8-3.58 8-8v-88h88c4.42 0 8-3.58 8-8v-16c0-4.42-3.58-8-8-8zm-6.77 270.71l-99.72-42.87 99.72-42.87c8.35-3.6 12.19-13.23 8.58-21.52-3.65-8.29-13.32-12.13-21.74-8.48l-225.32 96.86c-1.81.77-3.74.77-5.48 0L45.23 258.4l193.45-83.16c8.35-3.59 12.19-13.23 8.58-21.52-3.65-8.28-13.26-12.13-21.74-8.48L14.81 235.81C5.81 239.66 0 248.52 0 258.4c0 9.87 5.81 18.74 14.77 22.58l99.73 42.87-99.7 42.85C5.81 370.55 0 379.42 0 389.31c0 9.87 5.81 18.74 14.77 22.58l225.32 96.84c5.06 2.17 10.48 3.28 15.9 3.28s10.84-1.09 15.9-3.28l225.29-96.83c9-3.85 14.81-12.72 14.81-22.59.01-9.89-5.8-18.76-14.76-22.6zM258.74 478.72c-1.81.77-3.74.77-5.48 0L45.23 389.29 156 341.68l84.1 36.15c5.06 2.17 10.48 3.28 15.9 3.28s10.84-1.09 15.9-3.28l84.12-36.16 110.78 47.62-208.06 89.43z"/>
+                        </svg>
+                        <div>Veículo</div>
+                      </li>
+                    </a>
+                    <a class="hoverFiltros" href="">
+                      <li id="">
+                        <svg id="AddFilterIcon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                          <path fill="#eee2df" d="M504 96h-88V8c0-4.42-3.58-8-8-8h-16c-4.42 0-8 3.58-8 8v88h-88c-4.42 0-8 3.58-8 8v16c0 4.42 3.58 8 8 8h88v88c0 4.42 3.58 8 8 8h16c4.42 0 8-3.58 8-8v-88h88c4.42 0 8-3.58 8-8v-16c0-4.42-3.58-8-8-8zm-6.77 270.71l-99.72-42.87 99.72-42.87c8.35-3.6 12.19-13.23 8.58-21.52-3.65-8.29-13.32-12.13-21.74-8.48l-225.32 96.86c-1.81.77-3.74.77-5.48 0L45.23 258.4l193.45-83.16c8.35-3.59 12.19-13.23 8.58-21.52-3.65-8.28-13.26-12.13-21.74-8.48L14.81 235.81C5.81 239.66 0 248.52 0 258.4c0 9.87 5.81 18.74 14.77 22.58l99.73 42.87-99.7 42.85C5.81 370.55 0 379.42 0 389.31c0 9.87 5.81 18.74 14.77 22.58l225.32 96.84c5.06 2.17 10.48 3.28 15.9 3.28s10.84-1.09 15.9-3.28l225.29-96.83c9-3.85 14.81-12.72 14.81-22.59.01-9.89-5.8-18.76-14.76-22.6zM258.74 478.72c-1.81.77-3.74.77-5.48 0L45.23 389.29 156 341.68l84.1 36.15c5.06 2.17 10.48 3.28 15.9 3.28s10.84-1.09 15.9-3.28l84.12-36.16 110.78 47.62-208.06 89.43z"/>
+                        </svg>
+                        <div>Jornalista</div>
+                      </li>
+                    </a>
+                    <a class="hoverFiltros" href="">
+                      <li id="">
+                        <svg id="AddFilterIcon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                          <path fill="#eee2df" d="M504 96h-88V8c0-4.42-3.58-8-8-8h-16c-4.42 0-8 3.58-8 8v88h-88c-4.42 0-8 3.58-8 8v16c0 4.42 3.58 8 8 8h88v88c0 4.42 3.58 8 8 8h16c4.42 0 8-3.58 8-8v-88h88c4.42 0 8-3.58 8-8v-16c0-4.42-3.58-8-8-8zm-6.77 270.71l-99.72-42.87 99.72-42.87c8.35-3.6 12.19-13.23 8.58-21.52-3.65-8.29-13.32-12.13-21.74-8.48l-225.32 96.86c-1.81.77-3.74.77-5.48 0L45.23 258.4l193.45-83.16c8.35-3.59 12.19-13.23 8.58-21.52-3.65-8.28-13.26-12.13-21.74-8.48L14.81 235.81C5.81 239.66 0 248.52 0 258.4c0 9.87 5.81 18.74 14.77 22.58l99.73 42.87-99.7 42.85C5.81 370.55 0 379.42 0 389.31c0 9.87 5.81 18.74 14.77 22.58l225.32 96.84c5.06 2.17 10.48 3.28 15.9 3.28s10.84-1.09 15.9-3.28l225.29-96.83c9-3.85 14.81-12.72 14.81-22.59.01-9.89-5.8-18.76-14.76-22.6zM258.74 478.72c-1.81.77-3.74.77-5.48 0L45.23 389.29 156 341.68l84.1 36.15c5.06 2.17 10.48 3.28 15.9 3.28s10.84-1.09 15.9-3.28l84.12-36.16 110.78 47.62-208.06 89.43z"/>
+                        </svg>
+                        <div>#TAG</div>
+                      </li>
+                    </a>
+                    <a class="hoverFiltros" href="">
+                      <li id="">
+                        <svg id="AddFilterIcon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                          <path fill="#eee2df" d="M504 96h-88V8c0-4.42-3.58-8-8-8h-16c-4.42 0-8 3.58-8 8v88h-88c-4.42 0-8 3.58-8 8v16c0 4.42 3.58 8 8 8h88v88c0 4.42 3.58 8 8 8h16c4.42 0 8-3.58 8-8v-88h88c4.42 0 8-3.58 8-8v-16c0-4.42-3.58-8-8-8zm-6.77 270.71l-99.72-42.87 99.72-42.87c8.35-3.6 12.19-13.23 8.58-21.52-3.65-8.29-13.32-12.13-21.74-8.48l-225.32 96.86c-1.81.77-3.74.77-5.48 0L45.23 258.4l193.45-83.16c8.35-3.59 12.19-13.23 8.58-21.52-3.65-8.28-13.26-12.13-21.74-8.48L14.81 235.81C5.81 239.66 0 248.52 0 258.4c0 9.87 5.81 18.74 14.77 22.58l99.73 42.87-99.7 42.85C5.81 370.55 0 379.42 0 389.31c0 9.87 5.81 18.74 14.77 22.58l225.32 96.84c5.06 2.17 10.48 3.28 15.9 3.28s10.84-1.09 15.9-3.28l225.29-96.83c9-3.85 14.81-12.72 14.81-22.59.01-9.89-5.8-18.76-14.76-22.6zM258.74 478.72c-1.81.77-3.74.77-5.48 0L45.23 389.29 156 341.68l84.1 36.15c5.06 2.17 10.48 3.28 15.9 3.28s10.84-1.09 15.9-3.28l84.12-36.16 110.78 47.62-208.06 89.43z"/>
+                        </svg>
+                        <div>Aniversário</div>
+                      </li>
+                    </a>
+                    <a class="hoverFiltros" href="">
+                      <li id="">
+                        <svg id="AddFilterIcon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                          <path fill="#eee2df" d="M504 96h-88V8c0-4.42-3.58-8-8-8h-16c-4.42 0-8 3.58-8 8v88h-88c-4.42 0-8 3.58-8 8v16c0 4.42 3.58 8 8 8h88v88c0 4.42 3.58 8 8 8h16c4.42 0 8-3.58 8-8v-88h88c4.42 0 8-3.58 8-8v-16c0-4.42-3.58-8-8-8zm-6.77 270.71l-99.72-42.87 99.72-42.87c8.35-3.6 12.19-13.23 8.58-21.52-3.65-8.29-13.32-12.13-21.74-8.48l-225.32 96.86c-1.81.77-3.74.77-5.48 0L45.23 258.4l193.45-83.16c8.35-3.59 12.19-13.23 8.58-21.52-3.65-8.28-13.26-12.13-21.74-8.48L14.81 235.81C5.81 239.66 0 248.52 0 258.4c0 9.87 5.81 18.74 14.77 22.58l99.73 42.87-99.7 42.85C5.81 370.55 0 379.42 0 389.31c0 9.87 5.81 18.74 14.77 22.58l225.32 96.84c5.06 2.17 10.48 3.28 15.9 3.28s10.84-1.09 15.9-3.28l225.29-96.83c9-3.85 14.81-12.72 14.81-22.59.01-9.89-5.8-18.76-14.76-22.6zM258.74 478.72c-1.81.77-3.74.77-5.48 0L45.23 389.29 156 341.68l84.1 36.15c5.06 2.17 10.48 3.28 15.9 3.28s10.84-1.09 15.9-3.28l84.12-36.16 110.78 47.62-208.06 89.43z"/>
+                        </svg>
+                        <div>Mailing Salvo</div>
+                      </li>
+                    </a>
+                  </ul>
+                </section>
+<!-- fim section adicionar filtro -->
+
+<!-- section excluir filtro -->
+                <section class="excludeSection">
+                  <span id="excludeTag">
+                    <div class="excludeSectionSpan">
+                    <svg id="trashIcon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
+                      <path fill="#eee2df" d="M336 64l-33.6-44.8C293.3 7.1 279.1 0 264 0h-80c-15.1 0-29.3 7.1-38.4 19.2L112 64H24C10.7 64 0 74.7 0 88v2c0 3.3 2.7 6 6 6h26v368c0 26.5 21.5 48 48 48h288c26.5 0 48-21.5 48-48V96h26c3.3 0 6-2.7 6-6v-2c0-13.3-10.7-24-24-24h-88zM184 32h80c5 0 9.8 2.4 12.8 6.4L296 64H152l19.2-25.6c3-4 7.8-6.4 12.8-6.4zm200 432c0 8.8-7.2 16-16 16H80c-8.8 0-16-7.2-16-16V96h320v368zm-176-44V156c0-6.6 5.4-12 12-12h8c6.6 0 12 5.4 12 12v264c0 6.6-5.4 12-12 12h-8c-6.6 0-12-5.4-12-12zm-80 0V156c0-6.6 5.4-12 12-12h8c6.6 0 12 5.4 12 12v264c0 6.6-5.4 12-12 12h-8c-6.6 0-12-5.4-12-12zm160 0V156c0-6.6 5.4-12 12-12h8c6.6 0 12 5.4 12 12v264c0 6.6-5.4 12-12 12h-8c-6.6 0-12-5.4-12-12z"/>
+                    </svg>
+                    <div>Excluir Filtros</div>
+                    </div>
+                  </span>
+                  <ul id="listaFiltros">
+                    <a class="hoverFiltros" href="">
+                      <li id="">
+                        <svg id="trashIcon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
+                          <path fill="#eee2df" d="M336 64l-33.6-44.8C293.3 7.1 279.1 0 264 0h-80c-15.1 0-29.3 7.1-38.4 19.2L112 64H24C10.7 64 0 74.7 0 88v2c0 3.3 2.7 6 6 6h26v368c0 26.5 21.5 48 48 48h288c26.5 0 48-21.5 48-48V96h26c3.3 0 6-2.7 6-6v-2c0-13.3-10.7-24-24-24h-88zM184 32h80c5 0 9.8 2.4 12.8 6.4L296 64H152l19.2-25.6c3-4 7.8-6.4 12.8-6.4zm200 432c0 8.8-7.2 16-16 16H80c-8.8 0-16-7.2-16-16V96h320v368zm-176-44V156c0-6.6 5.4-12 12-12h8c6.6 0 12 5.4 12 12v264c0 6.6-5.4 12-12 12h-8c-6.6 0-12-5.4-12-12zm-80 0V156c0-6.6 5.4-12 12-12h8c6.6 0 12 5.4 12 12v264c0 6.6-5.4 12-12 12h-8c-6.6 0-12-5.4-12-12zm160 0V156c0-6.6 5.4-12 12-12h8c6.6 0 12 5.4 12 12v264c0 6.6-5.4 12-12 12h-8c-6.6 0-12-5.4-12-12z"/>
+                        </svg>
+                        <div>Editoria</div>
+                      </li>
+                    </a>
+                    <a class="hoverFiltros" href="">
+                      <li id="">
+                        <svg id="trashIcon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
+                          <path fill="#eee2df" d="M336 64l-33.6-44.8C293.3 7.1 279.1 0 264 0h-80c-15.1 0-29.3 7.1-38.4 19.2L112 64H24C10.7 64 0 74.7 0 88v2c0 3.3 2.7 6 6 6h26v368c0 26.5 21.5 48 48 48h288c26.5 0 48-21.5 48-48V96h26c3.3 0 6-2.7 6-6v-2c0-13.3-10.7-24-24-24h-88zM184 32h80c5 0 9.8 2.4 12.8 6.4L296 64H152l19.2-25.6c3-4 7.8-6.4 12.8-6.4zm200 432c0 8.8-7.2 16-16 16H80c-8.8 0-16-7.2-16-16V96h320v368zm-176-44V156c0-6.6 5.4-12 12-12h8c6.6 0 12 5.4 12 12v264c0 6.6-5.4 12-12 12h-8c-6.6 0-12-5.4-12-12zm-80 0V156c0-6.6 5.4-12 12-12h8c6.6 0 12 5.4 12 12v264c0 6.6-5.4 12-12 12h-8c-6.6 0-12-5.4-12-12zm160 0V156c0-6.6 5.4-12 12-12h8c6.6 0 12 5.4 12 12v264c0 6.6-5.4 12-12 12h-8c-6.6 0-12-5.4-12-12z"/>
+                        </svg>
+                        <div>Cargo</div>
+                      </li>
+                    </a>
+                    <a class="hoverFiltros" href="">
+                      <li id="">
+                        <svg id="trashIcon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
+                          <path fill="#eee2df" d="M336 64l-33.6-44.8C293.3 7.1 279.1 0 264 0h-80c-15.1 0-29.3 7.1-38.4 19.2L112 64H24C10.7 64 0 74.7 0 88v2c0 3.3 2.7 6 6 6h26v368c0 26.5 21.5 48 48 48h288c26.5 0 48-21.5 48-48V96h26c3.3 0 6-2.7 6-6v-2c0-13.3-10.7-24-24-24h-88zM184 32h80c5 0 9.8 2.4 12.8 6.4L296 64H152l19.2-25.6c3-4 7.8-6.4 12.8-6.4zm200 432c0 8.8-7.2 16-16 16H80c-8.8 0-16-7.2-16-16V96h320v368zm-176-44V156c0-6.6 5.4-12 12-12h8c6.6 0 12 5.4 12 12v264c0 6.6-5.4 12-12 12h-8c-6.6 0-12-5.4-12-12zm-80 0V156c0-6.6 5.4-12 12-12h8c6.6 0 12 5.4 12 12v264c0 6.6-5.4 12-12 12h-8c-6.6 0-12-5.4-12-12zm160 0V156c0-6.6 5.4-12 12-12h8c6.6 0 12 5.4 12 12v264c0 6.6-5.4 12-12 12h-8c-6.6 0-12-5.4-12-12z"/>
+                        </svg>
+                        <div>Estado</div>
+                      </li>
+                    </a>
+                    <a class="hoverFiltros" href="">
+                      <li id="">
+                        <svg id="trashIcon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
+                          <path fill="#eee2df" d="M336 64l-33.6-44.8C293.3 7.1 279.1 0 264 0h-80c-15.1 0-29.3 7.1-38.4 19.2L112 64H24C10.7 64 0 74.7 0 88v2c0 3.3 2.7 6 6 6h26v368c0 26.5 21.5 48 48 48h288c26.5 0 48-21.5 48-48V96h26c3.3 0 6-2.7 6-6v-2c0-13.3-10.7-24-24-24h-88zM184 32h80c5 0 9.8 2.4 12.8 6.4L296 64H152l19.2-25.6c3-4 7.8-6.4 12.8-6.4zm200 432c0 8.8-7.2 16-16 16H80c-8.8 0-16-7.2-16-16V96h320v368zm-176-44V156c0-6.6 5.4-12 12-12h8c6.6 0 12 5.4 12 12v264c0 6.6-5.4 12-12 12h-8c-6.6 0-12-5.4-12-12zm-80 0V156c0-6.6 5.4-12 12-12h8c6.6 0 12 5.4 12 12v264c0 6.6-5.4 12-12 12h-8c-6.6 0-12-5.4-12-12zm160 0V156c0-6.6 5.4-12 12-12h8c6.6 0 12 5.4 12 12v264c0 6.6-5.4 12-12 12h-8c-6.6 0-12-5.4-12-12z"/>
+                        </svg>
+                        <div>Cidade</div>
+                      </li>
+                    </a>
+                    <a class="hoverFiltros" href="">
+                      <li id="">
+                        <svg id="trashIcon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
+                          <path fill="#eee2df" d="M336 64l-33.6-44.8C293.3 7.1 279.1 0 264 0h-80c-15.1 0-29.3 7.1-38.4 19.2L112 64H24C10.7 64 0 74.7 0 88v2c0 3.3 2.7 6 6 6h26v368c0 26.5 21.5 48 48 48h288c26.5 0 48-21.5 48-48V96h26c3.3 0 6-2.7 6-6v-2c0-13.3-10.7-24-24-24h-88zM184 32h80c5 0 9.8 2.4 12.8 6.4L296 64H152l19.2-25.6c3-4 7.8-6.4 12.8-6.4zm200 432c0 8.8-7.2 16-16 16H80c-8.8 0-16-7.2-16-16V96h320v368zm-176-44V156c0-6.6 5.4-12 12-12h8c6.6 0 12 5.4 12 12v264c0 6.6-5.4 12-12 12h-8c-6.6 0-12-5.4-12-12zm-80 0V156c0-6.6 5.4-12 12-12h8c6.6 0 12 5.4 12 12v264c0 6.6-5.4 12-12 12h-8c-6.6 0-12-5.4-12-12zm160 0V156c0-6.6 5.4-12 12-12h8c6.6 0 12 5.4 12 12v264c0 6.6-5.4 12-12 12h-8c-6.6 0-12-5.4-12-12z"/>
+                        </svg>
+                        <div>Região Geográfica</div>
+                      </li>
+                    </a>
+                    <a class="hoverFiltros" href="">
+                      <li id="">
+                        <svg id="trashIcon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
+                          <path fill="#eee2df" d="M336 64l-33.6-44.8C293.3 7.1 279.1 0 264 0h-80c-15.1 0-29.3 7.1-38.4 19.2L112 64H24C10.7 64 0 74.7 0 88v2c0 3.3 2.7 6 6 6h26v368c0 26.5 21.5 48 48 48h288c26.5 0 48-21.5 48-48V96h26c3.3 0 6-2.7 6-6v-2c0-13.3-10.7-24-24-24h-88zM184 32h80c5 0 9.8 2.4 12.8 6.4L296 64H152l19.2-25.6c3-4 7.8-6.4 12.8-6.4zm200 432c0 8.8-7.2 16-16 16H80c-8.8 0-16-7.2-16-16V96h320v368zm-176-44V156c0-6.6 5.4-12 12-12h8c6.6 0 12 5.4 12 12v264c0 6.6-5.4 12-12 12h-8c-6.6 0-12-5.4-12-12zm-80 0V156c0-6.6 5.4-12 12-12h8c6.6 0 12 5.4 12 12v264c0 6.6-5.4 12-12 12h-8c-6.6 0-12-5.4-12-12zm160 0V156c0-6.6 5.4-12 12-12h8c6.6 0 12 5.4 12 12v264c0 6.6-5.4 12-12 12h-8c-6.6 0-12-5.4-12-12z"/>
+                        </svg>
+                        <div>Tamanho da População</div>
+                      </li>
+                    </a>
+                    <a class="hoverFiltros" href="">
+                      <li id="">
+                        <svg id="trashIcon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
+                          <path fill="#eee2df" d="M336 64l-33.6-44.8C293.3 7.1 279.1 0 264 0h-80c-15.1 0-29.3 7.1-38.4 19.2L112 64H24C10.7 64 0 74.7 0 88v2c0 3.3 2.7 6 6 6h26v368c0 26.5 21.5 48 48 48h288c26.5 0 48-21.5 48-48V96h26c3.3 0 6-2.7 6-6v-2c0-13.3-10.7-24-24-24h-88zM184 32h80c5 0 9.8 2.4 12.8 6.4L296 64H152l19.2-25.6c3-4 7.8-6.4 12.8-6.4zm200 432c0 8.8-7.2 16-16 16H80c-8.8 0-16-7.2-16-16V96h320v368zm-176-44V156c0-6.6 5.4-12 12-12h8c6.6 0 12 5.4 12 12v264c0 6.6-5.4 12-12 12h-8c-6.6 0-12-5.4-12-12zm-80 0V156c0-6.6 5.4-12 12-12h8c6.6 0 12 5.4 12 12v264c0 6.6-5.4 12-12 12h-8c-6.6 0-12-5.4-12-12zm160 0V156c0-6.6 5.4-12 12-12h8c6.6 0 12 5.4 12 12v264c0 6.6-5.4 12-12 12h-8c-6.6 0-12-5.4-12-12z"/>
+                        </svg>
+                        <div>Veículo</div>
+                      </li>
+                    </a>
+                    <a class="hoverFiltros" href="">
+                      <li id="">
+                        <svg id="trashIcon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
+                          <path fill="#eee2df" d="M336 64l-33.6-44.8C293.3 7.1 279.1 0 264 0h-80c-15.1 0-29.3 7.1-38.4 19.2L112 64H24C10.7 64 0 74.7 0 88v2c0 3.3 2.7 6 6 6h26v368c0 26.5 21.5 48 48 48h288c26.5 0 48-21.5 48-48V96h26c3.3 0 6-2.7 6-6v-2c0-13.3-10.7-24-24-24h-88zM184 32h80c5 0 9.8 2.4 12.8 6.4L296 64H152l19.2-25.6c3-4 7.8-6.4 12.8-6.4zm200 432c0 8.8-7.2 16-16 16H80c-8.8 0-16-7.2-16-16V96h320v368zm-176-44V156c0-6.6 5.4-12 12-12h8c6.6 0 12 5.4 12 12v264c0 6.6-5.4 12-12 12h-8c-6.6 0-12-5.4-12-12zm-80 0V156c0-6.6 5.4-12 12-12h8c6.6 0 12 5.4 12 12v264c0 6.6-5.4 12-12 12h-8c-6.6 0-12-5.4-12-12zm160 0V156c0-6.6 5.4-12 12-12h8c6.6 0 12 5.4 12 12v264c0 6.6-5.4 12-12 12h-8c-6.6 0-12-5.4-12-12z"/>
+                        </svg>
+                        <div>Jornalista</div>
+                      </li>
+                    </a>
+                  </ul>
+                </section>
+<!-- fim section excluir filtro -->
+              </amp-accordion>
+            </section>
+            <section>
+              <span id="CategoriasPrincipaisHeaders1" class="HeaderLine1">GOV</span>
+              <amp-accordion class="nested-accordion">
+<!-- section adicionar filtro -->
+                <section expanded>
+                  <span class="AddFilterTag">
+                    <div class="AddFilter">
+                      <svg id="AddFilterIcon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                        <path fill="#eee2df" d="M504 96h-88V8c0-4.42-3.58-8-8-8h-16c-4.42 0-8 3.58-8 8v88h-88c-4.42 0-8 3.58-8 8v16c0 4.42 3.58 8 8 8h88v88c0 4.42 3.58 8 8 8h16c4.42 0 8-3.58 8-8v-88h88c4.42 0 8-3.58 8-8v-16c0-4.42-3.58-8-8-8zm-6.77 270.71l-99.72-42.87 99.72-42.87c8.35-3.6 12.19-13.23 8.58-21.52-3.65-8.29-13.32-12.13-21.74-8.48l-225.32 96.86c-1.81.77-3.74.77-5.48 0L45.23 258.4l193.45-83.16c8.35-3.59 12.19-13.23 8.58-21.52-3.65-8.28-13.26-12.13-21.74-8.48L14.81 235.81C5.81 239.66 0 248.52 0 258.4c0 9.87 5.81 18.74 14.77 22.58l99.73 42.87-99.7 42.85C5.81 370.55 0 379.42 0 389.31c0 9.87 5.81 18.74 14.77 22.58l225.32 96.84c5.06 2.17 10.48 3.28 15.9 3.28s10.84-1.09 15.9-3.28l225.29-96.83c9-3.85 14.81-12.72 14.81-22.59.01-9.89-5.8-18.76-14.76-22.6zM258.74 478.72c-1.81.77-3.74.77-5.48 0L45.23 389.29 156 341.68l84.1 36.15c5.06 2.17 10.48 3.28 15.9 3.28s10.84-1.09 15.9-3.28l84.12-36.16 110.78 47.62-208.06 89.43z"/>
+                      </svg>
+                      <div>Adicionar Filtros</div>
+                    </div>
+                </span>
+                  <ul id="listaFiltros">
+                    <a class="hoverFiltros" href="">
+                      <li id="">
+                        <svg id="AddFilterIcon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                          <path fill="#eee2df" d="M504 96h-88V8c0-4.42-3.58-8-8-8h-16c-4.42 0-8 3.58-8 8v88h-88c-4.42 0-8 3.58-8 8v16c0 4.42 3.58 8 8 8h88v88c0 4.42 3.58 8 8 8h16c4.42 0 8-3.58 8-8v-88h88c4.42 0 8-3.58 8-8v-16c0-4.42-3.58-8-8-8zm-6.77 270.71l-99.72-42.87 99.72-42.87c8.35-3.6 12.19-13.23 8.58-21.52-3.65-8.29-13.32-12.13-21.74-8.48l-225.32 96.86c-1.81.77-3.74.77-5.48 0L45.23 258.4l193.45-83.16c8.35-3.59 12.19-13.23 8.58-21.52-3.65-8.28-13.26-12.13-21.74-8.48L14.81 235.81C5.81 239.66 0 248.52 0 258.4c0 9.87 5.81 18.74 14.77 22.58l99.73 42.87-99.7 42.85C5.81 370.55 0 379.42 0 389.31c0 9.87 5.81 18.74 14.77 22.58l225.32 96.84c5.06 2.17 10.48 3.28 15.9 3.28s10.84-1.09 15.9-3.28l225.29-96.83c9-3.85 14.81-12.72 14.81-22.59.01-9.89-5.8-18.76-14.76-22.6zM258.74 478.72c-1.81.77-3.74.77-5.48 0L45.23 389.29 156 341.68l84.1 36.15c5.06 2.17 10.48 3.28 15.9 3.28s10.84-1.09 15.9-3.28l84.12-36.16 110.78 47.62-208.06 89.43z"/>
+                        </svg>
+                        <div>Poderes</div>
+                      </li>
+                    </a>
+                    <a class="hoverFiltros" href="">
+                      <li id="">
+                        <svg id="AddFilterIcon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                          <path fill="#eee2df" d="M504 96h-88V8c0-4.42-3.58-8-8-8h-16c-4.42 0-8 3.58-8 8v88h-88c-4.42 0-8 3.58-8 8v16c0 4.42 3.58 8 8 8h88v88c0 4.42 3.58 8 8 8h16c4.42 0 8-3.58 8-8v-88h88c4.42 0 8-3.58 8-8v-16c0-4.42-3.58-8-8-8zm-6.77 270.71l-99.72-42.87 99.72-42.87c8.35-3.6 12.19-13.23 8.58-21.52-3.65-8.29-13.32-12.13-21.74-8.48l-225.32 96.86c-1.81.77-3.74.77-5.48 0L45.23 258.4l193.45-83.16c8.35-3.59 12.19-13.23 8.58-21.52-3.65-8.28-13.26-12.13-21.74-8.48L14.81 235.81C5.81 239.66 0 248.52 0 258.4c0 9.87 5.81 18.74 14.77 22.58l99.73 42.87-99.7 42.85C5.81 370.55 0 379.42 0 389.31c0 9.87 5.81 18.74 14.77 22.58l225.32 96.84c5.06 2.17 10.48 3.28 15.9 3.28s10.84-1.09 15.9-3.28l225.29-96.83c9-3.85 14.81-12.72 14.81-22.59.01-9.89-5.8-18.76-14.76-22.6zM258.74 478.72c-1.81.77-3.74.77-5.48 0L45.23 389.29 156 341.68l84.1 36.15c5.06 2.17 10.48 3.28 15.9 3.28s10.84-1.09 15.9-3.28l84.12-36.16 110.78 47.62-208.06 89.43z"/>
+                        </svg>
+                        <div>Esfera</div>
+                      </li>
+                    </a>
+                    <a class="hoverFiltros" href="">
+                      <li id="">
+                        <svg id="AddFilterIcon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                          <path fill="#eee2df" d="M504 96h-88V8c0-4.42-3.58-8-8-8h-16c-4.42 0-8 3.58-8 8v88h-88c-4.42 0-8 3.58-8 8v16c0 4.42 3.58 8 8 8h88v88c0 4.42 3.58 8 8 8h16c4.42 0 8-3.58 8-8v-88h88c4.42 0 8-3.58 8-8v-16c0-4.42-3.58-8-8-8zm-6.77 270.71l-99.72-42.87 99.72-42.87c8.35-3.6 12.19-13.23 8.58-21.52-3.65-8.29-13.32-12.13-21.74-8.48l-225.32 96.86c-1.81.77-3.74.77-5.48 0L45.23 258.4l193.45-83.16c8.35-3.59 12.19-13.23 8.58-21.52-3.65-8.28-13.26-12.13-21.74-8.48L14.81 235.81C5.81 239.66 0 248.52 0 258.4c0 9.87 5.81 18.74 14.77 22.58l99.73 42.87-99.7 42.85C5.81 370.55 0 379.42 0 389.31c0 9.87 5.81 18.74 14.77 22.58l225.32 96.84c5.06 2.17 10.48 3.28 15.9 3.28s10.84-1.09 15.9-3.28l225.29-96.83c9-3.85 14.81-12.72 14.81-22.59.01-9.89-5.8-18.76-14.76-22.6zM258.74 478.72c-1.81.77-3.74.77-5.48 0L45.23 389.29 156 341.68l84.1 36.15c5.06 2.17 10.48 3.28 15.9 3.28s10.84-1.09 15.9-3.28l84.12-36.16 110.78 47.62-208.06 89.43z"/>
+                        </svg>
+                        <div>Cargo</div>
+                      </li>
+                    </a>
+                    <a class="hoverFiltros" href="">
+                      <li id="">
+                        <svg id="AddFilterIcon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                          <path fill="#eee2df" d="M504 96h-88V8c0-4.42-3.58-8-8-8h-16c-4.42 0-8 3.58-8 8v88h-88c-4.42 0-8 3.58-8 8v16c0 4.42 3.58 8 8 8h88v88c0 4.42 3.58 8 8 8h16c4.42 0 8-3.58 8-8v-88h88c4.42 0 8-3.58 8-8v-16c0-4.42-3.58-8-8-8zm-6.77 270.71l-99.72-42.87 99.72-42.87c8.35-3.6 12.19-13.23 8.58-21.52-3.65-8.29-13.32-12.13-21.74-8.48l-225.32 96.86c-1.81.77-3.74.77-5.48 0L45.23 258.4l193.45-83.16c8.35-3.59 12.19-13.23 8.58-21.52-3.65-8.28-13.26-12.13-21.74-8.48L14.81 235.81C5.81 239.66 0 248.52 0 258.4c0 9.87 5.81 18.74 14.77 22.58l99.73 42.87-99.7 42.85C5.81 370.55 0 379.42 0 389.31c0 9.87 5.81 18.74 14.77 22.58l225.32 96.84c5.06 2.17 10.48 3.28 15.9 3.28s10.84-1.09 15.9-3.28l225.29-96.83c9-3.85 14.81-12.72 14.81-22.59.01-9.89-5.8-18.76-14.76-22.6zM258.74 478.72c-1.81.77-3.74.77-5.48 0L45.23 389.29 156 341.68l84.1 36.15c5.06 2.17 10.48 3.28 15.9 3.28s10.84-1.09 15.9-3.28l84.12-36.16 110.78 47.62-208.06 89.43z"/>
+                        </svg>
+                        <div>Órgão</div>
+                      </li>
+                    </a>
+                    <a class="hoverFiltros" href="">
+                      <li id="">
+                        <svg id="AddFilterIcon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                          <path fill="#eee2df" d="M504 96h-88V8c0-4.42-3.58-8-8-8h-16c-4.42 0-8 3.58-8 8v88h-88c-4.42 0-8 3.58-8 8v16c0 4.42 3.58 8 8 8h88v88c0 4.42 3.58 8 8 8h16c4.42 0 8-3.58 8-8v-88h88c4.42 0 8-3.58 8-8v-16c0-4.42-3.58-8-8-8zm-6.77 270.71l-99.72-42.87 99.72-42.87c8.35-3.6 12.19-13.23 8.58-21.52-3.65-8.29-13.32-12.13-21.74-8.48l-225.32 96.86c-1.81.77-3.74.77-5.48 0L45.23 258.4l193.45-83.16c8.35-3.59 12.19-13.23 8.58-21.52-3.65-8.28-13.26-12.13-21.74-8.48L14.81 235.81C5.81 239.66 0 248.52 0 258.4c0 9.87 5.81 18.74 14.77 22.58l99.73 42.87-99.7 42.85C5.81 370.55 0 379.42 0 389.31c0 9.87 5.81 18.74 14.77 22.58l225.32 96.84c5.06 2.17 10.48 3.28 15.9 3.28s10.84-1.09 15.9-3.28l225.29-96.83c9-3.85 14.81-12.72 14.81-22.59.01-9.89-5.8-18.76-14.76-22.6zM258.74 478.72c-1.81.77-3.74.77-5.48 0L45.23 389.29 156 341.68l84.1 36.15c5.06 2.17 10.48 3.28 15.9 3.28s10.84-1.09 15.9-3.28l84.12-36.16 110.78 47.62-208.06 89.43z"/>
+                        </svg>
+                        <div>Depto. ou Comissão</div>
+                      </li>
+                    <a class="hoverFiltros" href="">
+                      <li id="">
+                        <svg id="AddFilterIcon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                          <path fill="#eee2df" d="M504 96h-88V8c0-4.42-3.58-8-8-8h-16c-4.42 0-8 3.58-8 8v88h-88c-4.42 0-8 3.58-8 8v16c0 4.42 3.58 8 8 8h88v88c0 4.42 3.58 8 8 8h16c4.42 0 8-3.58 8-8v-88h88c4.42 0 8-3.58 8-8v-16c0-4.42-3.58-8-8-8zm-6.77 270.71l-99.72-42.87 99.72-42.87c8.35-3.6 12.19-13.23 8.58-21.52-3.65-8.29-13.32-12.13-21.74-8.48l-225.32 96.86c-1.81.77-3.74.77-5.48 0L45.23 258.4l193.45-83.16c8.35-3.59 12.19-13.23 8.58-21.52-3.65-8.28-13.26-12.13-21.74-8.48L14.81 235.81C5.81 239.66 0 248.52 0 258.4c0 9.87 5.81 18.74 14.77 22.58l99.73 42.87-99.7 42.85C5.81 370.55 0 379.42 0 389.31c0 9.87 5.81 18.74 14.77 22.58l225.32 96.84c5.06 2.17 10.48 3.28 15.9 3.28s10.84-1.09 15.9-3.28l225.29-96.83c9-3.85 14.81-12.72 14.81-22.59.01-9.89-5.8-18.76-14.76-22.6zM258.74 478.72c-1.81.77-3.74.77-5.48 0L45.23 389.29 156 341.68l84.1 36.15c5.06 2.17 10.48 3.28 15.9 3.28s10.84-1.09 15.9-3.28l84.12-36.16 110.78 47.62-208.06 89.43z"/>
+                        </svg>
+                        <div>Estado</div>
+                      </li>
+                    </a>
+                    <a class="hoverFiltros" href="">
+                      <li id="">
+                        <svg id="AddFilterIcon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                          <path fill="#eee2df" d="M504 96h-88V8c0-4.42-3.58-8-8-8h-16c-4.42 0-8 3.58-8 8v88h-88c-4.42 0-8 3.58-8 8v16c0 4.42 3.58 8 8 8h88v88c0 4.42 3.58 8 8 8h16c4.42 0 8-3.58 8-8v-88h88c4.42 0 8-3.58 8-8v-16c0-4.42-3.58-8-8-8zm-6.77 270.71l-99.72-42.87 99.72-42.87c8.35-3.6 12.19-13.23 8.58-21.52-3.65-8.29-13.32-12.13-21.74-8.48l-225.32 96.86c-1.81.77-3.74.77-5.48 0L45.23 258.4l193.45-83.16c8.35-3.59 12.19-13.23 8.58-21.52-3.65-8.28-13.26-12.13-21.74-8.48L14.81 235.81C5.81 239.66 0 248.52 0 258.4c0 9.87 5.81 18.74 14.77 22.58l99.73 42.87-99.7 42.85C5.81 370.55 0 379.42 0 389.31c0 9.87 5.81 18.74 14.77 22.58l225.32 96.84c5.06 2.17 10.48 3.28 15.9 3.28s10.84-1.09 15.9-3.28l225.29-96.83c9-3.85 14.81-12.72 14.81-22.59.01-9.89-5.8-18.76-14.76-22.6zM258.74 478.72c-1.81.77-3.74.77-5.48 0L45.23 389.29 156 341.68l84.1 36.15c5.06 2.17 10.48 3.28 15.9 3.28s10.84-1.09 15.9-3.28l84.12-36.16 110.78 47.62-208.06 89.43z"/>
+                        </svg>
+                        <div>Cidade</div>
+                      </li>
+                    </a>
+                    <a class="hoverFiltros" href="">
+                      <li id="">
+                        <svg id="AddFilterIcon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                          <path fill="#eee2df" d="M504 96h-88V8c0-4.42-3.58-8-8-8h-16c-4.42 0-8 3.58-8 8v88h-88c-4.42 0-8 3.58-8 8v16c0 4.42 3.58 8 8 8h88v88c0 4.42 3.58 8 8 8h16c4.42 0 8-3.58 8-8v-88h88c4.42 0 8-3.58 8-8v-16c0-4.42-3.58-8-8-8zm-6.77 270.71l-99.72-42.87 99.72-42.87c8.35-3.6 12.19-13.23 8.58-21.52-3.65-8.29-13.32-12.13-21.74-8.48l-225.32 96.86c-1.81.77-3.74.77-5.48 0L45.23 258.4l193.45-83.16c8.35-3.59 12.19-13.23 8.58-21.52-3.65-8.28-13.26-12.13-21.74-8.48L14.81 235.81C5.81 239.66 0 248.52 0 258.4c0 9.87 5.81 18.74 14.77 22.58l99.73 42.87-99.7 42.85C5.81 370.55 0 379.42 0 389.31c0 9.87 5.81 18.74 14.77 22.58l225.32 96.84c5.06 2.17 10.48 3.28 15.9 3.28s10.84-1.09 15.9-3.28l225.29-96.83c9-3.85 14.81-12.72 14.81-22.59.01-9.89-5.8-18.76-14.76-22.6zM258.74 478.72c-1.81.77-3.74.77-5.48 0L45.23 389.29 156 341.68l84.1 36.15c5.06 2.17 10.48 3.28 15.9 3.28s10.84-1.09 15.9-3.28l84.12-36.16 110.78 47.62-208.06 89.43z"/>
+                        </svg>
+                        <div>Região Geográfica</div>
+                      </li>
+                    </a>
+                    <a class="hoverFiltros" href="">
+                      <li id="">
+                        <svg id="AddFilterIcon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                          <path fill="#eee2df" d="M504 96h-88V8c0-4.42-3.58-8-8-8h-16c-4.42 0-8 3.58-8 8v88h-88c-4.42 0-8 3.58-8 8v16c0 4.42 3.58 8 8 8h88v88c0 4.42 3.58 8 8 8h16c4.42 0 8-3.58 8-8v-88h88c4.42 0 8-3.58 8-8v-16c0-4.42-3.58-8-8-8zm-6.77 270.71l-99.72-42.87 99.72-42.87c8.35-3.6 12.19-13.23 8.58-21.52-3.65-8.29-13.32-12.13-21.74-8.48l-225.32 96.86c-1.81.77-3.74.77-5.48 0L45.23 258.4l193.45-83.16c8.35-3.59 12.19-13.23 8.58-21.52-3.65-8.28-13.26-12.13-21.74-8.48L14.81 235.81C5.81 239.66 0 248.52 0 258.4c0 9.87 5.81 18.74 14.77 22.58l99.73 42.87-99.7 42.85C5.81 370.55 0 379.42 0 389.31c0 9.87 5.81 18.74 14.77 22.58l225.32 96.84c5.06 2.17 10.48 3.28 15.9 3.28s10.84-1.09 15.9-3.28l225.29-96.83c9-3.85 14.81-12.72 14.81-22.59.01-9.89-5.8-18.76-14.76-22.6zM258.74 478.72c-1.81.77-3.74.77-5.48 0L45.23 389.29 156 341.68l84.1 36.15c5.06 2.17 10.48 3.28 15.9 3.28s10.84-1.09 15.9-3.28l84.12-36.16 110.78 47.62-208.06 89.43z"/>
+                        </svg>
+                        <div>Microrregião</div>
+                      </li>
+                    </a>
+                    <a class="hoverFiltros" href="">
+                      <li id="">
+                        <svg id="AddFilterIcon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                          <path fill="#eee2df" d="M504 96h-88V8c0-4.42-3.58-8-8-8h-16c-4.42 0-8 3.58-8 8v88h-88c-4.42 0-8 3.58-8 8v16c0 4.42 3.58 8 8 8h88v88c0 4.42 3.58 8 8 8h16c4.42 0 8-3.58 8-8v-88h88c4.42 0 8-3.58 8-8v-16c0-4.42-3.58-8-8-8zm-6.77 270.71l-99.72-42.87 99.72-42.87c8.35-3.6 12.19-13.23 8.58-21.52-3.65-8.29-13.32-12.13-21.74-8.48l-225.32 96.86c-1.81.77-3.74.77-5.48 0L45.23 258.4l193.45-83.16c8.35-3.59 12.19-13.23 8.58-21.52-3.65-8.28-13.26-12.13-21.74-8.48L14.81 235.81C5.81 239.66 0 248.52 0 258.4c0 9.87 5.81 18.74 14.77 22.58l99.73 42.87-99.7 42.85C5.81 370.55 0 379.42 0 389.31c0 9.87 5.81 18.74 14.77 22.58l225.32 96.84c5.06 2.17 10.48 3.28 15.9 3.28s10.84-1.09 15.9-3.28l225.29-96.83c9-3.85 14.81-12.72 14.81-22.59.01-9.89-5.8-18.76-14.76-22.6zM258.74 478.72c-1.81.77-3.74.77-5.48 0L45.23 389.29 156 341.68l84.1 36.15c5.06 2.17 10.48 3.28 15.9 3.28s10.84-1.09 15.9-3.28l84.12-36.16 110.78 47.62-208.06 89.43z"/>
+                        </svg>
+                        <div>Região de Influência</div>
+                      </li>
+                    </a>
+                    <a class="hoverFiltros" href="">
+                      <li id="">
+                        <svg id="AddFilterIcon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                          <path fill="#eee2df" d="M504 96h-88V8c0-4.42-3.58-8-8-8h-16c-4.42 0-8 3.58-8 8v88h-88c-4.42 0-8 3.58-8 8v16c0 4.42 3.58 8 8 8h88v88c0 4.42 3.58 8 8 8h16c4.42 0 8-3.58 8-8v-88h88c4.42 0 8-3.58 8-8v-16c0-4.42-3.58-8-8-8zm-6.77 270.71l-99.72-42.87 99.72-42.87c8.35-3.6 12.19-13.23 8.58-21.52-3.65-8.29-13.32-12.13-21.74-8.48l-225.32 96.86c-1.81.77-3.74.77-5.48 0L45.23 258.4l193.45-83.16c8.35-3.59 12.19-13.23 8.58-21.52-3.65-8.28-13.26-12.13-21.74-8.48L14.81 235.81C5.81 239.66 0 248.52 0 258.4c0 9.87 5.81 18.74 14.77 22.58l99.73 42.87-99.7 42.85C5.81 370.55 0 379.42 0 389.31c0 9.87 5.81 18.74 14.77 22.58l225.32 96.84c5.06 2.17 10.48 3.28 15.9 3.28s10.84-1.09 15.9-3.28l225.29-96.83c9-3.85 14.81-12.72 14.81-22.59.01-9.89-5.8-18.76-14.76-22.6zM258.74 478.72c-1.81.77-3.74.77-5.48 0L45.23 389.29 156 341.68l84.1 36.15c5.06 2.17 10.48 3.28 15.9 3.28s10.84-1.09 15.9-3.28l84.12-36.16 110.78 47.62-208.06 89.43z"/>
+                        </svg>
+                        <div>Mailing Salvo</div>
+                      </li>
+                    </a>
+                  </ul>
+                </section>
+<!-- fim section adicionar filtro -->
+              </amp-accordion>
+            </section>
+            <section>
+              <span id="CategoriasPrincipaisHeaders2" class="HeaderLine1">Latam</span>
+              <amp-accordion class="nested-accordion">
+<!-- section adicionar filtro -->
+                <section expanded>
+                  <span class="AddFilterTag">
+                    <div class="AddFilter">
+                      <svg id="AddFilterIcon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                        <path fill="#eee2df" d="M504 96h-88V8c0-4.42-3.58-8-8-8h-16c-4.42 0-8 3.58-8 8v88h-88c-4.42 0-8 3.58-8 8v16c0 4.42 3.58 8 8 8h88v88c0 4.42 3.58 8 8 8h16c4.42 0 8-3.58 8-8v-88h88c4.42 0 8-3.58 8-8v-16c0-4.42-3.58-8-8-8zm-6.77 270.71l-99.72-42.87 99.72-42.87c8.35-3.6 12.19-13.23 8.58-21.52-3.65-8.29-13.32-12.13-21.74-8.48l-225.32 96.86c-1.81.77-3.74.77-5.48 0L45.23 258.4l193.45-83.16c8.35-3.59 12.19-13.23 8.58-21.52-3.65-8.28-13.26-12.13-21.74-8.48L14.81 235.81C5.81 239.66 0 248.52 0 258.4c0 9.87 5.81 18.74 14.77 22.58l99.73 42.87-99.7 42.85C5.81 370.55 0 379.42 0 389.31c0 9.87 5.81 18.74 14.77 22.58l225.32 96.84c5.06 2.17 10.48 3.28 15.9 3.28s10.84-1.09 15.9-3.28l225.29-96.83c9-3.85 14.81-12.72 14.81-22.59.01-9.89-5.8-18.76-14.76-22.6zM258.74 478.72c-1.81.77-3.74.77-5.48 0L45.23 389.29 156 341.68l84.1 36.15c5.06 2.17 10.48 3.28 15.9 3.28s10.84-1.09 15.9-3.28l84.12-36.16 110.78 47.62-208.06 89.43z"/>
+                      </svg>
+                      <div>Adicionar Filtros</div>
+                    </div>
+                </span>
+                  <ul id="listaFiltros">
+                    <a class="hoverFiltros" href="">
+                      <li id="">
+                        <svg id="AddFilterIcon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                          <path fill="#eee2df" d="M504 96h-88V8c0-4.42-3.58-8-8-8h-16c-4.42 0-8 3.58-8 8v88h-88c-4.42 0-8 3.58-8 8v16c0 4.42 3.58 8 8 8h88v88c0 4.42 3.58 8 8 8h16c4.42 0 8-3.58 8-8v-88h88c4.42 0 8-3.58 8-8v-16c0-4.42-3.58-8-8-8zm-6.77 270.71l-99.72-42.87 99.72-42.87c8.35-3.6 12.19-13.23 8.58-21.52-3.65-8.29-13.32-12.13-21.74-8.48l-225.32 96.86c-1.81.77-3.74.77-5.48 0L45.23 258.4l193.45-83.16c8.35-3.59 12.19-13.23 8.58-21.52-3.65-8.28-13.26-12.13-21.74-8.48L14.81 235.81C5.81 239.66 0 248.52 0 258.4c0 9.87 5.81 18.74 14.77 22.58l99.73 42.87-99.7 42.85C5.81 370.55 0 379.42 0 389.31c0 9.87 5.81 18.74 14.77 22.58l225.32 96.84c5.06 2.17 10.48 3.28 15.9 3.28s10.84-1.09 15.9-3.28l225.29-96.83c9-3.85 14.81-12.72 14.81-22.59.01-9.89-5.8-18.76-14.76-22.6zM258.74 478.72c-1.81.77-3.74.77-5.48 0L45.23 389.29 156 341.68l84.1 36.15c5.06 2.17 10.48 3.28 15.9 3.28s10.84-1.09 15.9-3.28l84.12-36.16 110.78 47.62-208.06 89.43z"/>
+                        </svg>
+                        <div>Editoria</div>
+                      </li>
+                    </a>
+                    <a class="hoverFiltros" href="">
+                      <li id="">
+                        <svg id="AddFilterIcon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                          <path fill="#eee2df" d="M504 96h-88V8c0-4.42-3.58-8-8-8h-16c-4.42 0-8 3.58-8 8v88h-88c-4.42 0-8 3.58-8 8v16c0 4.42 3.58 8 8 8h88v88c0 4.42 3.58 8 8 8h16c4.42 0 8-3.58 8-8v-88h88c4.42 0 8-3.58 8-8v-16c0-4.42-3.58-8-8-8zm-6.77 270.71l-99.72-42.87 99.72-42.87c8.35-3.6 12.19-13.23 8.58-21.52-3.65-8.29-13.32-12.13-21.74-8.48l-225.32 96.86c-1.81.77-3.74.77-5.48 0L45.23 258.4l193.45-83.16c8.35-3.59 12.19-13.23 8.58-21.52-3.65-8.28-13.26-12.13-21.74-8.48L14.81 235.81C5.81 239.66 0 248.52 0 258.4c0 9.87 5.81 18.74 14.77 22.58l99.73 42.87-99.7 42.85C5.81 370.55 0 379.42 0 389.31c0 9.87 5.81 18.74 14.77 22.58l225.32 96.84c5.06 2.17 10.48 3.28 15.9 3.28s10.84-1.09 15.9-3.28l225.29-96.83c9-3.85 14.81-12.72 14.81-22.59.01-9.89-5.8-18.76-14.76-22.6zM258.74 478.72c-1.81.77-3.74.77-5.48 0L45.23 389.29 156 341.68l84.1 36.15c5.06 2.17 10.48 3.28 15.9 3.28s10.84-1.09 15.9-3.28l84.12-36.16 110.78 47.62-208.06 89.43z"/>
+                        </svg>
+                        <div>Tipo de Veículo</div>
+                      </li>
+                    </a>
+                    <a class="hoverFiltros" href="">
+                      <li id="">
+                        <svg id="AddFilterIcon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                          <path fill="#eee2df" d="M504 96h-88V8c0-4.42-3.58-8-8-8h-16c-4.42 0-8 3.58-8 8v88h-88c-4.42 0-8 3.58-8 8v16c0 4.42 3.58 8 8 8h88v88c0 4.42 3.58 8 8 8h16c4.42 0 8-3.58 8-8v-88h88c4.42 0 8-3.58 8-8v-16c0-4.42-3.58-8-8-8zm-6.77 270.71l-99.72-42.87 99.72-42.87c8.35-3.6 12.19-13.23 8.58-21.52-3.65-8.29-13.32-12.13-21.74-8.48l-225.32 96.86c-1.81.77-3.74.77-5.48 0L45.23 258.4l193.45-83.16c8.35-3.59 12.19-13.23 8.58-21.52-3.65-8.28-13.26-12.13-21.74-8.48L14.81 235.81C5.81 239.66 0 248.52 0 258.4c0 9.87 5.81 18.74 14.77 22.58l99.73 42.87-99.7 42.85C5.81 370.55 0 379.42 0 389.31c0 9.87 5.81 18.74 14.77 22.58l225.32 96.84c5.06 2.17 10.48 3.28 15.9 3.28s10.84-1.09 15.9-3.28l225.29-96.83c9-3.85 14.81-12.72 14.81-22.59.01-9.89-5.8-18.76-14.76-22.6zM258.74 478.72c-1.81.77-3.74.77-5.48 0L45.23 389.29 156 341.68l84.1 36.15c5.06 2.17 10.48 3.28 15.9 3.28s10.84-1.09 15.9-3.28l84.12-36.16 110.78 47.62-208.06 89.43z"/>
+                        </svg>
+                        <div>Cargo</div>
+                      </li>
+                    </a>
+                    <a class="hoverFiltros" href="">
+                      <li id="">
+                        <svg id="AddFilterIcon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                          <path fill="#eee2df" d="M504 96h-88V8c0-4.42-3.58-8-8-8h-16c-4.42 0-8 3.58-8 8v88h-88c-4.42 0-8 3.58-8 8v16c0 4.42 3.58 8 8 8h88v88c0 4.42 3.58 8 8 8h16c4.42 0 8-3.58 8-8v-88h88c4.42 0 8-3.58 8-8v-16c0-4.42-3.58-8-8-8zm-6.77 270.71l-99.72-42.87 99.72-42.87c8.35-3.6 12.19-13.23 8.58-21.52-3.65-8.29-13.32-12.13-21.74-8.48l-225.32 96.86c-1.81.77-3.74.77-5.48 0L45.23 258.4l193.45-83.16c8.35-3.59 12.19-13.23 8.58-21.52-3.65-8.28-13.26-12.13-21.74-8.48L14.81 235.81C5.81 239.66 0 248.52 0 258.4c0 9.87 5.81 18.74 14.77 22.58l99.73 42.87-99.7 42.85C5.81 370.55 0 379.42 0 389.31c0 9.87 5.81 18.74 14.77 22.58l225.32 96.84c5.06 2.17 10.48 3.28 15.9 3.28s10.84-1.09 15.9-3.28l225.29-96.83c9-3.85 14.81-12.72 14.81-22.59.01-9.89-5.8-18.76-14.76-22.6zM258.74 478.72c-1.81.77-3.74.77-5.48 0L45.23 389.29 156 341.68l84.1 36.15c5.06 2.17 10.48 3.28 15.9 3.28s10.84-1.09 15.9-3.28l84.12-36.16 110.78 47.62-208.06 89.43z"/>
+                        </svg>
+                        <div>Pais</div>
+                      </li>
+                    </a>
+                    <a class="hoverFiltros" href="">
+                      <li id="">
+                        <svg id="AddFilterIcon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                          <path fill="#eee2df" d="M504 96h-88V8c0-4.42-3.58-8-8-8h-16c-4.42 0-8 3.58-8 8v88h-88c-4.42 0-8 3.58-8 8v16c0 4.42 3.58 8 8 8h88v88c0 4.42 3.58 8 8 8h16c4.42 0 8-3.58 8-8v-88h88c4.42 0 8-3.58 8-8v-16c0-4.42-3.58-8-8-8zm-6.77 270.71l-99.72-42.87 99.72-42.87c8.35-3.6 12.19-13.23 8.58-21.52-3.65-8.29-13.32-12.13-21.74-8.48l-225.32 96.86c-1.81.77-3.74.77-5.48 0L45.23 258.4l193.45-83.16c8.35-3.59 12.19-13.23 8.58-21.52-3.65-8.28-13.26-12.13-21.74-8.48L14.81 235.81C5.81 239.66 0 248.52 0 258.4c0 9.87 5.81 18.74 14.77 22.58l99.73 42.87-99.7 42.85C5.81 370.55 0 379.42 0 389.31c0 9.87 5.81 18.74 14.77 22.58l225.32 96.84c5.06 2.17 10.48 3.28 15.9 3.28s10.84-1.09 15.9-3.28l225.29-96.83c9-3.85 14.81-12.72 14.81-22.59.01-9.89-5.8-18.76-14.76-22.6zM258.74 478.72c-1.81.77-3.74.77-5.48 0L45.23 389.29 156 341.68l84.1 36.15c5.06 2.17 10.48 3.28 15.9 3.28s10.84-1.09 15.9-3.28l84.12-36.16 110.78 47.62-208.06 89.43z"/>
+                        </svg>
+                        <div>Província ou Depto.</div>
+                      </li>
+                    <a class="hoverFiltros" href="">
+                      <li id="">
+                        <svg id="AddFilterIcon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                          <path fill="#eee2df" d="M504 96h-88V8c0-4.42-3.58-8-8-8h-16c-4.42 0-8 3.58-8 8v88h-88c-4.42 0-8 3.58-8 8v16c0 4.42 3.58 8 8 8h88v88c0 4.42 3.58 8 8 8h16c4.42 0 8-3.58 8-8v-88h88c4.42 0 8-3.58 8-8v-16c0-4.42-3.58-8-8-8zm-6.77 270.71l-99.72-42.87 99.72-42.87c8.35-3.6 12.19-13.23 8.58-21.52-3.65-8.29-13.32-12.13-21.74-8.48l-225.32 96.86c-1.81.77-3.74.77-5.48 0L45.23 258.4l193.45-83.16c8.35-3.59 12.19-13.23 8.58-21.52-3.65-8.28-13.26-12.13-21.74-8.48L14.81 235.81C5.81 239.66 0 248.52 0 258.4c0 9.87 5.81 18.74 14.77 22.58l99.73 42.87-99.7 42.85C5.81 370.55 0 379.42 0 389.31c0 9.87 5.81 18.74 14.77 22.58l225.32 96.84c5.06 2.17 10.48 3.28 15.9 3.28s10.84-1.09 15.9-3.28l225.29-96.83c9-3.85 14.81-12.72 14.81-22.59.01-9.89-5.8-18.76-14.76-22.6zM258.74 478.72c-1.81.77-3.74.77-5.48 0L45.23 389.29 156 341.68l84.1 36.15c5.06 2.17 10.48 3.28 15.9 3.28s10.84-1.09 15.9-3.28l84.12-36.16 110.78 47.62-208.06 89.43z"/>
+                        </svg>
+                        <div>Cidade</div>
+                      </li>
+                    </a>
+                    <a class="hoverFiltros" href="">
+                      <li id="">
+                        <svg id="AddFilterIcon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                          <path fill="#eee2df" d="M504 96h-88V8c0-4.42-3.58-8-8-8h-16c-4.42 0-8 3.58-8 8v88h-88c-4.42 0-8 3.58-8 8v16c0 4.42 3.58 8 8 8h88v88c0 4.42 3.58 8 8 8h16c4.42 0 8-3.58 8-8v-88h88c4.42 0 8-3.58 8-8v-16c0-4.42-3.58-8-8-8zm-6.77 270.71l-99.72-42.87 99.72-42.87c8.35-3.6 12.19-13.23 8.58-21.52-3.65-8.29-13.32-12.13-21.74-8.48l-225.32 96.86c-1.81.77-3.74.77-5.48 0L45.23 258.4l193.45-83.16c8.35-3.59 12.19-13.23 8.58-21.52-3.65-8.28-13.26-12.13-21.74-8.48L14.81 235.81C5.81 239.66 0 248.52 0 258.4c0 9.87 5.81 18.74 14.77 22.58l99.73 42.87-99.7 42.85C5.81 370.55 0 379.42 0 389.31c0 9.87 5.81 18.74 14.77 22.58l225.32 96.84c5.06 2.17 10.48 3.28 15.9 3.28s10.84-1.09 15.9-3.28l225.29-96.83c9-3.85 14.81-12.72 14.81-22.59.01-9.89-5.8-18.76-14.76-22.6zM258.74 478.72c-1.81.77-3.74.77-5.48 0L45.23 389.29 156 341.68l84.1 36.15c5.06 2.17 10.48 3.28 15.9 3.28s10.84-1.09 15.9-3.28l84.12-36.16 110.78 47.62-208.06 89.43z"/>
+                        </svg>
+                        <div>Veículo</div>
+                      </li>
+                    </a>
+                    <a class="hoverFiltros" href="">
+                      <li id="">
+                        <svg id="AddFilterIcon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                          <path fill="#eee2df" d="M504 96h-88V8c0-4.42-3.58-8-8-8h-16c-4.42 0-8 3.58-8 8v88h-88c-4.42 0-8 3.58-8 8v16c0 4.42 3.58 8 8 8h88v88c0 4.42 3.58 8 8 8h16c4.42 0 8-3.58 8-8v-88h88c4.42 0 8-3.58 8-8v-16c0-4.42-3.58-8-8-8zm-6.77 270.71l-99.72-42.87 99.72-42.87c8.35-3.6 12.19-13.23 8.58-21.52-3.65-8.29-13.32-12.13-21.74-8.48l-225.32 96.86c-1.81.77-3.74.77-5.48 0L45.23 258.4l193.45-83.16c8.35-3.59 12.19-13.23 8.58-21.52-3.65-8.28-13.26-12.13-21.74-8.48L14.81 235.81C5.81 239.66 0 248.52 0 258.4c0 9.87 5.81 18.74 14.77 22.58l99.73 42.87-99.7 42.85C5.81 370.55 0 379.42 0 389.31c0 9.87 5.81 18.74 14.77 22.58l225.32 96.84c5.06 2.17 10.48 3.28 15.9 3.28s10.84-1.09 15.9-3.28l225.29-96.83c9-3.85 14.81-12.72 14.81-22.59.01-9.89-5.8-18.76-14.76-22.6zM258.74 478.72c-1.81.77-3.74.77-5.48 0L45.23 389.29 156 341.68l84.1 36.15c5.06 2.17 10.48 3.28 15.9 3.28s10.84-1.09 15.9-3.28l84.12-36.16 110.78 47.62-208.06 89.43z"/>
+                        </svg>
+                        <div>Jornalista</div>
+                      </li>
+                    </a>
+                    <a class="hoverFiltros" href="">
+                      <li id="">
+                        <svg id="AddFilterIcon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                          <path fill="#eee2df" d="M504 96h-88V8c0-4.42-3.58-8-8-8h-16c-4.42 0-8 3.58-8 8v88h-88c-4.42 0-8 3.58-8 8v16c0 4.42 3.58 8 8 8h88v88c0 4.42 3.58 8 8 8h16c4.42 0 8-3.58 8-8v-88h88c4.42 0 8-3.58 8-8v-16c0-4.42-3.58-8-8-8zm-6.77 270.71l-99.72-42.87 99.72-42.87c8.35-3.6 12.19-13.23 8.58-21.52-3.65-8.29-13.32-12.13-21.74-8.48l-225.32 96.86c-1.81.77-3.74.77-5.48 0L45.23 258.4l193.45-83.16c8.35-3.59 12.19-13.23 8.58-21.52-3.65-8.28-13.26-12.13-21.74-8.48L14.81 235.81C5.81 239.66 0 248.52 0 258.4c0 9.87 5.81 18.74 14.77 22.58l99.73 42.87-99.7 42.85C5.81 370.55 0 379.42 0 389.31c0 9.87 5.81 18.74 14.77 22.58l225.32 96.84c5.06 2.17 10.48 3.28 15.9 3.28s10.84-1.09 15.9-3.28l225.29-96.83c9-3.85 14.81-12.72 14.81-22.59.01-9.89-5.8-18.76-14.76-22.6zM258.74 478.72c-1.81.77-3.74.77-5.48 0L45.23 389.29 156 341.68l84.1 36.15c5.06 2.17 10.48 3.28 15.9 3.28s10.84-1.09 15.9-3.28l84.12-36.16 110.78 47.62-208.06 89.43z"/>
+                        </svg>
+                        <div>Mailing Salvo</div>
+                      </li>
+                    </a>
+                  </ul>
+                </section>
+<!-- fim section adicionar filtro -->
+              </amp-accordion>
+            </section>
+            <section>
+              <span id="CategoriasPrincipaisHeaders3" class="HeaderLine1">Target</span>
+              <amp-accordion class="nested-accordion">
+<!-- section adicionar filtro -->
+                <section expanded>
+                  <span class="AddFilterTag">
+                    <div class="AddFilter">
+                      <svg id="AddFilterIcon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                        <path fill="#eee2df" d="M504 96h-88V8c0-4.42-3.58-8-8-8h-16c-4.42 0-8 3.58-8 8v88h-88c-4.42 0-8 3.58-8 8v16c0 4.42 3.58 8 8 8h88v88c0 4.42 3.58 8 8 8h16c4.42 0 8-3.58 8-8v-88h88c4.42 0 8-3.58 8-8v-16c0-4.42-3.58-8-8-8zm-6.77 270.71l-99.72-42.87 99.72-42.87c8.35-3.6 12.19-13.23 8.58-21.52-3.65-8.29-13.32-12.13-21.74-8.48l-225.32 96.86c-1.81.77-3.74.77-5.48 0L45.23 258.4l193.45-83.16c8.35-3.59 12.19-13.23 8.58-21.52-3.65-8.28-13.26-12.13-21.74-8.48L14.81 235.81C5.81 239.66 0 248.52 0 258.4c0 9.87 5.81 18.74 14.77 22.58l99.73 42.87-99.7 42.85C5.81 370.55 0 379.42 0 389.31c0 9.87 5.81 18.74 14.77 22.58l225.32 96.84c5.06 2.17 10.48 3.28 15.9 3.28s10.84-1.09 15.9-3.28l225.29-96.83c9-3.85 14.81-12.72 14.81-22.59.01-9.89-5.8-18.76-14.76-22.6zM258.74 478.72c-1.81.77-3.74.77-5.48 0L45.23 389.29 156 341.68l84.1 36.15c5.06 2.17 10.48 3.28 15.9 3.28s10.84-1.09 15.9-3.28l84.12-36.16 110.78 47.62-208.06 89.43z"/>
+                      </svg>
+                      <div>Adicionar Filtros</div>
+                    </div>
+                </span>
+                  <ul id="listaFiltros">
+                    <a class="hoverFiltros" href="">
+                      <li id="">
+                        <svg id="AddFilterIcon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                          <path fill="#eee2df" d="M504 96h-88V8c0-4.42-3.58-8-8-8h-16c-4.42 0-8 3.58-8 8v88h-88c-4.42 0-8 3.58-8 8v16c0 4.42 3.58 8 8 8h88v88c0 4.42 3.58 8 8 8h16c4.42 0 8-3.58 8-8v-88h88c4.42 0 8-3.58 8-8v-16c0-4.42-3.58-8-8-8zm-6.77 270.71l-99.72-42.87 99.72-42.87c8.35-3.6 12.19-13.23 8.58-21.52-3.65-8.29-13.32-12.13-21.74-8.48l-225.32 96.86c-1.81.77-3.74.77-5.48 0L45.23 258.4l193.45-83.16c8.35-3.59 12.19-13.23 8.58-21.52-3.65-8.28-13.26-12.13-21.74-8.48L14.81 235.81C5.81 239.66 0 248.52 0 258.4c0 9.87 5.81 18.74 14.77 22.58l99.73 42.87-99.7 42.85C5.81 370.55 0 379.42 0 389.31c0 9.87 5.81 18.74 14.77 22.58l225.32 96.84c5.06 2.17 10.48 3.28 15.9 3.28s10.84-1.09 15.9-3.28l225.29-96.83c9-3.85 14.81-12.72 14.81-22.59.01-9.89-5.8-18.76-14.76-22.6zM258.74 478.72c-1.81.77-3.74.77-5.48 0L45.23 389.29 156 341.68l84.1 36.15c5.06 2.17 10.48 3.28 15.9 3.28s10.84-1.09 15.9-3.28l84.12-36.16 110.78 47.62-208.06 89.43z"/>
+                        </svg>
+                        <div>Nome</div>
+                      </li>
+                    </a>
+                    <a class="hoverFiltros" href="">
+                      <li id="">
+                        <svg id="AddFilterIcon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                          <path fill="#eee2df" d="M504 96h-88V8c0-4.42-3.58-8-8-8h-16c-4.42 0-8 3.58-8 8v88h-88c-4.42 0-8 3.58-8 8v16c0 4.42 3.58 8 8 8h88v88c0 4.42 3.58 8 8 8h16c4.42 0 8-3.58 8-8v-88h88c4.42 0 8-3.58 8-8v-16c0-4.42-3.58-8-8-8zm-6.77 270.71l-99.72-42.87 99.72-42.87c8.35-3.6 12.19-13.23 8.58-21.52-3.65-8.29-13.32-12.13-21.74-8.48l-225.32 96.86c-1.81.77-3.74.77-5.48 0L45.23 258.4l193.45-83.16c8.35-3.59 12.19-13.23 8.58-21.52-3.65-8.28-13.26-12.13-21.74-8.48L14.81 235.81C5.81 239.66 0 248.52 0 258.4c0 9.87 5.81 18.74 14.77 22.58l99.73 42.87-99.7 42.85C5.81 370.55 0 379.42 0 389.31c0 9.87 5.81 18.74 14.77 22.58l225.32 96.84c5.06 2.17 10.48 3.28 15.9 3.28s10.84-1.09 15.9-3.28l225.29-96.83c9-3.85 14.81-12.72 14.81-22.59.01-9.89-5.8-18.76-14.76-22.6zM258.74 478.72c-1.81.77-3.74.77-5.48 0L45.23 389.29 156 341.68l84.1 36.15c5.06 2.17 10.48 3.28 15.9 3.28s10.84-1.09 15.9-3.28l84.12-36.16 110.78 47.62-208.06 89.43z"/>
+                        </svg>
+                        <div>Cargo</div>
+                      </li>
+                    </a>
+                    <a class="hoverFiltros" href="">
+                      <li id="">
+                        <svg id="AddFilterIcon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                          <path fill="#eee2df" d="M504 96h-88V8c0-4.42-3.58-8-8-8h-16c-4.42 0-8 3.58-8 8v88h-88c-4.42 0-8 3.58-8 8v16c0 4.42 3.58 8 8 8h88v88c0 4.42 3.58 8 8 8h16c4.42 0 8-3.58 8-8v-88h88c4.42 0 8-3.58 8-8v-16c0-4.42-3.58-8-8-8zm-6.77 270.71l-99.72-42.87 99.72-42.87c8.35-3.6 12.19-13.23 8.58-21.52-3.65-8.29-13.32-12.13-21.74-8.48l-225.32 96.86c-1.81.77-3.74.77-5.48 0L45.23 258.4l193.45-83.16c8.35-3.59 12.19-13.23 8.58-21.52-3.65-8.28-13.26-12.13-21.74-8.48L14.81 235.81C5.81 239.66 0 248.52 0 258.4c0 9.87 5.81 18.74 14.77 22.58l99.73 42.87-99.7 42.85C5.81 370.55 0 379.42 0 389.31c0 9.87 5.81 18.74 14.77 22.58l225.32 96.84c5.06 2.17 10.48 3.28 15.9 3.28s10.84-1.09 15.9-3.28l225.29-96.83c9-3.85 14.81-12.72 14.81-22.59.01-9.89-5.8-18.76-14.76-22.6zM258.74 478.72c-1.81.77-3.74.77-5.48 0L45.23 389.29 156 341.68l84.1 36.15c5.06 2.17 10.48 3.28 15.9 3.28s10.84-1.09 15.9-3.28l84.12-36.16 110.78 47.62-208.06 89.43z"/>
+                        </svg>
+                        <div>Companhia</div>
+                      </li>
+                    </a>
+                    <a class="hoverFiltros" href="">
+                      <li id="">
+                        <svg id="AddFilterIcon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                          <path fill="#eee2df" d="M504 96h-88V8c0-4.42-3.58-8-8-8h-16c-4.42 0-8 3.58-8 8v88h-88c-4.42 0-8 3.58-8 8v16c0 4.42 3.58 8 8 8h88v88c0 4.42 3.58 8 8 8h16c4.42 0 8-3.58 8-8v-88h88c4.42 0 8-3.58 8-8v-16c0-4.42-3.58-8-8-8zm-6.77 270.71l-99.72-42.87 99.72-42.87c8.35-3.6 12.19-13.23 8.58-21.52-3.65-8.29-13.32-12.13-21.74-8.48l-225.32 96.86c-1.81.77-3.74.77-5.48 0L45.23 258.4l193.45-83.16c8.35-3.59 12.19-13.23 8.58-21.52-3.65-8.28-13.26-12.13-21.74-8.48L14.81 235.81C5.81 239.66 0 248.52 0 258.4c0 9.87 5.81 18.74 14.77 22.58l99.73 42.87-99.7 42.85C5.81 370.55 0 379.42 0 389.31c0 9.87 5.81 18.74 14.77 22.58l225.32 96.84c5.06 2.17 10.48 3.28 15.9 3.28s10.84-1.09 15.9-3.28l225.29-96.83c9-3.85 14.81-12.72 14.81-22.59.01-9.89-5.8-18.76-14.76-22.6zM258.74 478.72c-1.81.77-3.74.77-5.48 0L45.23 389.29 156 341.68l84.1 36.15c5.06 2.17 10.48 3.28 15.9 3.28s10.84-1.09 15.9-3.28l84.12-36.16 110.78 47.62-208.06 89.43z"/>
+                        </svg>
+                        <div>Atividade Econômica</div>
+                      </li>
+                    <a class="hoverFiltros" href="">
+                      <li id="">
+                        <svg id="AddFilterIcon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                          <path fill="#eee2df" d="M504 96h-88V8c0-4.42-3.58-8-8-8h-16c-4.42 0-8 3.58-8 8v88h-88c-4.42 0-8 3.58-8 8v16c0 4.42 3.58 8 8 8h88v88c0 4.42 3.58 8 8 8h16c4.42 0 8-3.58 8-8v-88h88c4.42 0 8-3.58 8-8v-16c0-4.42-3.58-8-8-8zm-6.77 270.71l-99.72-42.87 99.72-42.87c8.35-3.6 12.19-13.23 8.58-21.52-3.65-8.29-13.32-12.13-21.74-8.48l-225.32 96.86c-1.81.77-3.74.77-5.48 0L45.23 258.4l193.45-83.16c8.35-3.59 12.19-13.23 8.58-21.52-3.65-8.28-13.26-12.13-21.74-8.48L14.81 235.81C5.81 239.66 0 248.52 0 258.4c0 9.87 5.81 18.74 14.77 22.58l99.73 42.87-99.7 42.85C5.81 370.55 0 379.42 0 389.31c0 9.87 5.81 18.74 14.77 22.58l225.32 96.84c5.06 2.17 10.48 3.28 15.9 3.28s10.84-1.09 15.9-3.28l225.29-96.83c9-3.85 14.81-12.72 14.81-22.59.01-9.89-5.8-18.76-14.76-22.6zM258.74 478.72c-1.81.77-3.74.77-5.48 0L45.23 389.29 156 341.68l84.1 36.15c5.06 2.17 10.48 3.28 15.9 3.28s10.84-1.09 15.9-3.28l84.12-36.16 110.78 47.62-208.06 89.43z"/>
+                        </svg>
+                        <div>#TAG</div>
+                      </li>
+                    </a>
+                    <a class="hoverFiltros" href="">
+                      <li id="">
+                        <svg id="AddFilterIcon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                          <path fill="#eee2df" d="M504 96h-88V8c0-4.42-3.58-8-8-8h-16c-4.42 0-8 3.58-8 8v88h-88c-4.42 0-8 3.58-8 8v16c0 4.42 3.58 8 8 8h88v88c0 4.42 3.58 8 8 8h16c4.42 0 8-3.58 8-8v-88h88c4.42 0 8-3.58 8-8v-16c0-4.42-3.58-8-8-8zm-6.77 270.71l-99.72-42.87 99.72-42.87c8.35-3.6 12.19-13.23 8.58-21.52-3.65-8.29-13.32-12.13-21.74-8.48l-225.32 96.86c-1.81.77-3.74.77-5.48 0L45.23 258.4l193.45-83.16c8.35-3.59 12.19-13.23 8.58-21.52-3.65-8.28-13.26-12.13-21.74-8.48L14.81 235.81C5.81 239.66 0 248.52 0 258.4c0 9.87 5.81 18.74 14.77 22.58l99.73 42.87-99.7 42.85C5.81 370.55 0 379.42 0 389.31c0 9.87 5.81 18.74 14.77 22.58l225.32 96.84c5.06 2.17 10.48 3.28 15.9 3.28s10.84-1.09 15.9-3.28l225.29-96.83c9-3.85 14.81-12.72 14.81-22.59.01-9.89-5.8-18.76-14.76-22.6zM258.74 478.72c-1.81.77-3.74.77-5.48 0L45.23 389.29 156 341.68l84.1 36.15c5.06 2.17 10.48 3.28 15.9 3.28s10.84-1.09 15.9-3.28l84.12-36.16 110.78 47.62-208.06 89.43z"/>
+                        </svg>
+                        <div>Estado</div>
+                      </li>
+                    </a>
+                    <a class="hoverFiltros" href="">
+                      <li id="">
+                        <svg id="AddFilterIcon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                          <path fill="#eee2df" d="M504 96h-88V8c0-4.42-3.58-8-8-8h-16c-4.42 0-8 3.58-8 8v88h-88c-4.42 0-8 3.58-8 8v16c0 4.42 3.58 8 8 8h88v88c0 4.42 3.58 8 8 8h16c4.42 0 8-3.58 8-8v-88h88c4.42 0 8-3.58 8-8v-16c0-4.42-3.58-8-8-8zm-6.77 270.71l-99.72-42.87 99.72-42.87c8.35-3.6 12.19-13.23 8.58-21.52-3.65-8.29-13.32-12.13-21.74-8.48l-225.32 96.86c-1.81.77-3.74.77-5.48 0L45.23 258.4l193.45-83.16c8.35-3.59 12.19-13.23 8.58-21.52-3.65-8.28-13.26-12.13-21.74-8.48L14.81 235.81C5.81 239.66 0 248.52 0 258.4c0 9.87 5.81 18.74 14.77 22.58l99.73 42.87-99.7 42.85C5.81 370.55 0 379.42 0 389.31c0 9.87 5.81 18.74 14.77 22.58l225.32 96.84c5.06 2.17 10.48 3.28 15.9 3.28s10.84-1.09 15.9-3.28l225.29-96.83c9-3.85 14.81-12.72 14.81-22.59.01-9.89-5.8-18.76-14.76-22.6zM258.74 478.72c-1.81.77-3.74.77-5.48 0L45.23 389.29 156 341.68l84.1 36.15c5.06 2.17 10.48 3.28 15.9 3.28s10.84-1.09 15.9-3.28l84.12-36.16 110.78 47.62-208.06 89.43z"/>
+                        </svg>
+                        <div>Cidade</div>
+                      </li>
+                    </a>
+                    <a class="hoverFiltros" href="">
+                      <li id="">
+                        <svg id="AddFilterIcon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                          <path fill="#eee2df" d="M504 96h-88V8c0-4.42-3.58-8-8-8h-16c-4.42 0-8 3.58-8 8v88h-88c-4.42 0-8 3.58-8 8v16c0 4.42 3.58 8 8 8h88v88c0 4.42 3.58 8 8 8h16c4.42 0 8-3.58 8-8v-88h88c4.42 0 8-3.58 8-8v-16c0-4.42-3.58-8-8-8zm-6.77 270.71l-99.72-42.87 99.72-42.87c8.35-3.6 12.19-13.23 8.58-21.52-3.65-8.29-13.32-12.13-21.74-8.48l-225.32 96.86c-1.81.77-3.74.77-5.48 0L45.23 258.4l193.45-83.16c8.35-3.59 12.19-13.23 8.58-21.52-3.65-8.28-13.26-12.13-21.74-8.48L14.81 235.81C5.81 239.66 0 248.52 0 258.4c0 9.87 5.81 18.74 14.77 22.58l99.73 42.87-99.7 42.85C5.81 370.55 0 379.42 0 389.31c0 9.87 5.81 18.74 14.77 22.58l225.32 96.84c5.06 2.17 10.48 3.28 15.9 3.28s10.84-1.09 15.9-3.28l225.29-96.83c9-3.85 14.81-12.72 14.81-22.59.01-9.89-5.8-18.76-14.76-22.6zM258.74 478.72c-1.81.77-3.74.77-5.48 0L45.23 389.29 156 341.68l84.1 36.15c5.06 2.17 10.48 3.28 15.9 3.28s10.84-1.09 15.9-3.28l84.12-36.16 110.78 47.62-208.06 89.43z"/>
+                        </svg>
+                        <div>Aniversário</div>
+                      </li>
+                    </a>
+                    <a class="hoverFiltros" href="">
+                      <li id="">
+                        <svg id="AddFilterIcon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                          <path fill="#eee2df" d="M504 96h-88V8c0-4.42-3.58-8-8-8h-16c-4.42 0-8 3.58-8 8v88h-88c-4.42 0-8 3.58-8 8v16c0 4.42 3.58 8 8 8h88v88c0 4.42 3.58 8 8 8h16c4.42 0 8-3.58 8-8v-88h88c4.42 0 8-3.58 8-8v-16c0-4.42-3.58-8-8-8zm-6.77 270.71l-99.72-42.87 99.72-42.87c8.35-3.6 12.19-13.23 8.58-21.52-3.65-8.29-13.32-12.13-21.74-8.48l-225.32 96.86c-1.81.77-3.74.77-5.48 0L45.23 258.4l193.45-83.16c8.35-3.59 12.19-13.23 8.58-21.52-3.65-8.28-13.26-12.13-21.74-8.48L14.81 235.81C5.81 239.66 0 248.52 0 258.4c0 9.87 5.81 18.74 14.77 22.58l99.73 42.87-99.7 42.85C5.81 370.55 0 379.42 0 389.31c0 9.87 5.81 18.74 14.77 22.58l225.32 96.84c5.06 2.17 10.48 3.28 15.9 3.28s10.84-1.09 15.9-3.28l225.29-96.83c9-3.85 14.81-12.72 14.81-22.59.01-9.89-5.8-18.76-14.76-22.6zM258.74 478.72c-1.81.77-3.74.77-5.48 0L45.23 389.29 156 341.68l84.1 36.15c5.06 2.17 10.48 3.28 15.9 3.28s10.84-1.09 15.9-3.28l84.12-36.16 110.78 47.62-208.06 89.43z"/>
+                        </svg>
+                        <div>Mailing Salvo</div>
+                      </li>
+                    </a>
+                  </ul>
+                </section>
+<!-- fim section adicionar filtro -->
+              </amp-accordion>
+            </section>
+            <section>
+              <span id="CategoriasPrincipaisHeaders4" class="HeaderLine1">Influencers</span>
+              <amp-accordion class="nested-accordion">
+<!-- section adicionar filtro -->
+                <section expanded>
+                  <span class="AddFilterTag">
+                    <div class="AddFilter">
+                      <svg id="AddFilterIcon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                        <path fill="#eee2df" d="M504 96h-88V8c0-4.42-3.58-8-8-8h-16c-4.42 0-8 3.58-8 8v88h-88c-4.42 0-8 3.58-8 8v16c0 4.42 3.58 8 8 8h88v88c0 4.42 3.58 8 8 8h16c4.42 0 8-3.58 8-8v-88h88c4.42 0 8-3.58 8-8v-16c0-4.42-3.58-8-8-8zm-6.77 270.71l-99.72-42.87 99.72-42.87c8.35-3.6 12.19-13.23 8.58-21.52-3.65-8.29-13.32-12.13-21.74-8.48l-225.32 96.86c-1.81.77-3.74.77-5.48 0L45.23 258.4l193.45-83.16c8.35-3.59 12.19-13.23 8.58-21.52-3.65-8.28-13.26-12.13-21.74-8.48L14.81 235.81C5.81 239.66 0 248.52 0 258.4c0 9.87 5.81 18.74 14.77 22.58l99.73 42.87-99.7 42.85C5.81 370.55 0 379.42 0 389.31c0 9.87 5.81 18.74 14.77 22.58l225.32 96.84c5.06 2.17 10.48 3.28 15.9 3.28s10.84-1.09 15.9-3.28l225.29-96.83c9-3.85 14.81-12.72 14.81-22.59.01-9.89-5.8-18.76-14.76-22.6zM258.74 478.72c-1.81.77-3.74.77-5.48 0L45.23 389.29 156 341.68l84.1 36.15c5.06 2.17 10.48 3.28 15.9 3.28s10.84-1.09 15.9-3.28l84.12-36.16 110.78 47.62-208.06 89.43z"/>
+                      </svg>
+                      <div>Adicionar Filtros</div>
+                    </div>
+                </span>
+                  <ul id="listaFiltros">
+                    <a class="hoverFiltros" href="">
+                      <li id="">
+                        <svg id="AddFilterIcon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                          <path fill="#eee2df" d="M504 96h-88V8c0-4.42-3.58-8-8-8h-16c-4.42 0-8 3.58-8 8v88h-88c-4.42 0-8 3.58-8 8v16c0 4.42 3.58 8 8 8h88v88c0 4.42 3.58 8 8 8h16c4.42 0 8-3.58 8-8v-88h88c4.42 0 8-3.58 8-8v-16c0-4.42-3.58-8-8-8zm-6.77 270.71l-99.72-42.87 99.72-42.87c8.35-3.6 12.19-13.23 8.58-21.52-3.65-8.29-13.32-12.13-21.74-8.48l-225.32 96.86c-1.81.77-3.74.77-5.48 0L45.23 258.4l193.45-83.16c8.35-3.59 12.19-13.23 8.58-21.52-3.65-8.28-13.26-12.13-21.74-8.48L14.81 235.81C5.81 239.66 0 248.52 0 258.4c0 9.87 5.81 18.74 14.77 22.58l99.73 42.87-99.7 42.85C5.81 370.55 0 379.42 0 389.31c0 9.87 5.81 18.74 14.77 22.58l225.32 96.84c5.06 2.17 10.48 3.28 15.9 3.28s10.84-1.09 15.9-3.28l225.29-96.83c9-3.85 14.81-12.72 14.81-22.59.01-9.89-5.8-18.76-14.76-22.6zM258.74 478.72c-1.81.77-3.74.77-5.48 0L45.23 389.29 156 341.68l84.1 36.15c5.06 2.17 10.48 3.28 15.9 3.28s10.84-1.09 15.9-3.28l84.12-36.16 110.78 47.62-208.06 89.43z"/>
+                        </svg>
+                        <div>Assuntos</div>
+                      </li>
+                    </a>
+                    <a class="hoverFiltros" href="">
+                      <li id="">
+                        <svg id="AddFilterIcon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                          <path fill="#eee2df" d="M504 96h-88V8c0-4.42-3.58-8-8-8h-16c-4.42 0-8 3.58-8 8v88h-88c-4.42 0-8 3.58-8 8v16c0 4.42 3.58 8 8 8h88v88c0 4.42 3.58 8 8 8h16c4.42 0 8-3.58 8-8v-88h88c4.42 0 8-3.58 8-8v-16c0-4.42-3.58-8-8-8zm-6.77 270.71l-99.72-42.87 99.72-42.87c8.35-3.6 12.19-13.23 8.58-21.52-3.65-8.29-13.32-12.13-21.74-8.48l-225.32 96.86c-1.81.77-3.74.77-5.48 0L45.23 258.4l193.45-83.16c8.35-3.59 12.19-13.23 8.58-21.52-3.65-8.28-13.26-12.13-21.74-8.48L14.81 235.81C5.81 239.66 0 248.52 0 258.4c0 9.87 5.81 18.74 14.77 22.58l99.73 42.87-99.7 42.85C5.81 370.55 0 379.42 0 389.31c0 9.87 5.81 18.74 14.77 22.58l225.32 96.84c5.06 2.17 10.48 3.28 15.9 3.28s10.84-1.09 15.9-3.28l225.29-96.83c9-3.85 14.81-12.72 14.81-22.59.01-9.89-5.8-18.76-14.76-22.6zM258.74 478.72c-1.81.77-3.74.77-5.48 0L45.23 389.29 156 341.68l84.1 36.15c5.06 2.17 10.48 3.28 15.9 3.28s10.84-1.09 15.9-3.28l84.12-36.16 110.78 47.62-208.06 89.43z"/>
+                        </svg>
+                        <div>Tipo de Rede Social</div>
+                      </li>
+                    </a>
+                    <a class="hoverFiltros" href="">
+                      <li id="">
+                        <svg id="AddFilterIcon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                          <path fill="#eee2df" d="M504 96h-88V8c0-4.42-3.58-8-8-8h-16c-4.42 0-8 3.58-8 8v88h-88c-4.42 0-8 3.58-8 8v16c0 4.42 3.58 8 8 8h88v88c0 4.42 3.58 8 8 8h16c4.42 0 8-3.58 8-8v-88h88c4.42 0 8-3.58 8-8v-16c0-4.42-3.58-8-8-8zm-6.77 270.71l-99.72-42.87 99.72-42.87c8.35-3.6 12.19-13.23 8.58-21.52-3.65-8.29-13.32-12.13-21.74-8.48l-225.32 96.86c-1.81.77-3.74.77-5.48 0L45.23 258.4l193.45-83.16c8.35-3.59 12.19-13.23 8.58-21.52-3.65-8.28-13.26-12.13-21.74-8.48L14.81 235.81C5.81 239.66 0 248.52 0 258.4c0 9.87 5.81 18.74 14.77 22.58l99.73 42.87-99.7 42.85C5.81 370.55 0 379.42 0 389.31c0 9.87 5.81 18.74 14.77 22.58l225.32 96.84c5.06 2.17 10.48 3.28 15.9 3.28s10.84-1.09 15.9-3.28l225.29-96.83c9-3.85 14.81-12.72 14.81-22.59.01-9.89-5.8-18.76-14.76-22.6zM258.74 478.72c-1.81.77-3.74.77-5.48 0L45.23 389.29 156 341.68l84.1 36.15c5.06 2.17 10.48 3.28 15.9 3.28s10.84-1.09 15.9-3.28l84.12-36.16 110.78 47.62-208.06 89.43z"/>
+                        </svg>
+                        <div>Estado</div>
+                      </li>
+                    </a>
+                    <a class="hoverFiltros" href="">
+                      <li id="">
+                        <svg id="AddFilterIcon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                          <path fill="#eee2df" d="M504 96h-88V8c0-4.42-3.58-8-8-8h-16c-4.42 0-8 3.58-8 8v88h-88c-4.42 0-8 3.58-8 8v16c0 4.42 3.58 8 8 8h88v88c0 4.42 3.58 8 8 8h16c4.42 0 8-3.58 8-8v-88h88c4.42 0 8-3.58 8-8v-16c0-4.42-3.58-8-8-8zm-6.77 270.71l-99.72-42.87 99.72-42.87c8.35-3.6 12.19-13.23 8.58-21.52-3.65-8.29-13.32-12.13-21.74-8.48l-225.32 96.86c-1.81.77-3.74.77-5.48 0L45.23 258.4l193.45-83.16c8.35-3.59 12.19-13.23 8.58-21.52-3.65-8.28-13.26-12.13-21.74-8.48L14.81 235.81C5.81 239.66 0 248.52 0 258.4c0 9.87 5.81 18.74 14.77 22.58l99.73 42.87-99.7 42.85C5.81 370.55 0 379.42 0 389.31c0 9.87 5.81 18.74 14.77 22.58l225.32 96.84c5.06 2.17 10.48 3.28 15.9 3.28s10.84-1.09 15.9-3.28l225.29-96.83c9-3.85 14.81-12.72 14.81-22.59.01-9.89-5.8-18.76-14.76-22.6zM258.74 478.72c-1.81.77-3.74.77-5.48 0L45.23 389.29 156 341.68l84.1 36.15c5.06 2.17 10.48 3.28 15.9 3.28s10.84-1.09 15.9-3.28l84.12-36.16 110.78 47.62-208.06 89.43z"/>
+                        </svg>
+                        <div>Cidade</div>
+                      </li>
+                    </a>
+                    <a class="hoverFiltros" href="">
+                      <li id="">
+                        <svg id="AddFilterIcon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                          <path fill="#eee2df" d="M504 96h-88V8c0-4.42-3.58-8-8-8h-16c-4.42 0-8 3.58-8 8v88h-88c-4.42 0-8 3.58-8 8v16c0 4.42 3.58 8 8 8h88v88c0 4.42 3.58 8 8 8h16c4.42 0 8-3.58 8-8v-88h88c4.42 0 8-3.58 8-8v-16c0-4.42-3.58-8-8-8zm-6.77 270.71l-99.72-42.87 99.72-42.87c8.35-3.6 12.19-13.23 8.58-21.52-3.65-8.29-13.32-12.13-21.74-8.48l-225.32 96.86c-1.81.77-3.74.77-5.48 0L45.23 258.4l193.45-83.16c8.35-3.59 12.19-13.23 8.58-21.52-3.65-8.28-13.26-12.13-21.74-8.48L14.81 235.81C5.81 239.66 0 248.52 0 258.4c0 9.87 5.81 18.74 14.77 22.58l99.73 42.87-99.7 42.85C5.81 370.55 0 379.42 0 389.31c0 9.87 5.81 18.74 14.77 22.58l225.32 96.84c5.06 2.17 10.48 3.28 15.9 3.28s10.84-1.09 15.9-3.28l225.29-96.83c9-3.85 14.81-12.72 14.81-22.59.01-9.89-5.8-18.76-14.76-22.6zM258.74 478.72c-1.81.77-3.74.77-5.48 0L45.23 389.29 156 341.68l84.1 36.15c5.06 2.17 10.48 3.28 15.9 3.28s10.84-1.09 15.9-3.28l84.12-36.16 110.78 47.62-208.06 89.43z"/>
+                        </svg>
+                        <div>Região de Audiência</div>
+                      </li>
+                    <a class="hoverFiltros" href="">
+                      <li id="">
+                        <svg id="AddFilterIcon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                          <path fill="#eee2df" d="M504 96h-88V8c0-4.42-3.58-8-8-8h-16c-4.42 0-8 3.58-8 8v88h-88c-4.42 0-8 3.58-8 8v16c0 4.42 3.58 8 8 8h88v88c0 4.42 3.58 8 8 8h16c4.42 0 8-3.58 8-8v-88h88c4.42 0 8-3.58 8-8v-16c0-4.42-3.58-8-8-8zm-6.77 270.71l-99.72-42.87 99.72-42.87c8.35-3.6 12.19-13.23 8.58-21.52-3.65-8.29-13.32-12.13-21.74-8.48l-225.32 96.86c-1.81.77-3.74.77-5.48 0L45.23 258.4l193.45-83.16c8.35-3.59 12.19-13.23 8.58-21.52-3.65-8.28-13.26-12.13-21.74-8.48L14.81 235.81C5.81 239.66 0 248.52 0 258.4c0 9.87 5.81 18.74 14.77 22.58l99.73 42.87-99.7 42.85C5.81 370.55 0 379.42 0 389.31c0 9.87 5.81 18.74 14.77 22.58l225.32 96.84c5.06 2.17 10.48 3.28 15.9 3.28s10.84-1.09 15.9-3.28l225.29-96.83c9-3.85 14.81-12.72 14.81-22.59.01-9.89-5.8-18.76-14.76-22.6zM258.74 478.72c-1.81.77-3.74.77-5.48 0L45.23 389.29 156 341.68l84.1 36.15c5.06 2.17 10.48 3.28 15.9 3.28s10.84-1.09 15.9-3.28l84.12-36.16 110.78 47.62-208.06 89.43z"/>
+                        </svg>
+                        <div>Audiência</div>
+                      </li>
+                    </a>
+                    <a class="hoverFiltros" href="">
+                      <li id="">
+                        <svg id="AddFilterIcon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                          <path fill="#eee2df" d="M504 96h-88V8c0-4.42-3.58-8-8-8h-16c-4.42 0-8 3.58-8 8v88h-88c-4.42 0-8 3.58-8 8v16c0 4.42 3.58 8 8 8h88v88c0 4.42 3.58 8 8 8h16c4.42 0 8-3.58 8-8v-88h88c4.42 0 8-3.58 8-8v-16c0-4.42-3.58-8-8-8zm-6.77 270.71l-99.72-42.87 99.72-42.87c8.35-3.6 12.19-13.23 8.58-21.52-3.65-8.29-13.32-12.13-21.74-8.48l-225.32 96.86c-1.81.77-3.74.77-5.48 0L45.23 258.4l193.45-83.16c8.35-3.59 12.19-13.23 8.58-21.52-3.65-8.28-13.26-12.13-21.74-8.48L14.81 235.81C5.81 239.66 0 248.52 0 258.4c0 9.87 5.81 18.74 14.77 22.58l99.73 42.87-99.7 42.85C5.81 370.55 0 379.42 0 389.31c0 9.87 5.81 18.74 14.77 22.58l225.32 96.84c5.06 2.17 10.48 3.28 15.9 3.28s10.84-1.09 15.9-3.28l225.29-96.83c9-3.85 14.81-12.72 14.81-22.59.01-9.89-5.8-18.76-14.76-22.6zM258.74 478.72c-1.81.77-3.74.77-5.48 0L45.23 389.29 156 341.68l84.1 36.15c5.06 2.17 10.48 3.28 15.9 3.28s10.84-1.09 15.9-3.28l84.12-36.16 110.78 47.62-208.06 89.43z"/>
+                        </svg>
+                        <div>Midia Kit</div>
+                      </li>
+                    </a>
+                    <a class="hoverFiltros" href="">
+                      <li id="">
+                        <svg id="AddFilterIcon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                          <path fill="#eee2df" d="M504 96h-88V8c0-4.42-3.58-8-8-8h-16c-4.42 0-8 3.58-8 8v88h-88c-4.42 0-8 3.58-8 8v16c0 4.42 3.58 8 8 8h88v88c0 4.42 3.58 8 8 8h16c4.42 0 8-3.58 8-8v-88h88c4.42 0 8-3.58 8-8v-16c0-4.42-3.58-8-8-8zm-6.77 270.71l-99.72-42.87 99.72-42.87c8.35-3.6 12.19-13.23 8.58-21.52-3.65-8.29-13.32-12.13-21.74-8.48l-225.32 96.86c-1.81.77-3.74.77-5.48 0L45.23 258.4l193.45-83.16c8.35-3.59 12.19-13.23 8.58-21.52-3.65-8.28-13.26-12.13-21.74-8.48L14.81 235.81C5.81 239.66 0 248.52 0 258.4c0 9.87 5.81 18.74 14.77 22.58l99.73 42.87-99.7 42.85C5.81 370.55 0 379.42 0 389.31c0 9.87 5.81 18.74 14.77 22.58l225.32 96.84c5.06 2.17 10.48 3.28 15.9 3.28s10.84-1.09 15.9-3.28l225.29-96.83c9-3.85 14.81-12.72 14.81-22.59.01-9.89-5.8-18.76-14.76-22.6zM258.74 478.72c-1.81.77-3.74.77-5.48 0L45.23 389.29 156 341.68l84.1 36.15c5.06 2.17 10.48 3.28 15.9 3.28s10.84-1.09 15.9-3.28l84.12-36.16 110.78 47.62-208.06 89.43z"/>
+                        </svg>
+                        <div>Palavras-chave</div>
+                      </li>
+                    </a>
+                    <a class="hoverFiltros" href="">
+                      <li id="">
+                        <svg id="AddFilterIcon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                          <path fill="#eee2df" d="M504 96h-88V8c0-4.42-3.58-8-8-8h-16c-4.42 0-8 3.58-8 8v88h-88c-4.42 0-8 3.58-8 8v16c0 4.42 3.58 8 8 8h88v88c0 4.42 3.58 8 8 8h16c4.42 0 8-3.58 8-8v-88h88c4.42 0 8-3.58 8-8v-16c0-4.42-3.58-8-8-8zm-6.77 270.71l-99.72-42.87 99.72-42.87c8.35-3.6 12.19-13.23 8.58-21.52-3.65-8.29-13.32-12.13-21.74-8.48l-225.32 96.86c-1.81.77-3.74.77-5.48 0L45.23 258.4l193.45-83.16c8.35-3.59 12.19-13.23 8.58-21.52-3.65-8.28-13.26-12.13-21.74-8.48L14.81 235.81C5.81 239.66 0 248.52 0 258.4c0 9.87 5.81 18.74 14.77 22.58l99.73 42.87-99.7 42.85C5.81 370.55 0 379.42 0 389.31c0 9.87 5.81 18.74 14.77 22.58l225.32 96.84c5.06 2.17 10.48 3.28 15.9 3.28s10.84-1.09 15.9-3.28l225.29-96.83c9-3.85 14.81-12.72 14.81-22.59.01-9.89-5.8-18.76-14.76-22.6zM258.74 478.72c-1.81.77-3.74.77-5.48 0L45.23 389.29 156 341.68l84.1 36.15c5.06 2.17 10.48 3.28 15.9 3.28s10.84-1.09 15.9-3.28l84.12-36.16 110.78 47.62-208.06 89.43z"/>
+                        </svg>
+                        <div>Trending</div>
+                      </li>
+                    </a>
+                    <a class="hoverFiltros" href="">
+                      <li id="">
+                        <svg id="AddFilterIcon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                          <path fill="#eee2df" d="M504 96h-88V8c0-4.42-3.58-8-8-8h-16c-4.42 0-8 3.58-8 8v88h-88c-4.42 0-8 3.58-8 8v16c0 4.42 3.58 8 8 8h88v88c0 4.42 3.58 8 8 8h16c4.42 0 8-3.58 8-8v-88h88c4.42 0 8-3.58 8-8v-16c0-4.42-3.58-8-8-8zm-6.77 270.71l-99.72-42.87 99.72-42.87c8.35-3.6 12.19-13.23 8.58-21.52-3.65-8.29-13.32-12.13-21.74-8.48l-225.32 96.86c-1.81.77-3.74.77-5.48 0L45.23 258.4l193.45-83.16c8.35-3.59 12.19-13.23 8.58-21.52-3.65-8.28-13.26-12.13-21.74-8.48L14.81 235.81C5.81 239.66 0 248.52 0 258.4c0 9.87 5.81 18.74 14.77 22.58l99.73 42.87-99.7 42.85C5.81 370.55 0 379.42 0 389.31c0 9.87 5.81 18.74 14.77 22.58l225.32 96.84c5.06 2.17 10.48 3.28 15.9 3.28s10.84-1.09 15.9-3.28l225.29-96.83c9-3.85 14.81-12.72 14.81-22.59.01-9.89-5.8-18.76-14.76-22.6zM258.74 478.72c-1.81.77-3.74.77-5.48 0L45.23 389.29 156 341.68l84.1 36.15c5.06 2.17 10.48 3.28 15.9 3.28s10.84-1.09 15.9-3.28l84.12-36.16 110.78 47.62-208.06 89.43z"/>
+                        </svg>
+                        <div>Mailing Salvo</div>
+                      </li>
+                    </a>
+                  </ul>
+                </section>
+<!-- fim section adicionar filtro -->
+              </amp-accordion>
+            </section>
+            <section>
+              <span id="CategoriasPrincipaisHeaders5" class="HeaderLine1">Correspondente Internacional</span>
+              <amp-accordion class="nested-accordion">
+<!-- section adicionar filtro -->
+                <section expanded>
+                  <span class="AddFilterTag">
+                    <div class="AddFilter">
+                      <svg id="AddFilterIcon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                        <path fill="#eee2df" d="M504 96h-88V8c0-4.42-3.58-8-8-8h-16c-4.42 0-8 3.58-8 8v88h-88c-4.42 0-8 3.58-8 8v16c0 4.42 3.58 8 8 8h88v88c0 4.42 3.58 8 8 8h16c4.42 0 8-3.58 8-8v-88h88c4.42 0 8-3.58 8-8v-16c0-4.42-3.58-8-8-8zm-6.77 270.71l-99.72-42.87 99.72-42.87c8.35-3.6 12.19-13.23 8.58-21.52-3.65-8.29-13.32-12.13-21.74-8.48l-225.32 96.86c-1.81.77-3.74.77-5.48 0L45.23 258.4l193.45-83.16c8.35-3.59 12.19-13.23 8.58-21.52-3.65-8.28-13.26-12.13-21.74-8.48L14.81 235.81C5.81 239.66 0 248.52 0 258.4c0 9.87 5.81 18.74 14.77 22.58l99.73 42.87-99.7 42.85C5.81 370.55 0 379.42 0 389.31c0 9.87 5.81 18.74 14.77 22.58l225.32 96.84c5.06 2.17 10.48 3.28 15.9 3.28s10.84-1.09 15.9-3.28l225.29-96.83c9-3.85 14.81-12.72 14.81-22.59.01-9.89-5.8-18.76-14.76-22.6zM258.74 478.72c-1.81.77-3.74.77-5.48 0L45.23 389.29 156 341.68l84.1 36.15c5.06 2.17 10.48 3.28 15.9 3.28s10.84-1.09 15.9-3.28l84.12-36.16 110.78 47.62-208.06 89.43z"/>
+                      </svg>
+                      <div>Adicionar Filtros</div>
+                    </div>
+                </span>
+                  <ul id="listaFiltros">
+                    <a class="hoverFiltros" href="">
+                      <li id="">
+                        <svg id="AddFilterIcon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                          <path fill="#eee2df" d="M504 96h-88V8c0-4.42-3.58-8-8-8h-16c-4.42 0-8 3.58-8 8v88h-88c-4.42 0-8 3.58-8 8v16c0 4.42 3.58 8 8 8h88v88c0 4.42 3.58 8 8 8h16c4.42 0 8-3.58 8-8v-88h88c4.42 0 8-3.58 8-8v-16c0-4.42-3.58-8-8-8zm-6.77 270.71l-99.72-42.87 99.72-42.87c8.35-3.6 12.19-13.23 8.58-21.52-3.65-8.29-13.32-12.13-21.74-8.48l-225.32 96.86c-1.81.77-3.74.77-5.48 0L45.23 258.4l193.45-83.16c8.35-3.59 12.19-13.23 8.58-21.52-3.65-8.28-13.26-12.13-21.74-8.48L14.81 235.81C5.81 239.66 0 248.52 0 258.4c0 9.87 5.81 18.74 14.77 22.58l99.73 42.87-99.7 42.85C5.81 370.55 0 379.42 0 389.31c0 9.87 5.81 18.74 14.77 22.58l225.32 96.84c5.06 2.17 10.48 3.28 15.9 3.28s10.84-1.09 15.9-3.28l225.29-96.83c9-3.85 14.81-12.72 14.81-22.59.01-9.89-5.8-18.76-14.76-22.6zM258.74 478.72c-1.81.77-3.74.77-5.48 0L45.23 389.29 156 341.68l84.1 36.15c5.06 2.17 10.48 3.28 15.9 3.28s10.84-1.09 15.9-3.28l84.12-36.16 110.78 47.62-208.06 89.43z"/>
+                        </svg>
+                        <div>Pais de Origem</div>
+                      </li>
+                    </a>
+                    <a class="hoverFiltros" href="">
+                      <li id="">
+                        <svg id="AddFilterIcon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                          <path fill="#eee2df" d="M504 96h-88V8c0-4.42-3.58-8-8-8h-16c-4.42 0-8 3.58-8 8v88h-88c-4.42 0-8 3.58-8 8v16c0 4.42 3.58 8 8 8h88v88c0 4.42 3.58 8 8 8h16c4.42 0 8-3.58 8-8v-88h88c4.42 0 8-3.58 8-8v-16c0-4.42-3.58-8-8-8zm-6.77 270.71l-99.72-42.87 99.72-42.87c8.35-3.6 12.19-13.23 8.58-21.52-3.65-8.29-13.32-12.13-21.74-8.48l-225.32 96.86c-1.81.77-3.74.77-5.48 0L45.23 258.4l193.45-83.16c8.35-3.59 12.19-13.23 8.58-21.52-3.65-8.28-13.26-12.13-21.74-8.48L14.81 235.81C5.81 239.66 0 248.52 0 258.4c0 9.87 5.81 18.74 14.77 22.58l99.73 42.87-99.7 42.85C5.81 370.55 0 379.42 0 389.31c0 9.87 5.81 18.74 14.77 22.58l225.32 96.84c5.06 2.17 10.48 3.28 15.9 3.28s10.84-1.09 15.9-3.28l225.29-96.83c9-3.85 14.81-12.72 14.81-22.59.01-9.89-5.8-18.76-14.76-22.6zM258.74 478.72c-1.81.77-3.74.77-5.48 0L45.23 389.29 156 341.68l84.1 36.15c5.06 2.17 10.48 3.28 15.9 3.28s10.84-1.09 15.9-3.28l84.12-36.16 110.78 47.62-208.06 89.43z"/>
+                        </svg>
+                        <div>Pais de Destino</div>
+                      </li>
+                    </a>
+                    <a class="hoverFiltros" href="">
+                      <li id="">
+                        <svg id="AddFilterIcon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                          <path fill="#eee2df" d="M504 96h-88V8c0-4.42-3.58-8-8-8h-16c-4.42 0-8 3.58-8 8v88h-88c-4.42 0-8 3.58-8 8v16c0 4.42 3.58 8 8 8h88v88c0 4.42 3.58 8 8 8h16c4.42 0 8-3.58 8-8v-88h88c4.42 0 8-3.58 8-8v-16c0-4.42-3.58-8-8-8zm-6.77 270.71l-99.72-42.87 99.72-42.87c8.35-3.6 12.19-13.23 8.58-21.52-3.65-8.29-13.32-12.13-21.74-8.48l-225.32 96.86c-1.81.77-3.74.77-5.48 0L45.23 258.4l193.45-83.16c8.35-3.59 12.19-13.23 8.58-21.52-3.65-8.28-13.26-12.13-21.74-8.48L14.81 235.81C5.81 239.66 0 248.52 0 258.4c0 9.87 5.81 18.74 14.77 22.58l99.73 42.87-99.7 42.85C5.81 370.55 0 379.42 0 389.31c0 9.87 5.81 18.74 14.77 22.58l225.32 96.84c5.06 2.17 10.48 3.28 15.9 3.28s10.84-1.09 15.9-3.28l225.29-96.83c9-3.85 14.81-12.72 14.81-22.59.01-9.89-5.8-18.76-14.76-22.6zM258.74 478.72c-1.81.77-3.74.77-5.48 0L45.23 389.29 156 341.68l84.1 36.15c5.06 2.17 10.48 3.28 15.9 3.28s10.84-1.09 15.9-3.28l84.12-36.16 110.78 47.62-208.06 89.43z"/>
+                        </svg>
+                        <div>Cidade de Destino</div>
+                      </li>
+                    </a>
+                    <a class="hoverFiltros" href="">
+                      <li id="">
+                        <svg id="AddFilterIcon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                          <path fill="#eee2df" d="M504 96h-88V8c0-4.42-3.58-8-8-8h-16c-4.42 0-8 3.58-8 8v88h-88c-4.42 0-8 3.58-8 8v16c0 4.42 3.58 8 8 8h88v88c0 4.42 3.58 8 8 8h16c4.42 0 8-3.58 8-8v-88h88c4.42 0 8-3.58 8-8v-16c0-4.42-3.58-8-8-8zm-6.77 270.71l-99.72-42.87 99.72-42.87c8.35-3.6 12.19-13.23 8.58-21.52-3.65-8.29-13.32-12.13-21.74-8.48l-225.32 96.86c-1.81.77-3.74.77-5.48 0L45.23 258.4l193.45-83.16c8.35-3.59 12.19-13.23 8.58-21.52-3.65-8.28-13.26-12.13-21.74-8.48L14.81 235.81C5.81 239.66 0 248.52 0 258.4c0 9.87 5.81 18.74 14.77 22.58l99.73 42.87-99.7 42.85C5.81 370.55 0 379.42 0 389.31c0 9.87 5.81 18.74 14.77 22.58l225.32 96.84c5.06 2.17 10.48 3.28 15.9 3.28s10.84-1.09 15.9-3.28l225.29-96.83c9-3.85 14.81-12.72 14.81-22.59.01-9.89-5.8-18.76-14.76-22.6zM258.74 478.72c-1.81.77-3.74.77-5.48 0L45.23 389.29 156 341.68l84.1 36.15c5.06 2.17 10.48 3.28 15.9 3.28s10.84-1.09 15.9-3.28l84.12-36.16 110.78 47.62-208.06 89.43z"/>
+                        </svg>
+                        <div>Tipo de Veículo</div>
+                      </li>
+                    </a>
+                    <a class="hoverFiltros" href="">
+                      <li id="">
+                        <svg id="AddFilterIcon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                          <path fill="#eee2df" d="M504 96h-88V8c0-4.42-3.58-8-8-8h-16c-4.42 0-8 3.58-8 8v88h-88c-4.42 0-8 3.58-8 8v16c0 4.42 3.58 8 8 8h88v88c0 4.42 3.58 8 8 8h16c4.42 0 8-3.58 8-8v-88h88c4.42 0 8-3.58 8-8v-16c0-4.42-3.58-8-8-8zm-6.77 270.71l-99.72-42.87 99.72-42.87c8.35-3.6 12.19-13.23 8.58-21.52-3.65-8.29-13.32-12.13-21.74-8.48l-225.32 96.86c-1.81.77-3.74.77-5.48 0L45.23 258.4l193.45-83.16c8.35-3.59 12.19-13.23 8.58-21.52-3.65-8.28-13.26-12.13-21.74-8.48L14.81 235.81C5.81 239.66 0 248.52 0 258.4c0 9.87 5.81 18.74 14.77 22.58l99.73 42.87-99.7 42.85C5.81 370.55 0 379.42 0 389.31c0 9.87 5.81 18.74 14.77 22.58l225.32 96.84c5.06 2.17 10.48 3.28 15.9 3.28s10.84-1.09 15.9-3.28l225.29-96.83c9-3.85 14.81-12.72 14.81-22.59.01-9.89-5.8-18.76-14.76-22.6zM258.74 478.72c-1.81.77-3.74.77-5.48 0L45.23 389.29 156 341.68l84.1 36.15c5.06 2.17 10.48 3.28 15.9 3.28s10.84-1.09 15.9-3.28l84.12-36.16 110.78 47.62-208.06 89.43z"/>
+                        </svg>
+                        <div>Veículo</div>
+                      </li>
+                    <a class="hoverFiltros" href="">
+                      <li id="">
+                        <svg id="AddFilterIcon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                          <path fill="#eee2df" d="M504 96h-88V8c0-4.42-3.58-8-8-8h-16c-4.42 0-8 3.58-8 8v88h-88c-4.42 0-8 3.58-8 8v16c0 4.42 3.58 8 8 8h88v88c0 4.42 3.58 8 8 8h16c4.42 0 8-3.58 8-8v-88h88c4.42 0 8-3.58 8-8v-16c0-4.42-3.58-8-8-8zm-6.77 270.71l-99.72-42.87 99.72-42.87c8.35-3.6 12.19-13.23 8.58-21.52-3.65-8.29-13.32-12.13-21.74-8.48l-225.32 96.86c-1.81.77-3.74.77-5.48 0L45.23 258.4l193.45-83.16c8.35-3.59 12.19-13.23 8.58-21.52-3.65-8.28-13.26-12.13-21.74-8.48L14.81 235.81C5.81 239.66 0 248.52 0 258.4c0 9.87 5.81 18.74 14.77 22.58l99.73 42.87-99.7 42.85C5.81 370.55 0 379.42 0 389.31c0 9.87 5.81 18.74 14.77 22.58l225.32 96.84c5.06 2.17 10.48 3.28 15.9 3.28s10.84-1.09 15.9-3.28l225.29-96.83c9-3.85 14.81-12.72 14.81-22.59.01-9.89-5.8-18.76-14.76-22.6zM258.74 478.72c-1.81.77-3.74.77-5.48 0L45.23 389.29 156 341.68l84.1 36.15c5.06 2.17 10.48 3.28 15.9 3.28s10.84-1.09 15.9-3.28l84.12-36.16 110.78 47.62-208.06 89.43z"/>
+                        </svg>
+                        <div>Jornalista</div>
+                      </li>
+                    </a>
+                    <a class="hoverFiltros" href="">
+                      <li id="">
+                        <svg id="AddFilterIcon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                          <path fill="#eee2df" d="M504 96h-88V8c0-4.42-3.58-8-8-8h-16c-4.42 0-8 3.58-8 8v88h-88c-4.42 0-8 3.58-8 8v16c0 4.42 3.58 8 8 8h88v88c0 4.42 3.58 8 8 8h16c4.42 0 8-3.58 8-8v-88h88c4.42 0 8-3.58 8-8v-16c0-4.42-3.58-8-8-8zm-6.77 270.71l-99.72-42.87 99.72-42.87c8.35-3.6 12.19-13.23 8.58-21.52-3.65-8.29-13.32-12.13-21.74-8.48l-225.32 96.86c-1.81.77-3.74.77-5.48 0L45.23 258.4l193.45-83.16c8.35-3.59 12.19-13.23 8.58-21.52-3.65-8.28-13.26-12.13-21.74-8.48L14.81 235.81C5.81 239.66 0 248.52 0 258.4c0 9.87 5.81 18.74 14.77 22.58l99.73 42.87-99.7 42.85C5.81 370.55 0 379.42 0 389.31c0 9.87 5.81 18.74 14.77 22.58l225.32 96.84c5.06 2.17 10.48 3.28 15.9 3.28s10.84-1.09 15.9-3.28l225.29-96.83c9-3.85 14.81-12.72 14.81-22.59.01-9.89-5.8-18.76-14.76-22.6zM258.74 478.72c-1.81.77-3.74.77-5.48 0L45.23 389.29 156 341.68l84.1 36.15c5.06 2.17 10.48 3.28 15.9 3.28s10.84-1.09 15.9-3.28l84.12-36.16 110.78 47.62-208.06 89.43z"/>
+                        </svg>
+                        <div>Mailing Salvo</div>
+                      </li>
+                    </a>
+                  </ul>
+                </section>
+<!-- fim section adicionar filtro -->
+          </amp-accordion>
+        </div>
+      </div>
+  </div>
+
+
+<!-- janela 2: filtro escolhido -->
+  <div class="ListarWrapper WhiteOnWhite">
+
+    <!-- indice A a Z -->
+<div class="IndiceWrapper">
+  <ul class="indiceLista">
+    <li id="indiceA"><button>A</button></li>
+    <li id="indiceB"><button>B</button></li>
+    <li id="indiceC"><button>C</button></li>
+    <li id="indiceD"><button>D</button></li>
+    <li id="indiceE"><button>E</button></li>
+    <li id="indiceF"><button>F</button></li>
+    <li id="indiceG"><button>G</button></li>
+    <li id="indiceH"><button>H</button></li>
+    <li id="indiceI"><button>I</button></li>
+    <li id="indiceJ"><button>J</button></li>
+    <li id="indiceK"><button>K</button></li>
+    <li id="indiceL"><button>L</button></li>
+    <li id="indiceM"><button>M</button></li>
+    <li id="indiceN"><button>N</button></li>
+    <li id="indiceO"><button>O</button></li>
+    <li id="indiceP"><button>P</button></li>
+    <li id="indiceQ"><button>Q</button></li>
+    <li id="indiceR"><button>R</button></li>
+    <li id="indiceS"><button>S</button></li>
+    <li id="indiceT"><button>T</button></li>
+    <li id="indiceU"><button>U</button></li>
+    <li id="indiceV"><button>V</button></li>
+    <li id="indiceW"><button>W</button></li>
+    <li id="indiceX"><button>X</button></li>
+    <li id="indiceY"><button>Y</button></li>
+    <li id="indiceZ"><button>Z</button></li>
+    <li id="indice#"><button>#</button></li>
+  </ul>
+</div>
+<!-- fim indice A a Z -->
+
+      <div class="lista-filtros scrollbar" id="style-3-scrollbar">
+        <div class="force-overflow">
+
+
+<!-- janela busca filtros -->
+          <div class="filtrosBaseBoxWrapper">
+            <div class="baseBoxTitle">
+              <svg id="baseBoxAddFilterIcon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                <path fill="#eee2df" d="M504 96h-88V8c0-4.42-3.58-8-8-8h-16c-4.42 0-8 3.58-8 8v88h-88c-4.42 0-8 3.58-8 8v16c0 4.42 3.58 8 8 8h88v88c0 4.42 3.58 8 8 8h16c4.42 0 8-3.58 8-8v-88h88c4.42 0 8-3.58 8-8v-16c0-4.42-3.58-8-8-8zm-6.77 270.71l-99.72-42.87 99.72-42.87c8.35-3.6 12.19-13.23 8.58-21.52-3.65-8.29-13.32-12.13-21.74-8.48l-225.32 96.86c-1.81.77-3.74.77-5.48 0L45.23 258.4l193.45-83.16c8.35-3.59 12.19-13.23 8.58-21.52-3.65-8.28-13.26-12.13-21.74-8.48L14.81 235.81C5.81 239.66 0 248.52 0 258.4c0 9.87 5.81 18.74 14.77 22.58l99.73 42.87-99.7 42.85C5.81 370.55 0 379.42 0 389.31c0 9.87 5.81 18.74 14.77 22.58l225.32 96.84c5.06 2.17 10.48 3.28 15.9 3.28s10.84-1.09 15.9-3.28l225.29-96.83c9-3.85 14.81-12.72 14.81-22.59.01-9.89-5.8-18.76-14.76-22.6zM258.74 478.72c-1.81.77-3.74.77-5.48 0L45.23 389.29 156 341.68l84.1 36.15c5.06 2.17 10.48 3.28 15.9 3.28s10.84-1.09 15.9-3.28l84.12-36.16 110.78 47.62-208.06 89.43z"/>
+              </svg>
+              <span>Estados</span>
+            </div>
+            <div class="baseBoxInputWrapper">
+              <div class="baseBoxInputShadow">
+              <input id="inputBaseBoxFiltros" type="text" placeholder="Filtro1, Filtro2,... tecle Enter.">
+              <div class="svgIconSearch">
+                <svg id="baseBoxSearchIcon" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 18.5 18.5" xml:space="preserve">
+                  <path fill="#EEE2DF" d="M18.2,16l-3.6-3.6c-0.2-0.2-0.4-0.3-0.6-0.3h-0.6c1-1.3,1.6-2.9,1.6-4.6C15,3.4,11.7,0,7.5,0S0,3.4,0,7.5S3.4,15,7.5,15c1.7,0,3.3-0.6,4.6-1.6V14c0,0.2,0.1,0.5,0.3,0.6l3.6,3.6c0.3,0.3,0.9,0.3,1.2,0l1-1C18.6,16.9,18.6,16.3,18.2,16zM7.5,12.1c-2.6,0-4.6-2.1-4.6-4.6C2.9,5,5,2.9,7.5,2.9c2.6,0,4.6,2.1,4.6,4.6C12.1,10.1,10.1,12.1,7.5,12.1z"/>
+                </svg>
+              </div>
+              </div>
+            </div>
+          </div>
+<!-- fim janela busca filtros -->
+
+
+<!-- topico filtro container -->
+            <div id="FiltroTopicoWrapper" class="FiltroTopicoWrapperStyle">
+              <button id="NomeFiltroTopico" class="NomeFiltroTopicoStyle">
+                <span>AC</span>
+                <svg id="TopicoIconSvg" class="TopicoIconSvgStyle" onclick="TopicListCurtain();" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 14 8.2" xml:space="preserve">
+                  <path fill="#8E9AAF" d="M6.5,8L0.2,1.5c-0.3-0.3-0.3-0.7,0-0.9l0.4-0.4c0.3-0.3,0.7-0.3,0.9,0L7,5.8l5.5-5.6c0.3-0.3,0.7-0.3,0.9,0l0.4,0.4c0.3,0.3,0.3,0.7,0,0.9L7.5,8C7.2,8.2,6.8,8.2,6.5,8z"/>
+                </svg>
+              </button>
+              <ul id="ListaFiltroTopico" class="ListaFiltroTopicoStyle">
+                <li id="itemFiltroTopico" class="itemFiltroTopicoStyle">Assis Brasil</li>
+                <li id="itemFiltroTopico" class="itemFiltroTopicoStyle">Brasiléia</li>
+                <li id="itemFiltroTopico" class="itemFiltroTopicoStyle">Bujari</li>
+                <li id="itemFiltroTopico" class="itemFiltroTopicoStyle">Capixaba</li>
+                <li id="itemFiltroTopico" class="itemFiltroTopicoStyle">Cruzeiro do Sul</li>
+                <li id="itemFiltroTopico" class="itemFiltroTopicoStyle">Epitaciolândia</li>
+                <li id="itemFiltroTopico" class="itemFiltroTopicoStyle">Feijó</li>
+                <li id="itemFiltroTopico" class="itemFiltroTopicoStyle">Jordão</li>
+                <li id="itemFiltroTopico" class="itemFiltroTopicoStyle">Mâncio Lima</li>
+                <li id="itemFiltroTopico" class="itemFiltroTopicoStyle">Manoel Urbano</li>
+                <li id="itemFiltroTopico" class="itemFiltroTopicoStyle">Marechal Thaumaturgo</li>
+                <li id="itemFiltroTopico" class="itemFiltroTopicoStyle">Plácido de Castro</li>
+                <li id="itemFiltroTopico" class="itemFiltroTopicoStyle">Porto Acre</li>
+                <li id="itemFiltroTopico" class="itemFiltroTopicoStyle">Porto Walter</li>
+                <li id="itemFiltroTopico" class="itemFiltroTopicoStyle">Rio Branco</li>
+                <li id="itemFiltroTopico" class="itemFiltroTopicoStyle">Rodrigues Alves</li>
+                <li id="itemFiltroTopico" class="itemFiltroTopicoStyle">Santa Rosa do Purus</li>
+                <li id="itemFiltroTopico" class="itemFiltroTopicoStyle">Sena Madureira</li>
+                <li id="itemFiltroTopico" class="itemFiltroTopicoStyle">Senador Guiomard</li>
+                <li id="itemFiltroTopico" class="itemFiltroTopicoStyle">Tarauacá</li>
+                <li id="itemFiltroTopico" class="itemFiltroTopicoStyle">Xapuri</li>
+              </ul>
+            </div>
+<!-- fim topico filtro container -->
+
+        </div>
+      </div>
+  </div>
+<!-- final janela 2: filtro escolhido -->
+
+
+
+<!-- janela 3: abas do mailing -->
+  <div class="AbasWrapper WhiteOnWhite">
+
+    <!-- abas -->
+    <div class="tabs">
+    
+   <div class="tab">
+       <input type="radio" id="tab-1" name="tab-group-1" checked>
+
+       <label for="tab-1">
+        <button class="closeTabSvgIcon">
+          <svg id="closeSvg" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 12 12" xml:space="preserve">
+            <path fill="#79242F" d="M7.3,6l3.8-3.8l0.8-0.8c0.1-0.1,0.1-0.3,0-0.4l-0.8-0.8c-0.1-0.1-0.3-0.1-0.4,0L6,4.7L1.4,0.1C1.2,0,1.1,0,0.9,0.1L0.1,0.9C0,1.1,0,1.2,0.1,1.4L4.7,6l-4.6,4.6c-0.1,0.1-0.1,0.3,0,0.4l0.8,0.8c0.1,0.1,0.3,0.1,0.4,0L6,7.3l3.8,3.8l0.8,0.8c0.1,0.1,0.3,0.1,0.4,0l0.8-0.8c0.1-0.1,0.1-0.3,0-0.4L7.3,6z"/>
+          </svg>
+       </button>
+        <span>1</span>
+      </label>
+       
+       <div class="content">
+           <!-- conteudo abas -->
+      <div class="lista-filtros scrollbar" id="style-3-scrollbar">
+        <div class="force-overflow">
+
+
+
+
+
+<!-- janela filtros editoria selecionados -->
+          <div class="filtrosAbasBoxWrapperEditoria">
+            <div class="baseAbasBoxTitleEditoria">
+              <svg id="AddFilterIcon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                <path fill="#eee2df" d="M504 96h-88V8c0-4.42-3.58-8-8-8h-16c-4.42 0-8 3.58-8 8v88h-88c-4.42 0-8 3.58-8 8v16c0 4.42 3.58 8 8 8h88v88c0 4.42 3.58 8 8 8h16c4.42 0 8-3.58 8-8v-88h88c4.42 0 8-3.58 8-8v-16c0-4.42-3.58-8-8-8zm-6.77 270.71l-99.72-42.87 99.72-42.87c8.35-3.6 12.19-13.23 8.58-21.52-3.65-8.29-13.32-12.13-21.74-8.48l-225.32 96.86c-1.81.77-3.74.77-5.48 0L45.23 258.4l193.45-83.16c8.35-3.59 12.19-13.23 8.58-21.52-3.65-8.28-13.26-12.13-21.74-8.48L14.81 235.81C5.81 239.66 0 248.52 0 258.4c0 9.87 5.81 18.74 14.77 22.58l99.73 42.87-99.7 42.85C5.81 370.55 0 379.42 0 389.31c0 9.87 5.81 18.74 14.77 22.58l225.32 96.84c5.06 2.17 10.48 3.28 15.9 3.28s10.84-1.09 15.9-3.28l225.29-96.83c9-3.85 14.81-12.72 14.81-22.59.01-9.89-5.8-18.76-14.76-22.6zM258.74 478.72c-1.81.77-3.74.77-5.48 0L45.23 389.29 156 341.68l84.1 36.15c5.06 2.17 10.48 3.28 15.9 3.28s10.84-1.09 15.9-3.28l84.12-36.16 110.78 47.62-208.06 89.43z"/>
+              </svg>
+              <span>Editoria</span>
+                <svg id="FilterCurtainIconSvg" class="FilterCurtainSvgStyle" onclick="TopicListAbasCurtain2(this);" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 14 8.2" xml:space="preserve">
+                  <path fill="#eee2df" d="M6.5,8L0.2,1.5c-0.3-0.3-0.3-0.7,0-0.9l0.4-0.4c0.3-0.3,0.7-0.3,0.9,0L7,5.8l5.5-5.6c0.3-0.3,0.7-0.3,0.9,0l0.4,0.4c0.3,0.3,0.3,0.7,0,0.9L7.5,8C7.2,8.2,6.8,8.2,6.5,8z"/>
+                </svg>
+                <svg id="FiltercloseSvg" class="FecharJanelaEditoria" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 12 12" xml:space="preserve">
+                  <path fill="#79242F" d="M7.3,6l3.8-3.8l0.8-0.8c0.1-0.1,0.1-0.3,0-0.4l-0.8-0.8c-0.1-0.1-0.3-0.1-0.4,0L6,4.7L1.4,0.1C1.2,0,1.1,0,0.9,0.1L0.1,0.9C0,1.1,0,1.2,0.1,1.4L4.7,6l-4.6,4.6c-0.1,0.1-0.1,0.3,0,0.4l0.8,0.8c0.1,0.1,0.3,0.1,0.4,0L6,7.3l3.8,3.8l0.8,0.8c0.1,0.1,0.3,0.1,0.4,0l0.8-0.8c0.1-0.1,0.1-0.3,0-0.4L7.3,6z"/>
+                </svg>
+            </div>
+            <div class="baseAbasBoxItemWrapperEditoria" id="baseAbasBoxItemWrapperEditoria">
+              <!-- bloco editoria 100% -->
+              <div class="AbasBoxItemShadowEditoria blocoEditoriaFirst tooltip100" id="hoverItemFiltrosEditoria" data-tooltip-Editoria100="Use para mailings focados">
+
+                <svg id="editoriaTargetIconDardo100" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 213 211.6" xml:space="preserve">
+                  <path id="dardo50" fill="#C26158" d="M181.3,58.1c-4.3-0.9-8.6-1.5-12.8-2.7c-2.3-0.7-3.5-0.4-4.8,1.7c-10.3,15.3-21.7,29.7-34.7,42.9c-2.8,2.8-5.8,5.5-9.8,6.5c-0.8,0.2-1.8,0.5-2.6,0.3c-2.6-0.8-4.1,0.7-5.7,2.3c-4,3.9-7.9,7.9-12.2,11.4c-2.3,1.8-5.4,2.7-8.1,3.8c-1.5,0.6-2,0-1.7-1.6c1.1-4.9,3.8-8.9,7.3-12.4c3.1-3.1,6.2-6.2,9.3-9.3c1-1,1.3-1.9,1.1-3.4c-0.6-3.4,0.6-6.5,2.8-8.8c4.3-4.7,8.6-9.5,13.5-13.5c11.1-9,22.5-17.6,33.8-26.2c1.5-1.1,1.7-2,1.3-3.7c-1-4.3-1.9-8.7-2.3-13.1c-0.7-7.7,2.3-14.2,7.6-19.7c3.4-3.6,6.9-7.1,10.5-10.5c3.6-3.5,7.5-2.4,8.9,2.4c1.7,5.8,3.3,11.6,4.8,17.5c0.5,2.2,1.5,3.3,3.8,3.9c5.9,1.4,11.7,3.1,17.5,4.8c4.8,1.4,5.9,5.3,2.5,8.9c-3.6,3.7-7.3,7.4-11,10.9C194.6,55.5,188.8,57.6,181.3,58.1z"/>
+                </svg>
+                <svg id="editoriaTargetIcon" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 213 211.6" xml:space="preserve">
+                  <circle fill="none" stroke="#EEE2DF" stroke-width="19" stroke-miterlimit="10" cx="90.5" cy="121.1" r="81"/>
+                  <circle fill="none" stroke="#EEE2DF" stroke-width="19" stroke-miterlimit="10" cx="90.5" cy="121.1" r="38.8"/>
+                </svg>
+                <span>100%</span>
+              </div>
+              <!-- fim bloco editoria 100% -->
+              <!-- bloco editoria 50% -->
+              <div class="blocoEditoria2Sec AbasBoxItemShadowEditoria tooltip50" id="hoverItemFiltrosEditoria" data-tooltip-Editoria50="Use para mailings menos focados">
+
+                <svg id="editoriaTargetIconDardo50" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 213 211.6" xml:space="preserve">
+                  <path id="dardo50" fill="#C26158" d="M181.3,58.1c-4.3-0.9-8.6-1.5-12.8-2.7c-2.3-0.7-3.5-0.4-4.8,1.7c-10.3,15.3-21.7,29.7-34.7,42.9c-2.8,2.8-5.8,5.5-9.8,6.5c-0.8,0.2-1.8,0.5-2.6,0.3c-2.6-0.8-4.1,0.7-5.7,2.3c-4,3.9-7.9,7.9-12.2,11.4c-2.3,1.8-5.4,2.7-8.1,3.8c-1.5,0.6-2,0-1.7-1.6c1.1-4.9,3.8-8.9,7.3-12.4c3.1-3.1,6.2-6.2,9.3-9.3c1-1,1.3-1.9,1.1-3.4c-0.6-3.4,0.6-6.5,2.8-8.8c4.3-4.7,8.6-9.5,13.5-13.5c11.1-9,22.5-17.6,33.8-26.2c1.5-1.1,1.7-2,1.3-3.7c-1-4.3-1.9-8.7-2.3-13.1c-0.7-7.7,2.3-14.2,7.6-19.7c3.4-3.6,6.9-7.1,10.5-10.5c3.6-3.5,7.5-2.4,8.9,2.4c1.7,5.8,3.3,11.6,4.8,17.5c0.5,2.2,1.5,3.3,3.8,3.9c5.9,1.4,11.7,3.1,17.5,4.8c4.8,1.4,5.9,5.3,2.5,8.9c-3.6,3.7-7.3,7.4-11,10.9C194.6,55.5,188.8,57.6,181.3,58.1z"/>
+                </svg>
+                <svg id="editoriaTargetIcon" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 213 211.6" xml:space="preserve">
+                  <circle fill="none" stroke="#EEE2DF" stroke-width="19" stroke-miterlimit="10" cx="90.5" cy="121.1" r="81"/>
+                  <circle fill="none" stroke="#EEE2DF" stroke-width="19" stroke-miterlimit="10" cx="90.5" cy="121.1" r="38.8"/>
+                </svg>
+                <span>50%</span>
+              </div>
+              <!-- fim bloco editoria 50% -->
+            </div>
+          </div>
+<!-- final janela filtros editoria selecionados -->
+
+
+
+
+
+<!-- janela filtros selecionados -->
+          <div class="filtrosAbasBoxWrapperIncluir">
+            <div class="baseAbasBoxTitleIncluir">
+              <svg id="AddFilterIcon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                <path fill="#eee2df" d="M504 96h-88V8c0-4.42-3.58-8-8-8h-16c-4.42 0-8 3.58-8 8v88h-88c-4.42 0-8 3.58-8 8v16c0 4.42 3.58 8 8 8h88v88c0 4.42 3.58 8 8 8h16c4.42 0 8-3.58 8-8v-88h88c4.42 0 8-3.58 8-8v-16c0-4.42-3.58-8-8-8zm-6.77 270.71l-99.72-42.87 99.72-42.87c8.35-3.6 12.19-13.23 8.58-21.52-3.65-8.29-13.32-12.13-21.74-8.48l-225.32 96.86c-1.81.77-3.74.77-5.48 0L45.23 258.4l193.45-83.16c8.35-3.59 12.19-13.23 8.58-21.52-3.65-8.28-13.26-12.13-21.74-8.48L14.81 235.81C5.81 239.66 0 248.52 0 258.4c0 9.87 5.81 18.74 14.77 22.58l99.73 42.87-99.7 42.85C5.81 370.55 0 379.42 0 389.31c0 9.87 5.81 18.74 14.77 22.58l225.32 96.84c5.06 2.17 10.48 3.28 15.9 3.28s10.84-1.09 15.9-3.28l225.29-96.83c9-3.85 14.81-12.72 14.81-22.59.01-9.89-5.8-18.76-14.76-22.6zM258.74 478.72c-1.81.77-3.74.77-5.48 0L45.23 389.29 156 341.68l84.1 36.15c5.06 2.17 10.48 3.28 15.9 3.28s10.84-1.09 15.9-3.28l84.12-36.16 110.78 47.62-208.06 89.43z"/>
+              </svg>
+              <span>Estados</span>
+                <svg id="FilterCurtainIconSvg" class="FilterCurtainSvgStyle" onclick="TopicListAbasCurtain1(this);" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 14 8.2" xml:space="preserve">
+                  <path fill="#eee2df" d="M6.5,8L0.2,1.5c-0.3-0.3-0.3-0.7,0-0.9l0.4-0.4c0.3-0.3,0.7-0.3,0.9,0L7,5.8l5.5-5.6c0.3-0.3,0.7-0.3,0.9,0l0.4,0.4c0.3,0.3,0.3,0.7,0,0.9L7.5,8C7.2,8.2,6.8,8.2,6.5,8z"/>
+                </svg>
+                <svg id="FiltercloseSvg" class="FecharJanela" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 12 12" xml:space="preserve">
+                  <path fill="#79242F" d="M7.3,6l3.8-3.8l0.8-0.8c0.1-0.1,0.1-0.3,0-0.4l-0.8-0.8c-0.1-0.1-0.3-0.1-0.4,0L6,4.7L1.4,0.1C1.2,0,1.1,0,0.9,0.1L0.1,0.9C0,1.1,0,1.2,0.1,1.4L4.7,6l-4.6,4.6c-0.1,0.1-0.1,0.3,0,0.4l0.8,0.8c0.1,0.1,0.3,0.1,0.4,0L6,7.3l3.8,3.8l0.8,0.8c0.1,0.1,0.3,0.1,0.4,0l0.8-0.8c0.1-0.1,0.1-0.3,0-0.4L7.3,6z"/>
+                </svg>
+            </div>
+            <div class="baseAbasBoxItemWrapperIncluir" id="baseAbasBoxItemWrapperIncluir">
+              <div class="AbasBoxItemShadowIncluir" id="hoverItemFiltrosIncluir">
+                <span>Filtro1</span>
+                <div class="svgIconCheckIncluir" id="svgIconCheckIncluir">
+                  <svg id="baseBoxItemIconCheckIncluir" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 102.9 79.3" xml:space="preserve">
+                    <path fill="#EEE2DF" d="M92,0.8L32.7,60L11,38.3c-1.1-1.1-2.8-1.1-3.8,0l-6.4,6.4c-1.1,1.1-1.1,2.8,0,3.8l30,30c1.1,1.1,2.8,1.1,3.8,0L102.2,11c1.1-1.1,1.1-2.8,0-3.8l-6.4-6.4C94.7-0.3,93-0.3,92,0.8z"/>
+                  </svg>
+                  <svg id="baseBoxItemIconCloseIncluir" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 12 12" xml:space="preserve">
+                    <path fill="#EEE2DF" d="M7.3,6l3.8-3.8l0.8-0.8c0.1-0.1,0.1-0.3,0-0.4l-0.8-0.8c-0.1-0.1-0.3-0.1-0.4,0L6,4.7L1.4,0.1C1.2,0,1.1,0,0.9,0.1L0.1,0.9C0,1.1,0,1.2,0.1,1.4L4.7,6l-4.6,4.6c-0.1,0.1-0.1,0.3,0,0.4l0.8,0.8c0.1,0.1,0.3,0.1,0.4,0L6,7.3l3.8,3.8l0.8,0.8c0.1,0.1,0.3,0.1,0.4,0l0.8-0.8c0.1-0.1,0.1-0.3,0-0.4L7.3,6z"/>
+                  </svg>
+                </div>
+              </div>
+            </div>
+          </div>
+<!-- final janela filtros selecionados -->
+
+
+
+<!-- janela filtros excluir selecionados -->
+          <div class="filtrosExcluirAbasBoxWrapper">
+            <div class="baseAbasBoxTitle">
+              <svg id="trashIcon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
+                <path fill="#eee2df" d="M336 64l-33.6-44.8C293.3 7.1 279.1 0 264 0h-80c-15.1 0-29.3 7.1-38.4 19.2L112 64H24C10.7 64 0 74.7 0 88v2c0 3.3 2.7 6 6 6h26v368c0 26.5 21.5 48 48 48h288c26.5 0 48-21.5 48-48V96h26c3.3 0 6-2.7 6-6v-2c0-13.3-10.7-24-24-24h-88zM184 32h80c5 0 9.8 2.4 12.8 6.4L296 64H152l19.2-25.6c3-4 7.8-6.4 12.8-6.4zm200 432c0 8.8-7.2 16-16 16H80c-8.8 0-16-7.2-16-16V96h320v368zm-176-44V156c0-6.6 5.4-12 12-12h8c6.6 0 12 5.4 12 12v264c0 6.6-5.4 12-12 12h-8c-6.6 0-12-5.4-12-12zm-80 0V156c0-6.6 5.4-12 12-12h8c6.6 0 12 5.4 12 12v264c0 6.6-5.4 12-12 12h-8c-6.6 0-12-5.4-12-12zm160 0V156c0-6.6 5.4-12 12-12h8c6.6 0 12 5.4 12 12v264c0 6.6-5.4 12-12 12h-8c-6.6 0-12-5.4-12-12z"/>
+              </svg>
+              <span>Excluídos</span>
+                <svg id="FilterCurtainIconSvg" class="FilterCurtainSvgStyle" onclick="TopicListAbasCurtain(this);" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 14 8.2" xml:space="preserve">
+                  <path fill="#eee2df" d="M6.5,8L0.2,1.5c-0.3-0.3-0.3-0.7,0-0.9l0.4-0.4c0.3-0.3,0.7-0.3,0.9,0L7,5.8l5.5-5.6c0.3-0.3,0.7-0.3,0.9,0l0.4,0.4c0.3,0.3,0.3,0.7,0,0.9L7.5,8C7.2,8.2,6.8,8.2,6.5,8z"/>
+                </svg>
+                <svg id="FiltercloseSvg" class="fecharJanela1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 12 12" xml:space="preserve">
+                  <path fill="#79242F" d="M7.3,6l3.8-3.8l0.8-0.8c0.1-0.1,0.1-0.3,0-0.4l-0.8-0.8c-0.1-0.1-0.3-0.1-0.4,0L6,4.7L1.4,0.1C1.2,0,1.1,0,0.9,0.1L0.1,0.9C0,1.1,0,1.2,0.1,1.4L4.7,6l-4.6,4.6c-0.1,0.1-0.1,0.3,0,0.4l0.8,0.8c0.1,0.1,0.3,0.1,0.4,0L6,7.3l3.8,3.8l0.8,0.8c0.1,0.1,0.3,0.1,0.4,0l0.8-0.8c0.1-0.1,0.1-0.3,0-0.4L7.3,6z"/>
+                </svg>
+            </div>
+            <div class="baseAbasBoxItemWrapper" id="baseAbasBoxItemWrapper">
+              <div class="AbasBoxItemShadowExcluir" id="hoverItemFiltros">
+                <span>Filtro1</span>
+                <div class="svgIconCheck" id="svgIconCheck">
+                  <svg id="baseBoxItemIconCheck" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 102.9 79.3" xml:space="preserve">
+                    <path fill="#EEE2DF" d="M92,0.8L32.7,60L11,38.3c-1.1-1.1-2.8-1.1-3.8,0l-6.4,6.4c-1.1,1.1-1.1,2.8,0,3.8l30,30c1.1,1.1,2.8,1.1,3.8,0L102.2,11c1.1-1.1,1.1-2.8,0-3.8l-6.4-6.4C94.7-0.3,93-0.3,92,0.8z"/>
+                  </svg>
+                  <svg id="baseBoxItemIconClose" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 12 12" xml:space="preserve">
+                    <path fill="#EEE2DF" d="M7.3,6l3.8-3.8l0.8-0.8c0.1-0.1,0.1-0.3,0-0.4l-0.8-0.8c-0.1-0.1-0.3-0.1-0.4,0L6,4.7L1.4,0.1C1.2,0,1.1,0,0.9,0.1L0.1,0.9C0,1.1,0,1.2,0.1,1.4L4.7,6l-4.6,4.6c-0.1,0.1-0.1,0.3,0,0.4l0.8,0.8c0.1,0.1,0.3,0.1,0.4,0L6,7.3l3.8,3.8l0.8,0.8c0.1,0.1,0.3,0.1,0.4,0l0.8-0.8c0.1-0.1,0.1-0.3,0-0.4L7.3,6z"/>
+                  </svg>
+                </div>
+              </div>
+            </div>
+          </div>
+<!-- final janela filtros excluir selecionados -->
+
+        </div>
+      </div>
+      <!-- conteudo abas -->
+       </div> 
+   </div>
+    
+
+   <div class="tab countAbas2">
+       <input type="radio" id="tab-2" name="tab-group-1">
+       <label for="tab-2">
+        <button class="closeTabSvgIcon">
+          <svg id="closeSvg" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 12 12" xml:space="preserve">
+            <path fill="#79242F" d="M7.3,6l3.8-3.8l0.8-0.8c0.1-0.1,0.1-0.3,0-0.4l-0.8-0.8c-0.1-0.1-0.3-0.1-0.4,0L6,4.7L1.4,0.1C1.2,0,1.1,0,0.9,0.1L0.1,0.9C0,1.1,0,1.2,0.1,1.4L4.7,6l-4.6,4.6c-0.1,0.1-0.1,0.3,0,0.4l0.8,0.8c0.1,0.1,0.3,0.1,0.4,0L6,7.3l3.8,3.8l0.8,0.8c0.1,0.1,0.3,0.1,0.4,0l0.8-0.8c0.1-0.1,0.1-0.3,0-0.4L7.3,6z"/>
+          </svg>
+       </button>
+        <span>2</span>
+      </label>
+       
+       <div class="content">
+           stuff aba2
+       </div> 
+   </div>
+    
+
+    <div class="tab countAbas3">
+       <input type="radio" id="tab-3" name="tab-group-1">
+       <label for="tab-3">
+        <button class="closeTabSvgIcon">
+          <svg id="closeSvg"   xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 12 12" xml:space="preserve">
+            <path fill="#79242F" d="M7.3,6l3.8-3.8l0.8-0.8c0.1-0.1,0.1-0.3,0-0.4l-0.8-0.8c-0.1-0.1-0.3-0.1-0.4,0L6,4.7L1.4,0.1C1.2,0,1.1,0,0.9,0.1L0.1,0.9C0,1.1,0,1.2,0.1,1.4L4.7,6l-4.6,4.6c-0.1,0.1-0.1,0.3,0,0.4l0.8,0.8c0.1,0.1,0.3,0.1,0.4,0L6,7.3l3.8,3.8l0.8,0.8c0.1,0.1,0.3,0.1,0.4,0l0.8-0.8c0.1-0.1,0.1-0.3,0-0.4L7.3,6z"/>
+          </svg>
+       </button>
+        <span>3</span>
+      </label>
+     
+       <div class="content">
+           stuff aba3
+       </div> 
+   </div>
+    
+
+   <div class="tab countAbas4">
+       <input type="radio" id="tab-4" name="tab-group-1">
+       <label for="tab-4">
+        <button class="closeTabSvgIcon">
+          <svg id="closeSvg"   xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 12 12" xml:space="preserve">
+            <path fill="#79242F" d="M7.3,6l3.8-3.8l0.8-0.8c0.1-0.1,0.1-0.3,0-0.4l-0.8-0.8c-0.1-0.1-0.3-0.1-0.4,0L6,4.7L1.4,0.1C1.2,0,1.1,0,0.9,0.1L0.1,0.9C0,1.1,0,1.2,0.1,1.4L4.7,6l-4.6,4.6c-0.1,0.1-0.1,0.3,0,0.4l0.8,0.8c0.1,0.1,0.3,0.1,0.4,0L6,7.3l3.8,3.8l0.8,0.8c0.1,0.1,0.3,0.1,0.4,0l0.8-0.8c0.1-0.1,0.1-0.3,0-0.4L7.3,6z"/>
+          </svg>
+       </button>
+        <span>4</span>
+      </label>
+       
+       <div class="content">
+           stuff aba4
+       </div> 
+   </div>
+    
+
+    <div class="tab countAbas5">
+       <input type="radio" id="tab-5" name="tab-group-1">
+       <label for="tab-5">
+        <button class="closeTabSvgIcon">
+          <svg id="closeSvg"   xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 12 12" xml:space="preserve">
+            <path fill="#79242F" d="M7.3,6l3.8-3.8l0.8-0.8c0.1-0.1,0.1-0.3,0-0.4l-0.8-0.8c-0.1-0.1-0.3-0.1-0.4,0L6,4.7L1.4,0.1C1.2,0,1.1,0,0.9,0.1L0.1,0.9C0,1.1,0,1.2,0.1,1.4L4.7,6l-4.6,4.6c-0.1,0.1-0.1,0.3,0,0.4l0.8,0.8c0.1,0.1,0.3,0.1,0.4,0L6,7.3l3.8,3.8l0.8,0.8c0.1,0.1,0.3,0.1,0.4,0l0.8-0.8c0.1-0.1,0.1-0.3,0-0.4L7.3,6z"/>
+          </svg>
+       </button>
+        <span>5</span>
+      </label>
+     
+       <div class="content">
+           stuff aba5
+       </div> 
+   </div>
+
+
+    <div class="tab countAbas6">
+       <input type="radio" id="tab-6" name="tab-group-1">
+       <label for="tab-6">
+        <button class="closeTabSvgIcon">
+          <svg id="closeSvg"   xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 12 12" xml:space="preserve">
+            <path fill="#79242F" d="M7.3,6l3.8-3.8l0.8-0.8c0.1-0.1,0.1-0.3,0-0.4l-0.8-0.8c-0.1-0.1-0.3-0.1-0.4,0L6,4.7L1.4,0.1C1.2,0,1.1,0,0.9,0.1L0.1,0.9C0,1.1,0,1.2,0.1,1.4L4.7,6l-4.6,4.6c-0.1,0.1-0.1,0.3,0,0.4l0.8,0.8c0.1,0.1,0.3,0.1,0.4,0L6,7.3l3.8,3.8l0.8,0.8c0.1,0.1,0.3,0.1,0.4,0l0.8-0.8c0.1-0.1,0.1-0.3,0-0.4L7.3,6z"/>
+          </svg>
+       </button>
+        <span>6</span>
+      </label>
+     
+       <div class="content">
+           stuff aba6
+       </div> 
+   </div>
+
+
+    <div class="tab countAbas7">
+       <input type="radio" id="tab-7" name="tab-group-1">
+       <label for="tab-7">
+        <button class="closeTabSvgIcon">
+          <svg id="closeSvg"   xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 12 12" xml:space="preserve">
+            <path fill="#79242F" d="M7.3,6l3.8-3.8l0.8-0.8c0.1-0.1,0.1-0.3,0-0.4l-0.8-0.8c-0.1-0.1-0.3-0.1-0.4,0L6,4.7L1.4,0.1C1.2,0,1.1,0,0.9,0.1L0.1,0.9C0,1.1,0,1.2,0.1,1.4L4.7,6l-4.6,4.6c-0.1,0.1-0.1,0.3,0,0.4l0.8,0.8c0.1,0.1,0.3,0.1,0.4,0L6,7.3l3.8,3.8l0.8,0.8c0.1,0.1,0.3,0.1,0.4,0l0.8-0.8c0.1-0.1,0.1-0.3,0-0.4L7.3,6z"/>
+          </svg>
+       </button>
+        <span>7</span>
+      </label>
+     
+       <div class="content">
+           stuff aba7
+       </div> 
+   </div>
+
+
+    <div class="tab countAbas8">
+       <input type="radio" id="tab-8" name="tab-group-1">
+       <label for="tab-8">
+        <button class="closeTabSvgIcon">
+          <svg id="closeSvg"   xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 12 12" xml:space="preserve">
+            <path fill="#79242F" d="M7.3,6l3.8-3.8l0.8-0.8c0.1-0.1,0.1-0.3,0-0.4l-0.8-0.8c-0.1-0.1-0.3-0.1-0.4,0L6,4.7L1.4,0.1C1.2,0,1.1,0,0.9,0.1L0.1,0.9C0,1.1,0,1.2,0.1,1.4L4.7,6l-4.6,4.6c-0.1,0.1-0.1,0.3,0,0.4l0.8,0.8c0.1,0.1,0.3,0.1,0.4,0L6,7.3l3.8,3.8l0.8,0.8c0.1,0.1,0.3,0.1,0.4,0l0.8-0.8c0.1-0.1,0.1-0.3,0-0.4L7.3,6z"/>
+          </svg>
+       </button>
+        <span>8</span>
+      </label>
+     
+       <div class="content">
+           stuff aba8
+       </div> 
+   </div>
+
+
+<!-- botão adicionar aba -->
+<button class="tabsPlus tooltipAbasPlus" data-tooltip-NovaAba="Nova Aba">
+  <svg id="TabsPlusIcon" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 17 17" xml:space="preserve">
+    <path fill="#8E9AAF" d="M12.9,8V9c0,0.2-0.2,0.4-0.4,0.4h-3v3c0,0.2-0.2,0.4-0.4,0.4H8c-0.2,0-0.4-0.2-0.4-0.4v-3h-3C4.3,9.5,4.1,9.3,4.1,9V8c0-0.2,0.2-0.4,0.4-0.4h3v-3c0-0.2,0.2-0.4,0.4-0.4H9c0.2,0,0.4,0.2,0.4,0.4v3h3C12.7,7.5,12.9,7.7,12.9,8zM17,8.5c0,4.7-3.8,8.5-8.5,8.5S0,13.2,0,8.5S3.8,0,8.5,0S17,3.8,17,8.5z M15.4,8.5c0-3.8-3.1-6.9-6.9-6.9S1.6,4.7,1.6,8.5s3.1,6.9,6.9,6.9S15.4,12.3,15.4,8.5z"/>
+  </svg>
+</button>
+<!-- botão adicionar aba -->
+
+</div>
+
+
+  </div>
+<!-- final janela 3: abas do mailing -->
+</div>
+<!-- final editor mailing -->
+
+
+<!-- dialog box alerta -->
+<div class="alertDialogBox">
+  <div class="alertMsgWrapper">
+    <svg id="alertMsgIcon" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 44.2 38.7" xml:space="preserve">
+      <path fill="#FFFFFF" d="M22.1,2.8C11.4,2.8,2.8,9.6,2.8,17.9s8.7,15.2,19.3,15.2c2.4,0,4.9-0.4,7.2-1.1l1.3-0.4l1.1,0.8c2,1.4,5,3,8.9,3.4c-1-1.3-2.6-3.5-3.5-6l-0.6-1.6l1.2-1.3c2.5-2.6,3.8-5.8,3.8-9C41.4,9.6,32.7,2.8,22.1,2.8 M22.1,0c12.2,0,22.1,8,22.1,17.9c0,4.1-1.7,7.9-4.6,10.9c1.3,3.4,4,6.3,4,6.3c0.6,0.6,0.7,1.5,0.4,2.2c-0.3,0.8-1.1,1.3-1.9,1.3c-5.3,0-9.5-2.2-12-4c-2.5,0.8-5.2,1.2-8,1.2C9.9,35.9,0,27.9,0,17.9S9.9,0,22.1,0z"/>
+      <path fill="#FFFFFF" d="M19.1,27.1c0-0.8,0.3-1.4,0.8-1.9c0.6-0.5,1.3-0.7,2.1-0.7c0.8,0,1.5,0.2,2.1,0.7c0.6,0.5,0.8,1.1,0.8,1.9c0,0.8-0.3,1.4-0.8,1.9c-0.6,0.5-1.3,0.7-2.1,0.7c-0.8,0-1.5-0.2-2.1-0.7C19.4,28.5,19.1,27.8,19.1,27.1z M24.3,22.2H20L19.3,6.5H25L24.3,22.2z"/>
+    </svg>
+    <div class="alertMsg">
+      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quisquam debitis laboriosam, amet. Porro dicta omnis, quis, beatae molestiae eum consectetur debitis iste pariatur quaerat fuga a soluta at. Dignissimos, praesentium.
+    </div>
+    <button class="AlertBtn" onclick="fecharAlertDialogBox();">OK</button>
+  </div>
+</div>
+<!-- fim dialog box alerta -->
+
+<!-- dialog box alerta -->
+<div class="DialogBox">
+  <div class="DialogBarContainer">
+    <div class="DialogProgressBar"></div>
+    <div class="DialogBarBG"></div>
+  </div>
+  <div class="DialogMsgWrapper">
+    <svg id="alertMsgIcon" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 44.2 38.7" xml:space="preserve">
+      <path fill="#eee2df" d="M22.1,2.8C11.4,2.8,2.8,9.6,2.8,17.9s8.7,15.2,19.3,15.2c2.4,0,4.9-0.4,7.2-1.1l1.3-0.4l1.1,0.8c2,1.4,5,3,8.9,3.4c-1-1.3-2.6-3.5-3.5-6l-0.6-1.6l1.2-1.3c2.5-2.6,3.8-5.8,3.8-9C41.4,9.6,32.7,2.8,22.1,2.8 M22.1,0c12.2,0,22.1,8,22.1,17.9c0,4.1-1.7,7.9-4.6,10.9c1.3,3.4,4,6.3,4,6.3c0.6,0.6,0.7,1.5,0.4,2.2c-0.3,0.8-1.1,1.3-1.9,1.3c-5.3,0-9.5-2.2-12-4c-2.5,0.8-5.2,1.2-8,1.2C9.9,35.9,0,27.9,0,17.9S9.9,0,22.1,0z"/>
+      <path fill="#eee2df" d="M19.1,27.1c0-0.8,0.3-1.4,0.8-1.9c0.6-0.5,1.3-0.7,2.1-0.7c0.8,0,1.5,0.2,2.1,0.7c0.6,0.5,0.8,1.1,0.8,1.9c0,0.8-0.3,1.4-0.8,1.9c-0.6,0.5-1.3,0.7-2.1,0.7c-0.8,0-1.5-0.2-2.1-0.7C19.4,28.5,19.1,27.8,19.1,27.1z M24.3,22.2H20L19.3,6.5H25L24.3,22.2z"/>
+    </svg>
+    <div class="DialogMsg">
+      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quisquam debitis laboriosam, amet. Porro dicta omnis, quis, beatae molestiae eum consectetur debitis iste pariatur quaerat fuga a soluta at. Dignissimos, praesentium.
+    </div>
+    <button class="DialogBtn" onclick="fecharDialogBox();">SIM</button>
+  </div>
+</div>
+<!-- fim dialog box alerta -->
+
+
+
+
+
+<script src="js\editor-mailing-1-script.js">
+
+
+
+</script>
+
+
+  </body>
+</html>
